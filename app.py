@@ -4,71 +4,105 @@ import pandas as pd
 # ---------------- LOAD DATA ---------------- #
 swap = pd.read_csv("greenkwh.swaps.csv")
 energy = pd.read_csv("greenkwh.energy_sessions.csv")
-battery = pd.read_csv("greenkwh.batteries.csv")
-system = pd.read_csv("greenkwh.systems.csv")
+batteries = pd.read_csv("greenkwh.batteries.csv")
 
 # ---------------- CLEAN ---------------- #
 swap['serialnumber'] = swap['serialnumber'].astype(str).str.strip().str.upper()
 energy['serial_number'] = energy['serial_number'].astype(str).str.strip().str.upper()
-battery['serialnumber'] = battery['serialnumber'].astype(str).str.strip().str.upper()
+batteries['serialnumber'] = batteries['serialnumber'].astype(str).str.strip().str.upper()
 
-# ✅ FIXED COLUMN NAME HERE
-battery['connectedsystem'] = battery['connectedsystem'].astype(str).str.strip().str.upper()
-system['system_serial'] = system['system_serial'].astype(str).str.strip().str.upper()
-
-# Convert time
 swap['created_at'] = pd.to_datetime(swap['created_at'], errors='coerce')
 
+# ---------------- HANDLE COLUMN ISSUES ---------------- #
+# Fix mileage spelling
+if 'mileage' in energy.columns:
+    energy['milage'] = energy['mileage']
+
+# Ensure required columns exist
+for col in ['energy_change', 'milage', 'system_type']:
+    if col not in energy.columns:
+        energy[col] = None
+
 # ---------------- UI ---------------- #
-st.title("🔋 Battery Travel Dashboard")
+st.set_page_config(layout="wide")
+st.title("🔋 Battery Journey Dashboard")
 
-battery_id = st.text_input("Enter Battery Serial Number")
+col1, col2 = st.columns([1, 3])
 
-if battery_id:
+# ---------------- LEFT PANEL ---------------- #
+with col1:
+    st.subheader("Batteries")
+    battery_list = batteries['serialnumber'].dropna().unique()
+    selected_battery = st.selectbox("Select Battery", battery_list)
 
-    battery_id = battery_id.strip().upper()
+# ---------------- RIGHT PANEL ---------------- #
+with col2:
+    st.subheader("Battery Journey")
 
-    # Filter battery
-    bat = battery[battery['serialnumber'] == battery_id]
+    if selected_battery:
 
-    if bat.empty:
-        st.error("Battery not found ❌")
-    else:
-           # ✅ FIXED MERGE COLUMN HERE
-        bat = pd.merge(
-            bat,
-            system,
-            left_on='connectedsystem',
-            right_on='system_serial',
-            how='left'
-        )
+        # ---------------- FILTER ---------------- #
+        swap_f = swap[swap['serialnumber'] == selected_battery].copy()
+        energy_f = energy[energy['serial_number'] == selected_battery].copy()
 
-        # Filter swap + energy
-        swap_f = swap[swap['serialnumber'] == battery_id]
-        energy_f = energy[energy['serial_number'] == battery_id]
-
-        # Merge swap + energy
-        df = pd.merge(
-            swap_f,
-            energy_f,
+        # ---------------- MERGE (SWAP = MAIN) ---------------- #
+        df = swap_f.merge(
+            energy_f[['serial_number', 'energy_change', 'milage', 'system_type']],
             left_on='serialnumber',
             right_on='serial_number',
             how='left'
         )
 
-        # Add system type
-        df['system_type'] = bat['system_type'].values[0]
+        # ---------------- DATE FIX ---------------- #
+        df['created_at'] = pd.to_datetime(df['created_at'], errors='coerce')
+        df = df.dropna(subset=['created_at'])
 
-        # SOC format
-        df['soc_change'] = df['start_soc'].astype(str) + " → " + df['end_soc'].astype(str)
+        # 🔥 OLDEST → LATEST (as you wanted)
+        df = df.sort_values('created_at', ascending=True).reset_index(drop=True)
 
-        # Format time
-        df['time'] = df['created_at'].dt.strftime("%d %b %Y, %I:%M %p")
+        # ---------------- STATUS FUNCTION ---------------- #
+        def get_status(x, system_type):
+            system_type = str(system_type).lower()
 
-        # ✅ Proper sorting (professional fix)
-        df = df.sort_values(by='created_at')
+            # No charging at consumer
+            if system_type == "consumer":
+                return "⚡ Discharged"
 
-        # Final table
-        final_df = df[['system_type', 'soc_change', 'time']]
+            if x == 1:
+                return "🔌 Charged"
+            elif x == 0:
+                return "⚡ Discharged"
+            else:
+                return "⏸️ Idle"
 
-        st.dataframe(final_df)
+        # ---------------- TIMELINE ---------------- #
+        for _, row in df.iterrows():
+
+            # Status
+            status = get_status(row.get('setchargingstatus'), row.get('system_type'))
+
+            # Energy
+            energy_val = row.get('energy_change')
+            energy_kwh = "NA" if pd.isna(energy_val) else f"{energy_val} kWh"
+
+            # Location
+            location = row.get('system_type')
+            location = "Consumer" if pd.isna(location) else str(location).capitalize()
+
+            # Date
+            date = row['created_at'].strftime("%d %b %Y, %I:%M %p")
+
+            st.markdown("---")
+
+            text = f"""
+            **{status} {energy_kwh} at {location}**  
+            📅 {date}
+            """
+
+            # Mileage (only consumer)
+            if str(location).lower() == 'consumer':
+                mileage = row.get('milage')
+                mileage_text = "NA" if pd.isna(mileage) or mileage == 0 else f"{mileage} km"
+                text += f"\n🚗 Mileage: {mileage_text}"
+
+            st.markdown(text)
