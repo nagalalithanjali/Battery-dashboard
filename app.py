@@ -55,10 +55,8 @@ with col2:
         df = df[df['energy_change'] > 0]
         df = df.dropna(subset=['created_at'])
 
-        # sort oldest → newest (important for grouping)
         df = df.sort_values('created_at').reset_index(drop=True)
 
-        # map user names
         df['user_id'] = df['user_id'].astype(str).str.strip()
         df['user_name'] = df['user_id'].map(user_map)
 
@@ -86,7 +84,6 @@ with col2:
         if current_group:
             groups.append(pd.DataFrame(current_group))
 
-        # show latest first
         groups = groups[::-1]
 
         # ---------------- DISPLAY ---------------- #
@@ -103,7 +100,6 @@ with col2:
             start_date = start_dt.strftime("%d %b %Y, %I:%M %p")
             end_date = end_dt.strftime("%d %b %Y, %I:%M %p")
 
-            # smart date display
             if start_dt == end_dt:
                 date_text = f"📅 {start_date}"
             else:
@@ -122,7 +118,7 @@ with col2:
             st.markdown("---")
 
             text = f"""
-            **{status} {total_energy} kWh at {location}**  
+            **{status} {total_energy} GreenkWh at {location}**  
             {date_text}
             """
 
