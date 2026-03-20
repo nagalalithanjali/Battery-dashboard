@@ -1,0 +1,7377 @@
+[{
+  "_id": {
+    "$oid": "67e0f473fac062095801f302"
+  },
+  "id": "67e0f473fac062095801f303",
+  "name": "Mitta Sravanthi",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9848945302"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500002"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "62473154734",
+    "ifsc_code": "SBHY0020182",
+    "bank_name": "SBH"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:11.720Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:09.477Z"
+  },
+  "redeemable_energy": 506173.0549999993,
+  "total_energy": 506173.0549999993,
+  "total_lifetime_energy": 630173.0550000014,
+  "user_id": "P-NAL0002",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff603986c79c658148360d",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:06:17.112Z"
+    },
+    "blockchain_tx_hash": "dede3e3db75679a9e32851ab569d97c2d898986d89d63ed28cc1de73fd862543",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "kCjfVE1hsLYfXzJS2KQcTDuYStiv9QiWszT2a62Jte1"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f474fac062095801f304"
+  },
+  "id": "67e0f474fac062095801f305",
+  "name": "Bejawada Bhagyalakshmi",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9727498580"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500005"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "31682478945",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:12.768Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:07.405Z"
+  },
+  "redeemable_energy": 136705.69909999968,
+  "total_energy": 136705.69909999968,
+  "total_lifetime_energy": 260705.69910000122,
+  "user_id": "P-NAL0005",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff604586c79c6581483617",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:06:29.505Z"
+    },
+    "blockchain_tx_hash": "4d60b58db249adb63293c279f4d714508a6fecfb3a96a47fe5a2df4fc3fbd128",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "Cmswmjumzr4dNiDibMfAiGSGLJ9iXidiZqibmNUPA6hA"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f474fac062095801f306"
+  },
+  "id": "67e0f474fac062095801f307",
+  "name": "Mukkera Anitha",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "6304791394"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500010"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "32543806174",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:12.800Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:54.608Z"
+  },
+  "redeemable_energy": 137606.66140000048,
+  "total_energy": 137606.66140000048,
+  "total_lifetime_energy": 261606.66140000062,
+  "user_id": "P-NAL0010",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff604886c79c6581483619",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:06:32.017Z"
+    },
+    "blockchain_tx_hash": "93302046d706b006cd8a5548f7450dbef1229102206c9dfc0478ed0f922fd6b8",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "4ZrcGx1QMYCFT3Azxjw6H6FtAhbAq7ZZtZATJR59K2e3"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f474fac062095801f308"
+  },
+  "id": "67e0f474fac062095801f309",
+  "name": "Chougoni Saidamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9640217882"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500012"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "11529030488",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:12.833Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:46.230Z"
+  },
+  "redeemable_energy": 123597.34910000057,
+  "total_energy": 123597.34910000057,
+  "total_lifetime_energy": 247597.34909999967,
+  "user_id": "P-NAL0012",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff5f6486c79c6581483591",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:02:44.349Z"
+    },
+    "blockchain_tx_hash": "e552a3534fd07875057825258fde472420b5f9e67eabd38cc0c5db1be02fe26f",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "DT5fzJ25GuS3T4RKoxKp8DenK5PuEiV5Pc97gKc6ViFm"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f474fac062095801f30a"
+  },
+  "id": "67e0f474fac062095801f30b",
+  "name": "Pabbu Lingamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9014728051"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500019"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "30466404502",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:12.864Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:08.053Z"
+  },
+  "redeemable_energy": 126188.26020000012,
+  "total_energy": 126188.26020000012,
+  "total_lifetime_energy": 250188.26020000037,
+  "user_id": "P-NAL0019",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff61b486c79c6581483689",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:12:36.869Z"
+    },
+    "blockchain_tx_hash": "03058ac266f1b214095a0d52fb74a97b50d37f8fbcefe29332e5bfb743ac8e5f",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "FNoAgmNB45Wyq6BmRZtnC4BqnJPfqwfzNmPE1Xu7UMog"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f474fac062095801f30c"
+  },
+  "id": "67e0f474fac062095801f30d",
+  "name": "Chougoni Swathi",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9705909880"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500015"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "62081250068",
+    "ifsc_code": "SBHY0020182",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:12.897Z"
+  },
+  "modified_at": {
+    "$date": "2026-02-04T06:47:49.608Z"
+  },
+  "redeemable_energy": 97781.07499999987,
+  "total_energy": 97781.07499999987,
+  "total_lifetime_energy": 221781.0750000013,
+  "user_id": "P-NAL0015",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff604086c79c6581483613",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:06:24.526Z"
+    },
+    "blockchain_tx_hash": "7b6292e7325c8ebef57f21a1ea69248b4e96af58e34767f7bc8696c14cfb606c",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "CUJZrrebKGem52EeprmzrxqNm6EEtkTXsu2HPD3FavoS"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f474fac062095801f30e"
+  },
+  "id": "67e0f474fac062095801f30f",
+  "name": "Belli Mahalakshmamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "8125940106"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500008"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "36910821529",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:12.929Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:53.526Z"
+  },
+  "redeemable_energy": 114796.04920000065,
+  "total_energy": 114796.04920000065,
+  "total_lifetime_energy": 238796.04920000056,
+  "user_id": "P-NAL0008",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f474fac062095801f310"
+  },
+  "id": "67e0f474fac062095801f311",
+  "name": "Belli Sujatha",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9000945365"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500009"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "33914147136",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:12.965Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:08.778Z"
+  },
+  "redeemable_energy": 128485.79360000009,
+  "total_energy": 128485.79360000009,
+  "total_lifetime_energy": 252485.79360000085,
+  "user_id": "P-NAL0009",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff5f4c86c79c658148357d",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:02:20.701Z"
+    },
+    "blockchain_tx_hash": "1290652e86fb8afb93c6c98aad05c8bbcea80efaca5b691e5800c13f15430e27",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "6r9XHof4JCQcm3MuGmMZK8VDT5urwp8quLMyEbHzsEQa"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f474fac062095801f312"
+  },
+  "id": "67e0f474fac062095801f313",
+  "name": "Yarukala Nagalakshmi",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9966361287"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500021"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "100110202005461",
+    "ifsc_code": "UTIB0SSUD03",
+    "bank_name": "Sudha Bank"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:12.997Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:06.921Z"
+  },
+  "redeemable_energy": 130467.11360000017,
+  "total_energy": 130467.11360000017,
+  "total_lifetime_energy": 254467.11360000173,
+  "user_id": "P-NAL0021",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff619e86c79c6581483677",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:12:14.651Z"
+    },
+    "blockchain_tx_hash": "23c87c82a6268e5341c0f0eb1fd44425aa371536ab500102616d4987e5fd01da",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "FwBnpgBZZ9Dq6weLpeDxfJiDqQ9oioNhXkN7hSGcth4b"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f314"
+  },
+  "id": "67e0f475fac062095801f315",
+  "name": "Ananthula Dhevakamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9052290386"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500011"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "051710183471",
+    "ifsc_code": "IPOS0000001",
+    "bank_name": "Indian post payments bank"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.028Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:07.275Z"
+  },
+  "redeemable_energy": 133405.4937000003,
+  "total_energy": 133405.4937000003,
+  "total_lifetime_energy": 257405.4937000006,
+  "user_id": "P-NAL0011",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff619b86c79c6581483675",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:12:11.871Z"
+    },
+    "blockchain_tx_hash": "4111f902a897a90742f7e3bd6c3a57b370f0eb32307abc7c1cd1ff1edb22a141",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "9zjvy1FPCCN1qS7xAxsbyXs8oW5Dx6ZDzZ95VHuNJooQ"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f316"
+  },
+  "id": "67e0f475fac062095801f317",
+  "name": "Yempalla Renuka",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9502350021"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500039"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "126610100002698",
+    "ifsc_code": "UBIN0812668",
+    "bank_name": "Union bank"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.061Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:08.484Z"
+  },
+  "redeemable_energy": 123781.69630000062,
+  "total_energy": 123781.69630000062,
+  "total_lifetime_energy": 247781.6963000006,
+  "user_id": "P-NAL0039",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f318"
+  },
+  "id": "67e0f475fac062095801f319",
+  "name": "Kondra Geetha",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9014386074"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500041"
+  ],
+  "user_type": [
+    "producer",
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "39114482624",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.093Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:10.103Z"
+  },
+  "redeemable_energy": 6880.6078999999945,
+  "total_energy": 6880.6078999999945,
+  "total_lifetime_energy": 6880.6078999999945,
+  "image_url": "",
+  "user_id": "PC-NAL0041",
+  "blockchain": {
+    "blockchain_referance_id": "68ff603b86c79c658148360f",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:06:19.627Z"
+    },
+    "blockchain_tx_hash": "8f29cacf7b6015910220ffc6c17d92b090f14b834403f22a433d18a697ce72b0",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "6UsRCw2geLnGeRw5o7oL8gdZ4eDsaQgsr96FYpv5nYsR"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f31a"
+  },
+  "id": "67e0f475fac062095801f31b",
+  "name": "Goli Rajeswari",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "7799413124"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500024"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "32616243891",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.126Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:08.612Z"
+  },
+  "redeemable_energy": 131984.55749999982,
+  "total_energy": 131984.55749999982,
+  "total_lifetime_energy": 255984.55750000145,
+  "user_id": "P-NAL0024",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff603e86c79c6581483611",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:06:22.084Z"
+    },
+    "blockchain_tx_hash": "ecdee27771447d38a5a44bb41df4a69099501c91b6e6007c3ea9f3f2ad08b1e8",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "3CaU7sno5bCSpMZqpWv59iD2FGJ7qaT6WeC318KDj5aN"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f31c"
+  },
+  "id": "67e0f475fac062095801f31d",
+  "name": "Pabbu Uppamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9010860191"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500016"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "11529009183",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.159Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:49.001Z"
+  },
+  "redeemable_energy": 140317.61630000127,
+  "total_energy": 140317.61630000127,
+  "total_lifetime_energy": 264317.6163000025,
+  "user_id": "P-NAL0016",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f31e"
+  },
+  "id": "67e0f475fac062095801f31f",
+  "name": "Pabbu Pushpalatha",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "7842348226"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500017"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "11529022853",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.194Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:43.923Z"
+  },
+  "redeemable_energy": 133330.3525000008,
+  "total_energy": 133330.3525000008,
+  "total_lifetime_energy": 257330.3525000017,
+  "user_id": "P-NAL0017",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff602f86c79c6581483605",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:06:07.749Z"
+    },
+    "blockchain_tx_hash": "eadd37dbf19f4003e98d2f0600ee0eb69b4ce0b1a0bfe3a2805b1188411fa5d5",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "2151LCXosnTnEVR5G8hi5sz8NQJ7RH7MJehy7zmcDPom"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f320"
+  },
+  "id": "67e0f475fac062095801f321",
+  "name": "Pabbu Saritha",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "7799691288"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500018"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "32715851748",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.228Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:42.976Z"
+  },
+  "redeemable_energy": 133900.30560000017,
+  "total_energy": 133900.30560000017,
+  "total_lifetime_energy": 257900.3056000018,
+  "user_id": "P-NAL0018",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff61a886c79c658148367f",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:12:24.481Z"
+    },
+    "blockchain_tx_hash": "9333ed3e37db5fd3be5b67710af3f5cf3b36ff5d7efa88cc1cbf4f4401b98dfc",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "6dWF7MDMSoRVCx7VDJoC3Yu4Bv6fVEx79kA9K2eyw2ZR"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f322"
+  },
+  "id": "67e0f475fac062095801f323",
+  "name": "Chouguni Indramma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9704210351"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500003"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "34782848719",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.258Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:09.259Z"
+  },
+  "redeemable_energy": 138885.0968,
+  "total_energy": 138885.0968,
+  "total_lifetime_energy": 262885.0968000008,
+  "user_id": "P-NAL0003",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f324"
+  },
+  "id": "67e0f475fac062095801f325",
+  "name": "Bhupathi Renuka",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9014229800"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500049"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "62203648519",
+    "ifsc_code": "SBHY0020182",
+    "bank_name": "SBH"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.290Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:50.496Z"
+  },
+  "redeemable_energy": 128092.75980000039,
+  "total_energy": 128092.75980000039,
+  "total_lifetime_energy": 252092.759800001,
+  "user_id": "P-NAL0049",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff61af86c79c6581483685",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:12:31.891Z"
+    },
+    "blockchain_tx_hash": "98d890f4afd4b010e409c31ec6a9c35557c535229baf75e255390729d4972566",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "2an73CTDqSgtHnwCx1MFJPtyczWbTRKHq9S89QAA62Yv"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f326"
+  },
+  "id": "67e0f475fac062095801f327",
+  "name": "Kappala Annapurnamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "8143438703"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500047"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "11529021633",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.322Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:09.084Z"
+  },
+  "redeemable_energy": 129937.06940000053,
+  "total_energy": 129937.06940000053,
+  "total_lifetime_energy": 253937.06940000158,
+  "user_id": "P-NAL0047",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff5f5186c79c6581483581",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:02:25.341Z"
+    },
+    "blockchain_tx_hash": "3511d268d724cd6da8257c4d5eaf2cbf863427b87ad8487563ee850a275cc6cc",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "J3PcgtTAP85TsHV3pZ5GLv2KNe6ttZTEmCRKA3k4gRXx"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f328"
+  },
+  "id": "67e0f475fac062095801f329",
+  "name": "Naragoni Dhanalakshmi",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "6301362543"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500046"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "33285731145",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.355Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:09.906Z"
+  },
+  "redeemable_energy": 135312.97620000047,
+  "total_energy": 135312.97620000047,
+  "total_lifetime_energy": 259312.97620000216,
+  "user_id": "P-NAL0046",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f32a"
+  },
+  "id": "67e0f475fac062095801f32b",
+  "name": "Siga Malleswari",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "7658941572"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500050"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "11529024419",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.389Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:09.300Z"
+  },
+  "redeemable_energy": 122069.42280000082,
+  "total_energy": 122069.42280000082,
+  "total_lifetime_energy": 246069.42280000055,
+  "user_id": "P-NAL0050",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff61a386c79c658148367b",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:12:19.464Z"
+    },
+    "blockchain_tx_hash": "e74f4e72ea9f02d24f0aea7e92f7e9d0a8c0a8e9adc84a34c429a1e2bb0412dd",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "AJYqbr1hQJDhB6aJvvAfewWsChtD792Cbt67QCoN7eWj"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f32c"
+  },
+  "id": "67e0f475fac062095801f32d",
+  "name": "Bojja Saidamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "7993648960"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500028"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "62203648734",
+    "ifsc_code": "SBIN0020182",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.419Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:07.750Z"
+  },
+  "redeemable_energy": 134459.07859999963,
+  "total_energy": 134459.07859999963,
+  "total_lifetime_energy": 258459.0785999988,
+  "user_id": "P-NAL0028",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f32e"
+  },
+  "id": "67e0f475fac062095801f32f",
+  "name": "Pabbu Lakshmi",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9390855073"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500035"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "11529025729",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.453Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:55.298Z"
+  },
+  "redeemable_energy": 127846.2043,
+  "total_energy": 127846.2043,
+  "total_lifetime_energy": 251846.20430000144,
+  "user_id": "P-NAL0035",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff61b286c79c6581483687",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:12:34.382Z"
+    },
+    "blockchain_tx_hash": "7fa4996756520af7564b65bc3315037d0499b67089e57e0abeb84f9e73438766",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "3Ci2LMSgnBfQJxuj7kjrhVkLw7fz7bHHkn8xJVy89E9G"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f330"
+  },
+  "id": "67e0f475fac062095801f331",
+  "name": "Guntoju Rameswaramma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "7997703081"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500030"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "62393525406",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.487Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:42.847Z"
+  },
+  "redeemable_energy": 129978.85549999971,
+  "total_energy": 129978.85549999971,
+  "total_lifetime_energy": 253978.85550000085,
+  "user_id": "P-NAL0030",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff5f6286c79c658148358f",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:02:42.207Z"
+    },
+    "blockchain_tx_hash": "bc84f9b0b8ae2b51ab67c81f8fecdc9f6c0bc537563e8968ff7792605c920844",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "68UabU8JpxjnbX1Hghjd4wyFs5j68LtRJynuUw5L3B9q"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f332"
+  },
+  "id": "67e0f475fac062095801f333",
+  "name": "Neereudu Yadamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9885465991"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500042"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "31479990070",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.520Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:09.866Z"
+  },
+  "redeemable_energy": 125533.66630000027,
+  "total_energy": 125533.66630000027,
+  "total_lifetime_energy": 249533.66630000074,
+  "user_id": "P-NAL0042",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff5f5386c79c6581483583",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:02:27.656Z"
+    },
+    "blockchain_tx_hash": "18150cd5a379457d12d96271a441d40c1cfac9220463a9c06a409cd37dbbae9e",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "9ocSXUA3trQu6zxWxtFuB37ycaU96YkCdobdNhGWcBJY"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f334"
+  },
+  "id": "67e0f475fac062095801f335",
+  "name": "Mukkera Yadamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "8096529028"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500026"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "051710102442",
+    "ifsc_code": "IPOS0000001",
+    "bank_name": "Indian post payments bank"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.555Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:09.651Z"
+  },
+  "redeemable_energy": 125677.85700000048,
+  "total_energy": 125677.85700000048,
+  "total_lifetime_energy": 249677.85700000182,
+  "user_id": "P-NAL0026",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f336"
+  },
+  "id": "67e0f475fac062095801f337",
+  "name": "Shaik Farida Begum",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9666917414"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500044"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "33700037327",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.586Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:43.606Z"
+  },
+  "redeemable_energy": 137197.19000000026,
+  "total_energy": 137197.19000000026,
+  "total_lifetime_energy": 261197.19000000105,
+  "user_id": "P-NAL0044",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff603486c79c6581483609",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:06:12.154Z"
+    },
+    "blockchain_tx_hash": "2d1ac9affc4669d10f2aee034ebd340a36bf653af1dd2ec0add69578a588ab68",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "6DPdU6hq8n1fudSUtTJ2dLtEWQia5mqanURvasYDwegn"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f338"
+  },
+  "id": "67e0f475fac062095801f339",
+  "name": "Shaik Salma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "6301942238"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500043"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "38444468166",
+    "ifsc_code": "SBIN0021657",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.619Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:43.297Z"
+  },
+  "redeemable_energy": 140626.5835999996,
+  "total_energy": 140626.5835999996,
+  "total_lifetime_energy": 264626.5836000032,
+  "user_id": "P-NAL0043",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff61aa86c79c6581483681",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:12:27.041Z"
+    },
+    "blockchain_tx_hash": "3dcaf43e53a33b651c526c7847cb650da15b5f898967412154ed6e2b9bebe1b5",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "G3mUKieK9BaaJj1ntzvZMuQH1xr8xFpidhJMarNoNEcH"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f33a"
+  },
+  "id": "67e0f475fac062095801f33b",
+  "name": "Mukkera Mallamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9550182631"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500027"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "43381367839",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.648Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:07.232Z"
+  },
+  "redeemable_energy": 128389.4814000004,
+  "total_energy": 128389.4814000004,
+  "total_lifetime_energy": 252389.4814000009,
+  "user_id": "P-NAL0027",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f33c"
+  },
+  "id": "67e0f475fac062095801f33d",
+  "name": "Thandu Varalakshmi",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9542737790"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500029"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "32828687290",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.683Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:10.249Z"
+  },
+  "redeemable_energy": 129356.0341000001,
+  "total_energy": 129356.0341000001,
+  "total_lifetime_energy": 253356.0341000009,
+  "user_id": "P-NAL0029",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f33e"
+  },
+  "id": "67e0f475fac062095801f33f",
+  "name": "Gundlepally Lakshmamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9618747775"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500033"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "32233757184",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.715Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:02.154Z"
+  },
+  "redeemable_energy": 120303.79720000103,
+  "total_energy": 120303.79720000103,
+  "total_lifetime_energy": 244303.7972000014,
+  "user_id": "P-NAL0033",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f340"
+  },
+  "id": "67e0f475fac062095801f341",
+  "name": "Koppu Vaani",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9912534661"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500036"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "33065629064",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.747Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:09.391Z"
+  },
+  "redeemable_energy": 127581.96550000025,
+  "total_energy": 127581.96550000025,
+  "total_lifetime_energy": 251581.9655,
+  "user_id": "P-NAL0036",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f342"
+  },
+  "id": "67e0f475fac062095801f343",
+  "name": "Veldandi Kotamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "8688461712"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500032"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "42698788403",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.779Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:00.062Z"
+  },
+  "redeemable_energy": 124080.92840000025,
+  "total_energy": 124080.92840000025,
+  "total_lifetime_energy": 248080.92840000053,
+  "user_id": "P-NAL0032",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff5f5886c79c6581483587",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:02:32.480Z"
+    },
+    "blockchain_tx_hash": "7bc87fd6adc6d0f34109af9ac2489b63b22a43c71dd6310886764707c93a7be5",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "8nyCJq7bXqvcM1gjsEVTcST6mQ7xtnvzYXhfDxcNFvzc"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f344"
+  },
+  "id": "67e0f475fac062095801f345",
+  "name": "Nalla Nagamani",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9100746820"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500040"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "31452698612",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.834Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:07.961Z"
+  },
+  "redeemable_energy": 119819.73669999985,
+  "total_energy": 119819.73669999985,
+  "total_lifetime_energy": 243819.73670000132,
+  "user_id": "P-NAL0040",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f346"
+  },
+  "id": "67e0f475fac062095801f347",
+  "name": "Veldandi kalamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9505516178"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500034"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "32413769764",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.866Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-12T12:59:30.443Z"
+  },
+  "redeemable_energy": 116901.98259999955,
+  "total_energy": 116901.98259999955,
+  "total_lifetime_energy": 240901.98260000092,
+  "user_id": "P-NAL0034",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f348"
+  },
+  "id": "67e0f475fac062095801f349",
+  "name": "Sayyad Rehana Begum",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "8374126251"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500031"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "33210632754",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.901Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:08.392Z"
+  },
+  "redeemable_energy": 127553.29720000022,
+  "total_energy": 127553.29720000022,
+  "total_lifetime_energy": 251553.2972000018,
+  "user_id": "P-NAL0031",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff61a186c79c6581483679",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:12:17.007Z"
+    },
+    "blockchain_tx_hash": "1ec0bdca48da7a95d23afe928b9dfe004edc86b566330d9ead3e12583c589042",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "4LNKga36yTKN75mxWLDUDMpC4jMLM48ruMxtyaoDqYhf"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f34a"
+  },
+  "id": "67e0f475fac062095801f34b",
+  "name": "naragoni Nagamani",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "8341461643"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500045"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "34165366920",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.932Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:56.661Z"
+  },
+  "redeemable_energy": 112678.2737000002,
+  "total_energy": 112678.2737000002,
+  "total_lifetime_energy": 236678.27370000113,
+  "user_id": "P-NAL0045",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff61a686c79c658148367d",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:12:21.927Z"
+    },
+    "blockchain_tx_hash": "f8632adf00426524ecf2d8aaf27285beeb8db05f9c48e7e2ad241a87bdaea363",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "4xVVhXhFymTesBj7Dq46vdp1uXgn8AHBAr6CyHVy2AAs"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f34c"
+  },
+  "id": "67e0f475fac062095801f34d",
+  "name": "Chowgoni kavitha",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9100425631"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500023"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "62037591056",
+    "ifsc_code": "SBIN0020182",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.965Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:08.869Z"
+  },
+  "redeemable_energy": 138500.7914000002,
+  "total_energy": 138500.7914000002,
+  "total_lifetime_energy": 262500.7914000024,
+  "user_id": "P-NAL0023",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff5f5d86c79c658148358b",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:02:37.604Z"
+    },
+    "blockchain_tx_hash": "b9d39bf37582939cf28e828fa5efe3ac0390de668e827b3af45553284edb7707",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "8LtrrdwpVyN3yLCPxnUNwzwB14ZrWT35xR2r2Rx8voQn"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f475fac062095801f34e"
+  },
+  "id": "67e0f475fac062095801f34f",
+  "name": "Goli Yellamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "8142912037"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500025"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "52145608553",
+    "ifsc_code": "SBIN0020182",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:13.997Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:06.839Z"
+  },
+  "redeemable_energy": 136915.55860000147,
+  "total_energy": 136915.55860000147,
+  "total_lifetime_energy": 260915.55860000325,
+  "user_id": "P-NAL0025",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff5f5f86c79c658148358d",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:02:39.893Z"
+    },
+    "blockchain_tx_hash": "1255157d54212f0f08a8c45d2466142085e63e2db8d8043743e219881e44117d",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "7ECL6YRXGy93XKiyF9hCPuKrdAJfZ7hzQq3vQfvoJLtK"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f476fac062095801f350"
+  },
+  "id": "67e0f476fac062095801f351",
+  "name": "Pabbu Anjamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9294004751"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500020"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "11529010188",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:14.029Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:08.436Z"
+  },
+  "redeemable_energy": 125503.92720000033,
+  "total_energy": 125503.92720000033,
+  "total_lifetime_energy": 249503.92720000175,
+  "user_id": "P-NAL0020",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f476fac062095801f352"
+  },
+  "id": "67e0f476fac062095801f353",
+  "name": "Gangula Vijayalakshmi",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9398769717"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500037"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "11529021098",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:14.061Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:57.086Z"
+  },
+  "redeemable_energy": 110606.88140000003,
+  "total_energy": 110606.88140000003,
+  "total_lifetime_energy": 234606.8814000007,
+  "user_id": "P-NAL0037",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f476fac062095801f354"
+  },
+  "id": "67e0f476fac062095801f355",
+  "name": "Belli Padma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "7702238326"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500007"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "32282849023",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:14.095Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:08.094Z"
+  },
+  "redeemable_energy": 127877.22430000086,
+  "total_energy": 127877.22430000086,
+  "total_lifetime_energy": 251877.22430000224,
+  "user_id": "P-NAL0007",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff603186c79c6581483607",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:06:09.672Z"
+    },
+    "blockchain_tx_hash": "faf6c7bd4f6fb73617b54af611b14eaaddcdda79d49fad63afbd029991c4357f",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "CCkCyvXZNxz8ZgXK41uSrj8ZHm9Zu2CJjeXuNdah9bdC"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f476fac062095801f356"
+  },
+  "id": "67e0f476fac062095801f357",
+  "name": "Miryala Jayalakshmi",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9951650881"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500048"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "31607898812",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:14.131Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:07.452Z"
+  },
+  "redeemable_energy": 129459.26850000065,
+  "total_energy": 129459.26850000065,
+  "total_lifetime_energy": 253459.26850000143,
+  "user_id": "P-NAL0048",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff5f5b86c79c6581483589",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:02:35.433Z"
+    },
+    "blockchain_tx_hash": "2ca666fc7379a4c4a7a36ee2023744229733dc349f3902420e448008bf14026c",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "4LGCkc2Qn3UjMDWUajokgntsyLC4QhGMSLkkaEi7GCuE"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f476fac062095801f358"
+  },
+  "id": "67e0f476fac062095801f359",
+  "name": "Uppala Naga varnika",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "7095638538"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500038"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "36107725409",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:14.164Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:08.526Z"
+  },
+  "redeemable_energy": 130693.00519999984,
+  "total_energy": 130693.00519999984,
+  "total_lifetime_energy": 254693.00520000077,
+  "user_id": "P-NAL0038",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f476fac062095801f35a"
+  },
+  "id": "67e0f476fac062095801f35b",
+  "name": "Pabbu Swathi",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9666240684"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500004"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "35069308063",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:14.198Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:09.954Z"
+  },
+  "redeemable_energy": 136848.60040000145,
+  "total_energy": 136848.60040000145,
+  "total_lifetime_energy": 260848.60040000276,
+  "user_id": "P-NAL0004",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f476fac062095801f35c"
+  },
+  "id": "67e0f476fac062095801f35d",
+  "name": "Jaala Saidamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9963054514"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500014"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "32217065357",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:14.228Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:01.480Z"
+  },
+  "redeemable_energy": 133931.3563999996,
+  "total_energy": 133931.3563999996,
+  "total_lifetime_energy": 257931.3564000007,
+  "user_id": "P-NAL0014",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f476fac062095801f35e"
+  },
+  "id": "67e0f476fac062095801f35f",
+  "name": "Jaala Lakshmamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9160969506"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500013"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "31464926679",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:14.262Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:07.919Z"
+  },
+  "redeemable_energy": 398463.4397000006,
+  "total_energy": 398463.4397000006,
+  "total_lifetime_energy": 522463.4397000023,
+  "user_id": "P-NAL0013",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f476fac062095801f360"
+  },
+  "id": "67e0f476fac062095801f361",
+  "name": "Mukkera Parvathamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9160740430"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500006"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "35984062832",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:14.295Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:09.566Z"
+  },
+  "redeemable_energy": 135051.3405999999,
+  "total_energy": 135051.3405999999,
+  "total_lifetime_energy": 259051.34060000154,
+  "user_id": "P-NAL0006",
+  "image_url": "",
+  "blockchain": {
+    "blockchain_referance_id": "68ff61ad86c79c6581483683",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:12:29.499Z"
+    },
+    "blockchain_tx_hash": "a518bd155dcf1f618630879c41af24e8b548350cfb4827e1a93093e42bd2d6f6",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "F6C4XyFXW8K33jU8rmVufwtyY2AXjyfCEa5AMKm8rn69"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f476fac062095801f362"
+  },
+  "id": "67e0f476fac062095801f363",
+  "name": "Poleboina Lakshmamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9948657569"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500001"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "30304365942",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:14.329Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:08.958Z"
+  },
+  "redeemable_energy": 131804.52020000108,
+  "total_energy": 131804.52020000108,
+  "total_lifetime_energy": 255804.52020000212,
+  "user_id": "P-NAL0001",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67e0f476fac062095801f364"
+  },
+  "id": "67e0f476fac062095801f365",
+  "name": "Chougani Anjamma",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9640204140"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500022"
+  ],
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "30653262245",
+    "ifsc_code": "SBIN0008807",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:14.361Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:09.826Z"
+  },
+  "redeemable_energy": 132148.77910000124,
+  "total_energy": 132148.77910000124,
+  "total_lifetime_energy": 256148.77910000068,
+  "user_id": "P-NAL0022",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67f8d7984858e50ae57904b2"
+  },
+  "id": "67f8d7984858e50ae57904b1",
+  "name": "Trilok mouli ",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "7331125657"
+  },
+  "geotag": "",
+  "email": "trilok@greenkwh.net",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "",
+    "state": "",
+    "pincode": "",
+    "country": ""
+  },
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-04-11T08:49:28.609Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:47.624Z"
+  },
+  "system_id": [
+    "7331125657",
+    "50820500086"
+  ],
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "image_url": "",
+  "user_id": "R-",
+  "user_type": [
+    "partner",
+    "franchise"
+  ],
+  "redeemable_energy": 86670.87039999991,
+  "total_energy": 86670.87039999991,
+  "total_lifetime_energy": 86670.87039999991,
+  "partner_status": "online",
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67fcc6bd4858e50ae57904e8"
+  },
+  "id": "67fcc6bd4858e50ae57904e7",
+  "name": "Pranay",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "7036498073"
+  },
+  "geotag": "",
+  "email": "pranay@greenkwh.net",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "",
+    "state": "",
+    "pincode": "",
+    "country": ""
+  },
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-04-14T08:26:37.366Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:09.000Z"
+  },
+  "system_id": [
+    "7036498073"
+  ],
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "image_url": "",
+  "user_id": "R-",
+  "user_type": [
+    "partner"
+  ],
+  "redeemable_energy": 46807.468300000015,
+  "total_energy": 46807.468300000015,
+  "total_lifetime_energy": 46807.468300000015,
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67fcc73c4858e50ae57904ec"
+  },
+  "id": "67fcc73c4858e50ae57904eb",
+  "name": "Shiva",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "8106241457"
+  },
+  "geotag": "",
+  "email": "shiva@greenkwh.net",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "",
+    "state": "",
+    "pincode": "",
+    "country": ""
+  },
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-04-14T08:28:44.784Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:10.294Z"
+  },
+  "system_id": [
+    "8106241457"
+  ],
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "image_url": "",
+  "user_id": "R-",
+  "user_type": [
+    "partner"
+  ],
+  "redeemable_energy": 63476.9277,
+  "total_energy": 63476.9277,
+  "total_lifetime_energy": 63476.9277,
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67fcc8e203fd66f0972389f4"
+  },
+  "id": "67e0f476fac062095801f476",
+  "name": "V Ramalinga Chary",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9010602805"
+  },
+  "geotag": "",
+  "email": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "system_id": [
+    "50820500051"
+  ],
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "NA",
+    "ifsc_code": "NA",
+    "bank_name": "NA"
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-03-24T05:58:14.361Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-17T11:50:07.419Z"
+  },
+  "redeemable_energy": 884968.5986000074,
+  "total_energy": 884968.5986000074,
+  "total_lifetime_energy": 884968.5986000074,
+  "image_url": "",
+  "user_id": "C-NAL0051",
+  "blockchain": {
+    "blockchain_referance_id": "68ff5f5686c79c6581483585",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:02:29.969Z"
+    },
+    "blockchain_tx_hash": "07834a89a053a4412f8f9f1ec89546b80b2674746c16eb343b55ca6ea1139740",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "41mcqJYZVcrAKveiGme7Eh3S3pBAtnLaTH8JwjyX6jzt"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "67fcd38d03fd66f0972389fc"
+  },
+  "id": "67fcc73c4858e50ae57815eb",
+  "name": "SSK ATP",
+  "phonenumber": {
+    "countrycode": "",
+    "number": "999999999"
+  },
+  "geotag": "",
+  "email": "sskatp@greenkwh.net",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "state": "",
+    "pincode": "",
+    "country": ""
+  },
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-04-14T08:28:44.784Z"
+  },
+  "modified_at": {
+    "$date": "2025-04-14T08:29:37.786Z"
+  },
+  "system_id": [
+    "SSKATP"
+  ],
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6826d1cb8ac9be5445dcfaca"
+  },
+  "id": "6826d1cb8ac9be5445dcfac9",
+  "name": "B.Himabindu",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9010749090"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "",
+    "state": "",
+    "pincode": "",
+    "country": ""
+  },
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-05-16T05:48:59.842Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:08.652Z"
+  },
+  "system_id": [
+    "50820500052"
+  ],
+  "email": "",
+  "image_url": "",
+  "user_type": [
+    "consumer"
+  ],
+  "redeemable_energy": 6196.846299999995,
+  "total_energy": 6196.846299999995,
+  "total_lifetime_energy": 6196.846299999995,
+  "user_id": "C-NAL0052",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6826d2078ac9be5445dcfacc"
+  },
+  "id": "6826d2078ac9be5445dcfacb",
+  "name": "Chanagani Kotaiah",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "8096409612"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "",
+    "state": "",
+    "pincode": "",
+    "country": ""
+  },
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-05-16T05:49:59.194Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:09.175Z"
+  },
+  "system_id": [
+    "50820500053"
+  ],
+  "email": "",
+  "image_url": "",
+  "user_type": [
+    "consumer"
+  ],
+  "redeemable_energy": 28992.362899999982,
+  "total_energy": 28992.362899999982,
+  "total_lifetime_energy": 28992.362899999982,
+  "user_id": "C-NAL0053",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6826d7268ac9be5445dcfad2"
+  },
+  "id": "6826d7268ac9be5445dcfad1",
+  "name": "SSK-Cargo",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "0000000000"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "",
+    "state": "",
+    "pincode": "",
+    "country": ""
+  },
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-05-16T06:11:50.178Z"
+  },
+  "modified_at": {
+    "$date": "2026-02-26T13:14:40.679Z"
+  },
+  "system_id": [
+    "50820500054"
+  ],
+  "user_id": "C-NAL0054",
+  "email": "",
+  "image_url": "",
+  "user_type": [
+    "consumer"
+  ],
+  "redeemable_energy": 2154.6575999999986,
+  "total_energy": 2154.6575999999986,
+  "total_lifetime_energy": 2154.6575999999986,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "68359d93b218cfbcdf71e80f"
+  },
+  "id": "68359d93b218cfbcdf71e80e",
+  "name": "Evora",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "1111111111"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "",
+    "state": "",
+    "pincode": "",
+    "country": ""
+  },
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-05-27T11:10:11.598Z"
+  },
+  "modified_at": {
+    "$date": "2025-08-26T06:12:50.357Z"
+  },
+  "system_id": [
+    "50820500055"
+  ],
+  "email": "",
+  "image_url": "",
+  "user_type": [
+    "consumer"
+  ],
+  "redeemable_energy": 1461.9599999999996,
+  "total_energy": 1461.9599999999996,
+  "total_lifetime_energy": 1461.9599999999996,
+  "user_id": "C-NAL0055",
+  "blockchain": {
+    "blockchain_referance_id": "68ff5f6686c79c6581483593",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:02:46.492Z"
+    },
+    "blockchain_tx_hash": "6bc35bc509b032cde2aa28a0639f17cee5cd05143417dd34699bf5dd5f0f6fe2",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "BVo1Nsej7TV6ujo11iKRktUvjhgmnuzRKzXYYRpatD1L"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "68359e5fb218cfbcdf71e811"
+  },
+  "id": "68359e5fb218cfbcdf71e810",
+  "name": "Podugu Yugender",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "2222222222"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "Kattangoor, Nalgonda",
+    "state": "Telengana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-05-27T11:13:35.201Z"
+  },
+  "modified_at": {
+    "$date": "2025-06-17T11:28:00.483Z"
+  },
+  "system_id": null,
+  "email": "",
+  "image_url": "",
+  "user_type": [
+    "consumer"
+  ],
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "68359f8cb218cfbcdf71e813"
+  },
+  "id": "68359f8cb218cfbcdf71e812",
+  "name": "Bhupathi Nagaraju",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "3333333333"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "Kattangoor,Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-05-27T11:18:36.909Z"
+  },
+  "modified_at": {
+    "$date": "2025-06-18T06:41:43.216Z"
+  },
+  "system_id": null,
+  "email": "",
+  "image_url": "",
+  "user_type": [
+    "consumer"
+  ],
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6846ae7941e312793ccb81ac"
+  },
+  "id": "6846ae7941e312793ccb81ab",
+  "name": "Thatipamula Praveen kumar",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "1234567878"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "757968448356",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "10-56, Aitipamula, kattangur",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508001",
+    "country": "India"
+  },
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-06-09T09:50:49.296Z"
+  },
+  "modified_at": {
+    "$date": "2025-08-26T05:30:22.761Z"
+  },
+  "system_id": [
+    "50820500058"
+  ],
+  "user_id": "C-NAL0058",
+  "email": "",
+  "image_url": "",
+  "user_type": [
+    "consumer"
+  ],
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6846afc441e312793ccb81b2"
+  },
+  "id": "6846afc441e312793ccb81b1",
+  "name": "L P Sriramulu",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9392800460"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "10-13 Aitipamula, Kattangu",
+    "area": "Aitipamula",
+    "city": "Nalgonda District",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-06-09T09:56:20.240Z"
+  },
+  "modified_at": {
+    "$date": "2025-06-18T06:42:17.291Z"
+  },
+  "system_id": null,
+  "email": "",
+  "image_url": "",
+  "user_type": [
+    "consumer"
+  ],
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6849083c41e312793ccb81de"
+  },
+  "id": "6849083c41e312793ccb81dd",
+  "name": "A.NAVEEN",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "86885 64989"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Aitipamula",
+    "area": "Kattangur",
+    "city": "Nalgonda Disctrict",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-06-11T04:38:20.061Z"
+  },
+  "modified_at": {
+    "$date": "2025-06-18T06:42:08.842Z"
+  },
+  "system_id": null,
+  "email": "",
+  "image_url": "",
+  "user_type": [
+    "consumer"
+  ],
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "684a521641e312793ccb8209"
+  },
+  "id": "684a521641e312793ccb8208",
+  "name": "Macharla Ramesh",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9390785367"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "1-90, Nellibanda, ",
+    "area": "Nakrekal",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508211",
+    "country": ""
+  },
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-06-12T04:05:42.075Z"
+  },
+  "modified_at": {
+    "$date": "2025-08-26T06:15:19.783Z"
+  },
+  "system_id": [
+    "50820500061"
+  ],
+  "email": "",
+  "image_url": "",
+  "user_type": [
+    "consumer"
+  ],
+  "user_id": "C-NAL0061",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "685e2c0c089ad8bd811efdf3"
+  },
+  "id": "685e2c0c089ad8bd811efdf2",
+  "name": "Yempalla Dasaradha Reddy",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9908758659"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "598692025403",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "8-25/6, Moosi Road, ",
+    "area": "Nakrekal,",
+    "city": "",
+    "district": "",
+    "state": "Telangana",
+    "pincode": "508211",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-06-27T05:28:44.083Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:09.783Z"
+  },
+  "system_id": [
+    "50820500062"
+  ],
+  "redeemable_energy": 6809.120599999986,
+  "total_energy": 6809.120599999986,
+  "total_lifetime_energy": 6809.120599999986,
+  "user_id": "C-NAL0062",
+  "email": "",
+  "image_url": "",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "685e3794089ad8bd811efdf9"
+  },
+  "id": "685e3794089ad8bd811efdf8",
+  "name": "Vamsi Damodara",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9515542348"
+  },
+  "geotag": "",
+  "email": "Vamsi@82.com",
+  "govtid": {
+    "gid": "",
+    "type": ""
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "Hyderabad, , INDIA",
+    "state": "",
+    "pincode": "",
+    "country": ""
+  },
+  "user_type": [
+    "technician"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "technician_metadata": {
+    "area_of_operation": "IT "
+  },
+  "created_at": {
+    "$date": "2025-06-27T06:17:56.646Z"
+  },
+  "modified_at": {
+    "$date": "2025-06-27T09:55:42.061Z"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "68886651fb302d5b282edc96"
+  },
+  "id": "68886651fb302d5b282edc95",
+  "name": "Ramesh EV Service",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9989080081"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "Nakirekal",
+    "state": "Telangana",
+    "pincode": "508211",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-07-29T06:12:33.011Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:07.711Z"
+  },
+  "system_id": [
+    "9989080081",
+    "SSK-Nakrekal"
+  ],
+  "redeemable_energy": 36884.53519999994,
+  "total_energy": 36884.53519999994,
+  "total_lifetime_energy": 36884.53519999994,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "689998ed338bf5b7120817bf"
+  },
+  "id": "689998ed338bf5b7120817be",
+  "name": "VAMSI",
+  "user_id": "GNT0001",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "6302099073"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Guntur",
+    "state": "Andhra Pradesh",
+    "pincode": "522439",
+    "country": ""
+  },
+  "user_type": [
+    "producer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-08-11T07:17:01.875Z"
+  },
+  "modified_at": {
+    "$date": "2025-08-11T07:17:01.875Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "68ff604a86c79c658148361b",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:06:34.477Z"
+    },
+    "blockchain_tx_hash": "2b1b5cf9461b849ab24967f6d24e02333b20943d1a3c2f19d78767ee7f89a1b2",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "auEjsGQsfLSWcd7ZdXrdqbdwAotbXiZDzVZq3soWrpB"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "68999d9b338bf5b7120817c1"
+  },
+  "id": "68999d9b338bf5b7120817c0",
+  "name": "SSKATP2",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "112345678"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Aitipamula",
+    "area": "Kattangur",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-08-11T07:36:59.051Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:10.208Z"
+  },
+  "email": "",
+  "image_url": "",
+  "system_id": null,
+  "redeemable_energy": 451553.98190000025,
+  "total_energy": 451553.98190000025,
+  "total_lifetime_energy": 451553.98190000025,
+  "blockchain": {
+    "blockchain_referance_id": "68ff5f4f86c79c658148357f",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:02:22.956Z"
+    },
+    "blockchain_tx_hash": "ce59c93bcf4e7883f98873f702d67e47cc54f8ad2613706bf50a92d2b132a307",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "HLajXJq9mNkH4wouVyjMi8wcgNsFNRc4iJ9WWLw91uhr"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "68999ed6338bf5b7120817c5"
+  },
+  "id": "68999ed6338bf5b7120817c4",
+  "name": "SSKATPGCS",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "122345678"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Aitipamula",
+    "area": "Kattangur",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-08-11T07:42:14.432Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-13T05:44:27.248Z"
+  },
+  "system_id": [
+    "SSKATPGCS"
+  ],
+  "redeemable_energy": 12567.570099999992,
+  "total_energy": 12567.570099999992,
+  "total_lifetime_energy": 12567.570099999992,
+  "blockchain": {
+    "blockchain_referance_id": "68ff603686c79c658148360b",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:06:14.609Z"
+    },
+    "blockchain_tx_hash": "899aaef8fdce6f63f2e35f95e1543d0e9c10d940940acdf18973ab6529f6b749",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "2AkncfVAssKHwHgb24b5eJ61VhyjPkN6qsboRLWR9Whw"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "68a6f158338bf5b712081c31"
+  },
+  "id": "68a6f158338bf5b712081c30",
+  "name": "Akash Anumolu",
+  "user_id": "R-",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9100226642"
+  },
+  "geotag": "",
+  "email": "akash@svabaglabs.com",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "",
+    "state": "",
+    "pincode": "",
+    "country": "INDIA"
+  },
+  "user_type": [
+    "partner"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "technician_metadata": {
+    "area_of_operation": "Infra"
+  },
+  "created_at": {
+    "$date": "2025-08-21T10:13:44.816Z"
+  },
+  "modified_at": {
+    "$date": "2026-01-25T05:13:30.545Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "68ff604386c79c6581483615",
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T12:06:27.102Z"
+    },
+    "blockchain_tx_hash": "88863ba6f7a7ca2a14f45af69a07415e3e88e5083bb420dde4c81238251af556",
+    "blockchain_tx_status": true,
+    "on_chain_metadata": "",
+    "pda_address": "kWVhKPFsVav9DLzMuMp8zLATi9HLTYLx56rhQUjxPv5"
+  },
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "image_url": "",
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "68b32dfa7166e07a205c88f4"
+  },
+  "id": "68b32dfa7166e07a205c88f3",
+  "name": "Pavan",
+  "user_id": "CR-HYD0001",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "7045009199"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Hyderabad",
+    "state": "Telangana",
+    "pincode": "500039",
+    "country": ""
+  },
+  "user_type": [
+    "partner",
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-08-30T16:59:38.975Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:08.352Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "68ff5c4286c79c6581483573",
+    "pda_address": "D3QYtkVbYuDGnU299Dm2M8pnMMsoyShifHjWXQvq1uHE",
+    "blockchain_tx_hash": "417c92d0d3a8efa8c9d82c62cf195d4791cee8759f5636afec9be138abd003fb",
+    "blockchain_tx_status": true,
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T11:49:22.981Z"
+    },
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "Pavan"
+  ],
+  "redeemable_energy": 228761.3421999991,
+  "total_energy": 228761.3421999991,
+  "total_lifetime_energy": 228761.3421999991,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "email": "",
+  "image_url": "",
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "68b548d67166e07a205c8a11"
+  },
+  "id": "68b548d67166e07a205c8a10",
+  "name": "Pavitra",
+  "user_id": "CR-NAL0063",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9553782647"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "partner",
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-09-01T07:18:46.636Z"
+  },
+  "modified_at": {
+    "$date": "2026-02-11T07:17:50.702Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "68ff5c4586c79c6581483575",
+    "pda_address": "Bz8xzQrfF6VTT5ZmFjf8wLyMxAwosvkxoYgbkLBEfsAU",
+    "blockchain_tx_hash": "bfcffbb95928bc2288bb62d48d716217b5360f82cfd7b91eb03113284e54a24b",
+    "blockchain_tx_status": true,
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T11:49:25.747Z"
+    },
+    "on_chain_metadata": ""
+  },
+  "system_id": [],
+  "redeemable_energy": 8041.904999999998,
+  "total_energy": 8041.904999999998,
+  "total_lifetime_energy": 8041.904999999998,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "email": "",
+  "image_url": "",
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "68d5389940878bbeee033b24"
+  },
+  "id": "68d5389940878bbeee033b23",
+  "name": "Rapolu veeraiha",
+  "user_id": "C-NAL0064",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9949380302"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "2-15",
+    "area": "kadaparthy",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508210",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-09-25T12:42:01.765Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:56.012Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "68ff5c4886c79c6581483577",
+    "pda_address": "D41NQXFjfaoSkj6QgXuYZNMd5pHnh1ES5EJzocg7nyLa",
+    "blockchain_tx_hash": "a2bc4a17eb09fb65ad8a27dea68a9b952b2b3c89ec724035efba8b0038239893",
+    "blockchain_tx_status": true,
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T11:49:28.102Z"
+    },
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500064"
+  ],
+  "redeemable_energy": 8076.646499999999,
+  "total_energy": 8076.646499999999,
+  "total_lifetime_energy": 8076.646499999999,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "68da2cc9a4edfdf359e2bf31"
+  },
+  "id": "68da2cc9a4edfdf359e2bf30",
+  "name": "Chanagoni Janaiah",
+  "user_id": "C-NAL0065",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "7095633983"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Aitapamula",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-09-29T06:52:57.178Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:46.552Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "68ff5c4c86c79c6581483579",
+    "pda_address": "Gd6Qog2RN2T59b1JSsqTFENyLbPf8dPkrKib5WjoMLPT",
+    "blockchain_tx_hash": "175b269b0aaf279947913459f2162adbdeb002df67d1f69aab54ccf3f3a5f0d0",
+    "blockchain_tx_status": true,
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T11:49:32.196Z"
+    },
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500065"
+  ],
+  "redeemable_energy": 5189.168600000008,
+  "total_energy": 5189.168600000008,
+  "total_lifetime_energy": 5189.168600000008,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "68da2f79a4edfdf359e2bf4f"
+  },
+  "id": "68da2f79a4edfdf359e2bf4e",
+  "name": "Pabbu Shiva kumar",
+  "user_id": "C-NAL0066",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "7893521798"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Aitipamula",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-09-29T07:04:25.963Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:08.917Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "68ff5c4f86c79c658148357b",
+    "pda_address": "2SA3a4M6PjDu9nUvQFwRRco3V74RTf7465nLSrKVkCvU",
+    "blockchain_tx_hash": "766a29d1f25ed440c8a4135e8c874a952c90ed561d560cdfd14be7b4a4475ef9",
+    "blockchain_tx_status": true,
+    "blockchain_sync_at": {
+      "$date": "2025-10-27T11:49:35.371Z"
+    },
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500066"
+  ],
+  "redeemable_energy": 6437.330599999991,
+  "total_energy": 6437.330599999991,
+  "total_lifetime_energy": 6437.330599999991,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "68e8a03c4ebf8d307289dc15"
+  },
+  "id": "68e8a03c4ebf8d307289dc14",
+  "name": "E Shiva",
+  "user_id": "CR-NAL0067",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9441500613"
+  },
+  "geotag": "",
+  "email": "karteek@svabaglabs.com",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Aitipamula",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer",
+    "partner"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-10-10T05:57:16.782Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-18T14:20:08.480Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "68e8a0411b970cc9e76d60e4",
+    "pda_address": "EccuBpQARMJajrWxW7x1Nc1sFJxbzqKWGSEA9CAKZ4Zz",
+    "blockchain_tx_hash": "df25508d59e2b99f77f66674138a7316159b2540bbc4d760630fbef5d7a050ca",
+    "blockchain_tx_status": true,
+    "blockchain_sync_at": {
+      "$date": "2025-10-10T05:57:21.089Z"
+    },
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "9441500613"
+  ],
+  "redeemable_energy": 52312.23540000001,
+  "total_energy": 52312.23540000001,
+  "total_lifetime_energy": 52312.23540000001,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "image_url": "",
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "68efaa934ebf8d307289e03b"
+  },
+  "id": "68efaa934ebf8d307289e03a",
+  "name": "Anji Kumar",
+  "user_id": "CR-NAL0069",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9676658180"
+  },
+  "geotag": "",
+  "email": "anjikumar@svabaglabs.com",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "Hyderabad",
+    "city": "",
+    "district": "Hyderabad",
+    "state": "TELANGANA",
+    "pincode": "500039",
+    "country": "India"
+  },
+  "user_type": [
+    "partner",
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-10-15T14:07:15.041Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-16T09:34:12.635Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "68efaa98ac1e2ce8cb819c91",
+    "pda_address": "D85PbA4dqzzwYeuRzGMrP7m4hvV7ZHV8s6mBTZodBswH",
+    "blockchain_tx_hash": "24f1106c640723754d0261a7f8023e3a5842fcf6b24dddbd2929c74ff0ef6177",
+    "blockchain_tx_status": true,
+    "blockchain_sync_at": {
+      "$date": "2025-10-15T14:07:20.070Z"
+    },
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "9676658180",
+    "9676658180",
+    "Anji Kumar "
+  ],
+  "redeemable_energy": 970.3768999999995,
+  "total_energy": 970.3768999999995,
+  "total_lifetime_energy": 970.3768999999995,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "image_url": "",
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "68f0c16a4ebf8d307289e118"
+  },
+  "id": "68f0c16a4ebf8d307289e117",
+  "name": "BattRE Vehicle",
+  "user_id": "C-NAL0070",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "1234554321"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-10-16T09:56:58.225Z"
+  },
+  "modified_at": {
+    "$date": "2025-12-23T07:10:23.876Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "68f0c16fac1e2ce8cb819d2f",
+    "pda_address": "46FBkYwDJNPFVVAY7pBHQU3R18Dt1XuvjY11umg5VNuK",
+    "blockchain_tx_hash": "b409bb3993e0cedb59458387eee27b1664394ae7ad00b839ee48cc9170ea40c1",
+    "blockchain_tx_status": true,
+    "blockchain_sync_at": {
+      "$date": "2025-10-16T09:57:03.196Z"
+    },
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500067"
+  ],
+  "redeemable_energy": 28570.049999999992,
+  "total_energy": 28570.049999999992,
+  "total_lifetime_energy": 28570.049999999992,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "68f0c2544ebf8d307289e11c"
+  },
+  "id": "68f0c2544ebf8d307289e11b",
+  "name": "Zypp Vehicle",
+  "user_id": "C-NAL0071",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "6789009876"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-10-16T10:00:52.493Z"
+  },
+  "modified_at": {
+    "$date": "2026-01-27T07:12:02.261Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "68f0c258ac1e2ce8cb819d33",
+    "pda_address": "5cBxwt7CW7YPyVLqr8zyFQVwGCr1nEePwrKxRhrcS4vW",
+    "blockchain_tx_hash": "532a1baf50a6ecfe6b58bb29057e032458ac01e852a708f87dbe750eba19f79b",
+    "blockchain_tx_status": true,
+    "blockchain_sync_at": {
+      "$date": "2025-10-16T10:00:56.031Z"
+    },
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500068"
+  ],
+  "redeemable_energy": 252.98999999999901,
+  "total_energy": 252.98999999999901,
+  "total_lifetime_energy": 252.98999999999901,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "68f0c3714ebf8d307289e120"
+  },
+  "id": "68f0c3714ebf8d307289e11f",
+  "name": "Esprinto Vehicle",
+  "user_id": "C-NAL0072",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "1234567890"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-10-16T10:05:37.276Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-09T11:14:43.439Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "68f0c375ac1e2ce8cb819d37",
+    "pda_address": "G8d2zRRVph5Eth3hPu6XTQSju7hxZjKEaRjZkwMh8Dat",
+    "blockchain_tx_hash": "35aa90d61f3ccea83ccd3cd14987724eb1aea9f5b46f49ea04306bcb4ee8f4e6",
+    "blockchain_tx_status": true,
+    "blockchain_sync_at": {
+      "$date": "2025-10-16T10:05:41.767Z"
+    },
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500069"
+  ],
+  "redeemable_energy": 8970.1425,
+  "total_energy": 8970.1425,
+  "total_lifetime_energy": 8970.1425,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "68f31bfa4ebf8d307289e324"
+  },
+  "id": "68f31bfa4ebf8d307289e323",
+  "name": "E-Rikshaw",
+  "user_id": "C-NAL0073",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "3434343434"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "nalgonda",
+    "state": "",
+    "pincode": "508205",
+    "country": "india"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-10-18T04:47:54.995Z"
+  },
+  "modified_at": {
+    "$date": "2025-12-05T01:42:17.162Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "68f31bffac1e2ce8cb819e47",
+    "pda_address": "2ySzEoY9f27vcpE949k5NQRkxDv2acg6JYoN5fo2ZN2w",
+    "blockchain_tx_hash": "8e53f4a34517f50a973feb27b3d7a1ca0af543986c6ad876dcaba1b7808b34dc",
+    "blockchain_tx_status": true,
+    "blockchain_sync_at": {
+      "$date": "2025-10-18T04:47:59.334Z"
+    },
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500070"
+  ],
+  "redeemable_energy": 131.80499999999932,
+  "total_energy": 131.80499999999932,
+  "total_lifetime_energy": 131.80499999999932,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6909907fe2debce5023be8f7"
+  },
+  "id": "6909907fe2debce5023be8f6",
+  "name": "Thotla Narasimha ",
+  "user_id": "C-NAL0074",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9849054007"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508211",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-11-04T05:34:55.645Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:51.894Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "6909908251473fb5d23776ff",
+    "pda_address": "AVf2k7qxRSZuegKKjzdqHq8sou46hjgrSkawyHnNeRFZ",
+    "blockchain_tx_hash": "cb2c91b2bcd254c28ea672e28f13bff521ecc14c116550d9100ab676f96709eb",
+    "blockchain_tx_status": true,
+    "blockchain_sync_at": {
+      "$date": "2025-11-04T05:34:58.968Z"
+    },
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500071"
+  ],
+  "redeemable_energy": 5422.8479999999845,
+  "total_energy": 5422.8479999999845,
+  "total_lifetime_energy": 5422.8479999999845,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "69106d07e2debce5023bf180"
+  },
+  "id": "69106d07e2debce5023bf17f",
+  "name": "Adla Lingaiah",
+  "user_id": "C-NAL0075",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9948316524"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Aitipamula",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-11-09T10:29:27.136Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:08.308Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500072"
+  ],
+  "redeemable_energy": 3575.719299999993,
+  "total_energy": 3575.719299999993,
+  "total_lifetime_energy": 3575.719299999993,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "69118a2fe2debce5023bf2e6"
+  },
+  "id": "69118a2fe2debce5023bf2e5",
+  "name": "Reddeboina Srisailam",
+  "user_id": "C-NAL0076",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9391628758"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "561869962061",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-11-10T06:46:07.872Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:48.675Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500073"
+  ],
+  "redeemable_energy": 2539.8352000000004,
+  "total_energy": 2539.8352000000004,
+  "total_lifetime_energy": 2539.8352000000004,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6911ef88e2debce5023bf37c"
+  },
+  "id": "6911ef88e2debce5023bf37b",
+  "name": "Sheik Hussain Bee",
+  "user_id": "C-NAL0077",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9502703938"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508211",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-11-10T13:58:32.950Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:09.350Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500074"
+  ],
+  "redeemable_energy": 8678.550700000003,
+  "total_energy": 8678.550700000003,
+  "total_lifetime_energy": 8678.550700000003,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "69130b2be2debce5023bf59d"
+  },
+  "id": "69130b2be2debce5023bf59c",
+  "name": "Chanagani Nagamma",
+  "user_id": "C-NAL0078",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": ""
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508211",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-11-11T10:08:43.435Z"
+  },
+  "modified_at": {
+    "$date": "2025-12-18T11:25:28.245Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500075"
+  ],
+  "redeemable_energy": 3727.485000000001,
+  "total_energy": 3727.485000000001,
+  "total_lifetime_energy": 3727.485000000001,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "691708dee2debce5023bfae6"
+  },
+  "id": "691708dee2debce5023bfae5",
+  "name": "Belli Alivelu(Shankar)",
+  "user_id": "C-NAL0079",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "8686936935"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-11-14T10:47:58.660Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:10.007Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500076"
+  ],
+  "redeemable_energy": 2116.820299999994,
+  "total_energy": 2116.820299999994,
+  "total_lifetime_energy": 2116.820299999994,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "69172390e2debce5023bfafe"
+  },
+  "id": "69172390e2debce5023bfafd",
+  "name": "Bogari Ramesh",
+  "user_id": "C-NAL0080",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9492182575"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-11-14T12:41:52.652Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:54.958Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500077"
+  ],
+  "redeemable_energy": 2557.1742000000004,
+  "total_energy": 2557.1742000000004,
+  "total_lifetime_energy": 2557.1742000000004,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "691db00c6bc1e87f7711d2b6"
+  },
+  "id": "691db00c6bc1e87f7711d2b5",
+  "name": "Koppu Andalu",
+  "user_id": "C-NAL0081",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9963617638"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-11-19T11:54:52.988Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:47.934Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500078"
+  ],
+  "redeemable_energy": 2874.172799999999,
+  "total_energy": 2874.172799999999,
+  "total_lifetime_energy": 2874.172799999999,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "691ed7af6bc1e87f7711d47f"
+  },
+  "id": "691ed7af6bc1e87f7711d47e",
+  "name": "Chougoni Yadaiah",
+  "user_id": "C-NAL0082",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9966655727"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-11-20T08:56:15.612Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:52.205Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500079"
+  ],
+  "redeemable_energy": 6390.236399999994,
+  "total_energy": 6390.236399999994,
+  "total_lifetime_energy": 6390.236399999994,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "692029186bc1e87f7711d7b6"
+  },
+  "id": "692029186bc1e87f7711d7b5",
+  "name": "Lattapalli Mahesh",
+  "user_id": "C-NAL0083",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "6300919328"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "265113986616",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-11-21T08:55:52.350Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:07.623Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500080"
+  ],
+  "redeemable_energy": 2350.7612999999983,
+  "total_energy": 2350.7612999999983,
+  "total_lifetime_energy": 2350.7612999999983,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "69205de96bc1e87f7711d7de"
+  },
+  "id": "69205de96bc1e87f7711d7dd",
+  "name": "Bobbali Saidamma",
+  "user_id": "C-NAL0084",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9642275043"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "714397817508",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-11-21T12:41:13.007Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:49.645Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500081"
+  ],
+  "redeemable_energy": 3335.745899999999,
+  "total_energy": 3335.745899999999,
+  "total_lifetime_energy": 3335.745899999999,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "692299fb6bc1e87f7711dc22"
+  },
+  "id": "692299fb6bc1e87f7711dc21",
+  "name": "Etikala Shambulingam",
+  "user_id": "C-NAL0085",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9666229705"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-11-23T05:22:03.748Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:50.842Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500082"
+  ],
+  "redeemable_energy": 1139.3693999999978,
+  "total_energy": 1139.3693999999978,
+  "total_lifetime_energy": 1139.3693999999978,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "69241cae6bc1e87f7711de90"
+  },
+  "id": "69241cae6bc1e87f7711de8f",
+  "name": "Burra Lingaiah",
+  "user_id": "C-NAL0086",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9705376538"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "771067788014",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-11-24T08:51:58.219Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:09.431Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500083"
+  ],
+  "redeemable_energy": 5138.053400000003,
+  "total_energy": 5138.053400000003,
+  "total_lifetime_energy": 5138.053400000003,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "692695cb73254d5e4e0c4692"
+  },
+  "id": "692695cb73254d5e4e0c4691",
+  "name": "Miryala Mamatha",
+  "user_id": "C-NAL0087",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9030379676"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "650115719876 ",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-11-26T05:53:15.536Z"
+  },
+  "modified_at": {
+    "$date": "2025-12-01T16:42:14.983Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500084"
+  ],
+  "redeemable_energy": 48.735000000000355,
+  "total_energy": 48.735000000000355,
+  "total_lifetime_energy": 48.735000000000355,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6926c9c573254d5e4e0c46fc"
+  },
+  "id": "6926c9c573254d5e4e0c46fb",
+  "name": "Gundeboina Parameshwar",
+  "user_id": "C-NAL0088",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "8688071262"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "532342180141",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-11-26T09:35:01.858Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:07.363Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500085"
+  ],
+  "redeemable_energy": 2482.048399999998,
+  "total_energy": 2482.048399999998,
+  "total_lifetime_energy": 2482.048399999998,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6929a32acdb151f5c93097ef"
+  },
+  "id": "6929a32acdb151f5c93097ee",
+  "name": "Pranav Bharti Shah",
+  "user_id": "F-GML0001",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9709247760"
+  },
+  "geotag": "",
+  "email": "mseplssk.gumla@svabaglabs.com",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Gumla",
+    "state": "Jharkhand",
+    "pincode": "835207",
+    "country": "India"
+  },
+  "user_type": [
+    "franchise"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-11-28T13:27:06.719Z"
+  },
+  "modified_at": {
+    "$date": "2025-11-28T13:31:02.077Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "83520700001"
+  ],
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-GML-0001"
+  }
+},
+{
+  "_id": {
+    "$oid": "692d55665e8311a44e7fd5c9"
+  },
+  "id": "692d55665e8311a44e7fd5c8",
+  "name": "Anji kumar ",
+  "user_id": "CR-GML0002",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9866471581"
+  },
+  "geotag": "23.041924,84.540833",
+  "email": "anjikumar@svabaglabs.com",
+  "govtid": {
+    "gid": "999941057058",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "GOKUL NAGAR",
+    "area": "GOKUL NAGAR",
+    "city": "",
+    "district": "Gumla",
+    "state": "JHARKHAND",
+    "pincode": "835207",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer",
+    "partner"
+  ],
+  "payment_details": {
+    "upi_id": "",
+    "account_number": "123456789009877",
+    "ifsc_code": "SBIN0001234",
+    "branch_name": "SBI",
+    "bank_name": "SBI"
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-GML-0001"
+  },
+  "created_at": {
+    "$date": "2025-12-01T08:44:22.369Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:08.137Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "83520700002"
+  ],
+  "redeemable_energy": 5559.1974,
+  "total_energy": 5559.1974,
+  "total_lifetime_energy": 5559.1974,
+  "image_url": ""
+},
+{
+  "_id": {
+    "$oid": "692dc8603271f66f615fb7f2"
+  },
+  "id": "692dc8603271f66f615fb7f1",
+  "name": "Etikala Dhanalakshmi",
+  "user_id": "C-NAL0089",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9573449908"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "",
+    "area": "",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "Telangana",
+    "pincode": "508205",
+    "country": ""
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "created_at": {
+    "$date": "2025-12-01T16:54:56.863Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:05.196Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500087"
+  ],
+  "redeemable_energy": 1199.011100000001,
+  "total_energy": 1199.011100000001,
+  "total_lifetime_energy": 1199.011100000001,
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "692ec9fc45817ccfda839e75"
+  },
+  "id": "692ec9fc45817ccfda839e74",
+  "name": "Vemula Sumalatha",
+  "user_id": "C-NAL0091",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9666444588"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "472166060985",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Nakrekal",
+    "area": "Nakrekal",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "TELANGANA",
+    "pincode": "508211",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "created_at": {
+    "$date": "2025-12-02T11:14:04.837Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:05.923Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500088",
+    "SSK-Nakrekal2"
+  ],
+  "redeemable_energy": 667.4147000000016,
+  "total_energy": 667.4147000000016,
+  "total_lifetime_energy": 667.4147000000016,
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "69316ed3b7c773df9eba0dfc"
+  },
+  "id": "69316ed3b7c773df9eba0dfb",
+  "name": "Vikram Bhagat",
+  "user_id": "CR-GML0003",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "6200747973"
+  },
+  "geotag": "23.0546,84.5412",
+  "email": "vikrambhagat112@gmail.com",
+  "govtid": {
+    "gid": "460163938384",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Gumla",
+    "area": "Gumla",
+    "city": "",
+    "district": "Gumla",
+    "state": "JHARKHAND",
+    "pincode": "835207",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer",
+    "partner"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-GML-0001"
+  },
+  "created_at": {
+    "$date": "2025-12-04T11:21:55.867Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:06.621Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "83520700003",
+    "83520700007",
+    "GMLFRANCHISE"
+  ],
+  "redeemable_energy": 22096.08789999999,
+  "total_energy": 22096.08789999999,
+  "total_lifetime_energy": 22096.08789999999,
+  "image_url": ""
+},
+{
+  "_id": {
+    "$oid": "6931700cb7c773df9eba0e04"
+  },
+  "id": "6931700cb7c773df9eba0e03",
+  "name": "Kundan Kumar",
+  "user_id": "R-GML0004",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "8800628918"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "877387345962",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Gumla",
+    "area": "Gumla",
+    "city": "",
+    "district": "Gumla",
+    "state": "JHARKHAND",
+    "pincode": "835207",
+    "country": "India"
+  },
+  "user_type": [
+    "partner"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-GML-0001"
+  },
+  "created_at": {
+    "$date": "2025-12-04T11:27:08.337Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-16T04:49:01.494Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "83520700004"
+  ],
+  "redeemable_energy": 1875.6000000000026,
+  "total_energy": 1875.6000000000026,
+  "total_lifetime_energy": 1875.6000000000026
+},
+{
+  "_id": {
+    "$oid": "693175e9b7c773df9eba0e1d"
+  },
+  "id": "693175e9b7c773df9eba0e1c",
+  "name": "Francis Panna",
+  "user_id": "R-GML0005",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "7970371212"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "227484821287",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Asni",
+    "area": "Gumla",
+    "city": "",
+    "district": "Gumla",
+    "state": "Jharkhand",
+    "pincode": "835207",
+    "country": "India"
+  },
+  "user_type": [
+    "partner"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-GML-0001"
+  },
+  "created_at": {
+    "$date": "2025-12-04T11:52:09.617Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:06.663Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "83520700005",
+    "83520700006"
+  ],
+  "redeemable_energy": 188955.91660000017,
+  "total_energy": 188955.91660000017,
+  "total_lifetime_energy": 188955.91660000017
+},
+{
+  "_id": {
+    "$oid": "693d991d6f204553fa1b2d72"
+  },
+  "id": "693d991d6f204553fa1b2d71",
+  "name": "D Venkat Narsimha",
+  "user_id": "C-NAL0092",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "8374908424"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "987238225703",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "H.NO. 20-5",
+    "area": "Pannala Gudem,Nakirekal",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "TELANGANA",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "created_at": {
+    "$date": "2025-12-13T16:49:33.179Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:06.962Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "redeemable_energy": 5315.763799999994,
+  "total_energy": 5315.763799999994,
+  "total_lifetime_energy": 5315.763799999994,
+  "system_id": [
+    "50820500089"
+  ],
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "695226abf4215857f544bb82"
+  },
+  "id": "695226abf4215857f544bb81",
+  "name": "Mahindra E-Loader ",
+  "user_id": "C-GML0006",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9191919100"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Gumla",
+    "area": "Jharkhand",
+    "city": "",
+    "district": "Gumla",
+    "state": "JHARKHAND",
+    "pincode": "835207",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-GML-0001"
+  },
+  "created_at": {
+    "$date": "2025-12-29T06:58:51.327Z"
+  },
+  "modified_at": {
+    "$date": "2026-01-05T04:40:23.120Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "83520700008"
+  ],
+  "redeemable_energy": 38620.89000000001,
+  "total_energy": 38620.89000000001,
+  "total_lifetime_energy": 38620.89000000001
+},
+{
+  "_id": {
+    "$oid": "6957dff73bbe751978730693"
+  },
+  "id": "6957dff73bbe751978730692",
+  "name": "Katthula Venkanna",
+  "user_id": "CR-NAL0093",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9014498116"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "646667225755",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Vallala",
+    "area": "Vallala",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "TELANGANA",
+    "pincode": "508201",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer",
+    "partner"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "created_at": {
+    "$date": "2026-01-02T15:10:47.558Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:09.693Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500090",
+    "SSK-Vallala",
+    "9014498116"
+  ],
+  "redeemable_energy": 3264.5548999999974,
+  "total_energy": 3264.5548999999974,
+  "total_lifetime_energy": 3264.5548999999974,
+  "email": "",
+  "image_url": "",
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6957e0f93bbe75197873069b"
+  },
+  "id": "6957e0f93bbe75197873069a",
+  "name": "Madagoni Nagaiah",
+  "user_id": "C-NAL0094",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9703483171"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "651701115854",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Vallala",
+    "area": "Vallala",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "TELANGANA",
+    "pincode": "508201",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "created_at": {
+    "$date": "2026-01-02T15:15:05.845Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:07.789Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500091"
+  ],
+  "redeemable_energy": 4900.944,
+  "total_energy": 4900.944,
+  "total_lifetime_energy": 4900.944,
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6957e2513bbe7519787306a3"
+  },
+  "id": "6957e2513bbe7519787306a2",
+  "name": "Madagoni Venkanna",
+  "user_id": "C-NAL0095",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9912671735"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "670452827308",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Vallala",
+    "area": "Vallala",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "TELANGANA",
+    "pincode": "508201",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "created_at": {
+    "$date": "2026-01-02T15:20:49.106Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:06.530Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500092"
+  ],
+  "redeemable_energy": 2352.8123,
+  "total_energy": 2352.8123,
+  "total_lifetime_energy": 2352.8123,
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6957e3be3bbe7519787306ab"
+  },
+  "id": "6957e3be3bbe7519787306aa",
+  "name": "Madagoni Yadagiri",
+  "user_id": "C-NAL0096",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9705194376"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "425896899365",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Vallala",
+    "area": "Vallala",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "TELANGANA",
+    "pincode": "508201",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "created_at": {
+    "$date": "2026-01-02T15:26:54.148Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:06.442Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500093"
+  ],
+  "redeemable_energy": 3828.7333000000012,
+  "total_energy": 3828.7333000000012,
+  "total_lifetime_energy": 3828.7333000000012,
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6957e4bb3bbe7519787306b3"
+  },
+  "id": "6957e4bb3bbe7519787306b2",
+  "name": "Madagoni Krishnaiah",
+  "user_id": "C-NAL0097",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "6300150347"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "627471196041",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Vallala",
+    "area": "Vallala",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "TELANGANA",
+    "pincode": "508201",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "created_at": {
+    "$date": "2026-01-02T15:31:07.301Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:10.151Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500094"
+  ],
+  "redeemable_energy": 1808.7991999999977,
+  "total_energy": 1808.7991999999977,
+  "total_lifetime_energy": 1808.7991999999977,
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "697f0d4e1b657172986c015e"
+  },
+  "id": "697f0d4e1b657172986c015d",
+  "name": "Narsing Janaiah",
+  "user_id": "C-NAL0098",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9966377270"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "781699166329",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Aiti Pamula",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "TELANGANA",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "created_at": {
+    "$date": "2026-02-01T08:22:38.268Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:58.697Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500095"
+  ],
+  "redeemable_energy": 1509.1242000000009,
+  "total_energy": 1509.1242000000009,
+  "total_lifetime_energy": 1509.1242000000009,
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "697f5af01b657172986c019a"
+  },
+  "id": "697f5af01b657172986c0199",
+  "name": "Thatipamula Sravanthi",
+  "user_id": "C-NAL0099",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9949555962"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "349368529470",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Aitipamula",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "TELANGANA",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "created_at": {
+    "$date": "2026-02-01T13:53:52.065Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:06.707Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500096"
+  ],
+  "redeemable_energy": 368.5164000000003,
+  "total_energy": 368.5164000000003,
+  "total_lifetime_energy": 368.5164000000003,
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "697f5c261b657172986c01cc"
+  },
+  "id": "697f5c261b657172986c01cb",
+  "name": "Chilumula Vamshi",
+  "user_id": "C-NAL0100",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "7095636388"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "27927860464",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Aitipamula",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "TELANGANA",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "created_at": {
+    "$date": "2026-02-01T13:59:02.862Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:52.902Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500097"
+  ],
+  "redeemable_energy": 1059.2611999999992,
+  "total_energy": 1059.2611999999992,
+  "total_lifetime_energy": 1059.2611999999992,
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "69809da01b657172986c03e9"
+  },
+  "id": "69809da01b657172986c03e8",
+  "name": "Soppari Nagaraju",
+  "user_id": "C-NAL0101",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9951012175"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "315620358464",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Marthavani gudem",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "TELANGANA",
+    "pincode": "508205",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "created_at": {
+    "$date": "2026-02-02T12:50:40.863Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:52.542Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500098"
+  ],
+  "redeemable_energy": 801.0568000000011,
+  "total_energy": 801.0568000000011,
+  "total_lifetime_energy": 801.0568000000011,
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6985b1a91b657172986c0d02"
+  },
+  "id": "6985b1a91b657172986c0d01",
+  "name": "Macherla Jayamma",
+  "user_id": "C-NAL0102",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "8523842993"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "405924604751",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "H NO 8-90",
+    "area": "Aitipamula",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "TELANGANA",
+    "pincode": "508205",
+    "country": "india"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "created_at": {
+    "$date": "2026-02-06T09:17:29.995Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:45.427Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500099"
+  ],
+  "redeemable_energy": 417.47679999999986,
+  "total_energy": 417.47679999999986,
+  "total_lifetime_energy": 417.47679999999986,
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6986fcad1b657172986c1001"
+  },
+  "id": "6986fcad1b657172986c1000",
+  "name": "Madagoni Ramalingaiah",
+  "user_id": "C-NAL0103",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9908291003"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "882753495354",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Vallala",
+    "area": "Vallala",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "TELANGANA",
+    "pincode": "508210",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "created_at": {
+    "$date": "2026-02-07T08:49:49.855Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:08.570Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500100"
+  ],
+  "redeemable_energy": 712.0843,
+  "total_energy": 712.0843,
+  "total_lifetime_energy": 712.0843,
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6986fd2e1b657172986c1005"
+  },
+  "id": "6986fd2e1b657172986c1004",
+  "name": "Adla Shekhar Reddy",
+  "user_id": "C-NAL0104",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9912932838"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "600010852002",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Vallala",
+    "area": "Vallala",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "TELANGANA",
+    "pincode": "508210",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "created_at": {
+    "$date": "2026-02-07T08:51:58.581Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:09.133Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500101"
+  ],
+  "redeemable_energy": 649.5429000000005,
+  "total_energy": 649.5429000000005,
+  "total_lifetime_energy": 649.5429000000005,
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6986fdd21b657172986c1009"
+  },
+  "id": "6986fdd21b657172986c1008",
+  "name": "Bhupathi Ramamurthy",
+  "user_id": "C-NAL0105",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9951544824"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "777378837676",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Vallala",
+    "area": "Vallala",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "TELANGANA",
+    "pincode": "508210",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "created_at": {
+    "$date": "2026-02-07T08:54:42.830Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:57.971Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500102"
+  ],
+  "redeemable_energy": 648.8661999999997,
+  "total_energy": 648.8661999999997,
+  "total_lifetime_energy": 648.8661999999997,
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6986fe2b1b657172986c100d"
+  },
+  "id": "6986fe2b1b657172986c100c",
+  "name": "Bhupathi Satyanarayana",
+  "user_id": "C-NAL0106",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9989140738"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "939995409960",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Vallala",
+    "area": "Vallala",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "TELANGANA",
+    "pincode": "508210",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "created_at": {
+    "$date": "2026-02-07T08:56:11.746Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:06.284Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500103"
+  ],
+  "redeemable_energy": 509.8431999999998,
+  "total_energy": 509.8431999999998,
+  "total_lifetime_energy": 509.8431999999998,
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "6986ff0a1b657172986c1011"
+  },
+  "id": "6986ff0a1b657172986c1010",
+  "name": "Avula Ramakrishna",
+  "user_id": "C-NAL0107",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9912469163"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "519754116055",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Vallala",
+    "area": "Vallala",
+    "city": "",
+    "district": "Nalgonda",
+    "state": "TELANGANA",
+    "pincode": "508210",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-NAL-0001"
+  },
+  "created_at": {
+    "$date": "2026-02-07T08:59:54.254Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:04:59.745Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "50820500104"
+  ],
+  "redeemable_energy": 416.94249999999863,
+  "total_energy": 416.94249999999863,
+  "total_lifetime_energy": 416.94249999999863,
+  "language": "te"
+},
+{
+  "_id": {
+    "$oid": "69901149d04fbc13b5944414"
+  },
+  "id": "69901149d04fbc13b5944413",
+  "name": "Sushil Kumar Giri",
+  "user_id": "C-GML0007",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "7992269319"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "822247079770",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Anandapur",
+    "area": "Dunduriya Road",
+    "city": "",
+    "district": "Gumla",
+    "state": "JHARKHAND",
+    "pincode": "835207",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-GML-0001"
+  },
+  "created_at": {
+    "$date": "2026-02-14T06:08:09.238Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:07.539Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "83520700009"
+  ],
+  "redeemable_energy": 5953.579199999999,
+  "total_energy": 5953.579199999999,
+  "total_lifetime_energy": 5953.579199999999
+},
+{
+  "_id": {
+    "$oid": "69901b84d04fbc13b5944463"
+  },
+  "id": "69901b84d04fbc13b5944462",
+  "name": "Shyam Karan Toppo",
+  "user_id": "C-GML0008",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9931819797"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "448215432920",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Ghogra Village",
+    "area": "Gumla",
+    "city": "",
+    "district": "Gumla",
+    "state": "JHARKHAND",
+    "pincode": "835207",
+    "country": "India"
+  },
+  "user_type": [
+    "consumer"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-GML-0001"
+  },
+  "created_at": {
+    "$date": "2026-02-14T06:51:48.628Z"
+  },
+  "modified_at": {
+    "$date": "2026-03-20T11:05:06.881Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "83520700010"
+  ],
+  "redeemable_energy": 76.49540000000002,
+  "total_energy": 76.49540000000002,
+  "total_lifetime_energy": 76.49540000000002
+},
+{
+  "_id": {
+    "$oid": "6992eb2ad04fbc13b594492b"
+  },
+  "id": "6992eb2ad04fbc13b594492a",
+  "name": "Anand Raj",
+  "user_id": "R-GML0009",
+  "phonenumber": {
+    "countrycode": "+91",
+    "number": "9631173365"
+  },
+  "geotag": "",
+  "govtid": {
+    "gid": "659090924799",
+    "type": "Aadhaar"
+  },
+  "address": {
+    "street": "Gumla",
+    "area": "Gumla",
+    "city": "",
+    "district": "Gumla",
+    "state": "JHARKHAND",
+    "pincode": "835207",
+    "country": "India"
+  },
+  "user_type": [
+    "partner"
+  ],
+  "payment_details": {
+    "upi_id": ""
+  },
+  "user_status": "active",
+  "franchise_metadata": {
+    "created_by_franchise": "FRAN-GML-0001"
+  },
+  "created_at": {
+    "$date": "2026-02-16T10:02:18.750Z"
+  },
+  "modified_at": {
+    "$date": "2026-02-16T10:06:15.834Z"
+  },
+  "blockchain": {
+    "blockchain_referance_id": "",
+    "pda_address": "",
+    "blockchain_tx_hash": "",
+    "blockchain_tx_status": false,
+    "blockchain_sync_at": {
+      "$date": {
+        "$numberLong": "-62135596800000"
+      }
+    },
+    "blockchain_error": "",
+    "on_chain_metadata": ""
+  },
+  "system_id": [
+    "Partner Anand"
+  ]
+}]
