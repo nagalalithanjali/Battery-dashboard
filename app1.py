@@ -8,7 +8,7 @@ st.markdown("""
 <style>
 .timeline {
     position: relative;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 .timeline::after {
     content: '';
@@ -21,7 +21,7 @@ st.markdown("""
     margin-left: -2px;
 }
 .container {
-    padding: 10px 40px;
+    padding: 15px 40px;
     position: relative;
     width: 50%;
 }
@@ -33,13 +33,20 @@ st.markdown("""
 }
 .content {
     padding: 15px;
-    background-color: #0e1117;
-    border-radius: 10px;
+    border-radius: 12px;
     color: white;
-    border-left: 5px solid #888;  /* 👈 SAME GREY FOR ALL */
+    margin-bottom: 10px;
+}
+.charge {
+    background-color: #065f46;  /* green */
+}
+.discharge {
+    background-color: #9a3412;  /* orange */
 }
 </style>
 """, unsafe_allow_html=True)
+
+st.title("🔋 Battery Journey Roadmap")
 
 # ---------------- LOAD ---------------- #
 energy = pd.read_csv("greenkwh.energy_sessions.csv")
@@ -79,22 +86,23 @@ if selected_battery:
     df = df[df['energy_change'].notna()]
     df = df.dropna(subset=['created_at'])
 
-    df = df.sort_values('created_at').reset_index(drop=True)
+    # 🔥 SORT LATEST → OLDEST
+    df = df.sort_values('created_at', ascending=False).reset_index(drop=True)
 
     df['user_id'] = df['user_id'].astype(str).str.strip()
     df['user_name'] = df['user_id'].map(user_map)
 
     # ================= SUMMARY ================= #
-    total_charged = df[df['system_type'] == 'producer']['energy_change'].sum()
-    total_discharged = df[df['system_type'] == 'consumer']['energy_change'].sum()
+    total_charged = round(df[df['system_type'] == 'producer']['energy_change'].sum(), 2)
+    total_discharged = round(df[df['system_type'] == 'consumer']['energy_change'].sum(), 2)
 
     total_mileage = df['milage'].sum() if 'milage' in df.columns else 0
     total_mileage_text = "NA" if pd.isna(total_mileage) or total_mileage == 0 else f"{round(total_mileage,2)} km"
 
     c1, c2, c3 = st.columns(3)
 
-    c1.metric("🔌 Total Charged", f"{round(total_charged,2)} GreenkWh")
-    c2.metric("⚡ Total Discharged", f"{round(total_discharged,2)} GreenkWh")
+    c1.metric("🔌 Total Charged", f"{total_charged} GreenkWh")
+    c2.metric("⚡ Total Discharged", f"{total_discharged} GreenkWh")
     c3.metric("🚗 Total Mileage", total_mileage_text)
 
     st.markdown("---")
@@ -120,19 +128,15 @@ if selected_battery:
     if current_group:
         groups.append(pd.DataFrame(current_group))
 
-    groups = groups[::-1]
-
-    # ---------------- TIMELINE (FINAL FIX) ---------------- #
+    # ---------------- TIMELINE ---------------- #
     timeline_html = '<div class="timeline">'
 
-    for i, g in enumerate(groups):
-
-        side = "left" if i % 2 == 0 else "right"
+    for g in groups:
 
         user_name = g['user_name'].iloc[0]
         system_type = g['system_type'].iloc[0]
 
-        total_energy = round(g['energy_change'].sum(), 3)
+        total_energy = round(g['energy_change'].sum(), 2)
 
         start_dt = g['created_at'].min()
         end_dt = g['created_at'].max()
@@ -146,18 +150,20 @@ if selected_battery:
         mileage_text = "NA" if pd.isna(total_mileage) or total_mileage == 0 else f"{round(total_mileage,2)} km"
 
         if system_type == 'producer':
+            side = "left"
+            css_class = "charge"
             status = "🔌 Charged"
-            location = f"Producer : {user_name}"
             mileage_line = ""
         else:
+            side = "right"
+            css_class = "discharge"
             status = "⚡ Discharged"
-            location = f"Consumer : {user_name}"
             mileage_line = f"<br>🚗 Mileage: {mileage_text}"
 
         timeline_html += f"""<div class="container {side}">
-<div class="content">
+<div class="content {css_class}">
 <b>{status} {total_energy} GreenkWh</b><br>
-{location}<br>
+👤 {user_name}<br>
 📅 {date_text}
 {mileage_line}
 </div>
