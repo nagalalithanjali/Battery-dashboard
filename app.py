@@ -60,6 +60,22 @@ with col2:
         df['user_id'] = df['user_id'].astype(str).str.strip()
         df['user_name'] = df['user_id'].map(user_map)
 
+        # ================= SUMMARY ================= #
+        total_charged = df[df['system_type'] == 'producer']['energy_change'].sum()
+        total_discharged = df[df['system_type'] == 'consumer']['energy_change'].sum()
+
+        total_mileage = df['milage'].sum() if 'milage' in df.columns else 0
+
+        total_mileage_text = "NA" if pd.isna(total_mileage) or total_mileage == 0 else f"{round(total_mileage,2)} km"
+
+        c1, c2, c3 = st.columns(3)
+
+        c1.metric("🔌 Total Charged", f"{round(total_charged,2)} GreenkWh")
+        c2.metric("⚡ Total Discharged", f"{round(total_discharged,2)} GreenkWh")
+        c3.metric("🚗 Total Mileage", total_mileage_text)
+
+    
+
         # ---------------- GROUPING ---------------- #
         groups = []
         current_group = []
