@@ -7,7 +7,7 @@ energy = pd.read_csv("greenkwh.energy_sessions.csv")
 systems = pd.read_csv("greenkwh.systems.csv")
 
 MAX_BATTERY_KWH = 2.3
-CO2_PER_KM = 0.07  # kg CO2 per km (petrol equivalent)
+CO2_PER_KM = 0.07  # kg CO2 per km
 
 # ---------------- CLEAN ---------------- #
 users['id'] = users['id'].astype(str).str.strip()
@@ -57,17 +57,20 @@ with col2:
         df = df[df['system_type'].isin(['producer','consumer'])]
 
         # ---------------- REMOVE JUNK ---------------- #
-        df = df[~((df['energy_change'] == 0) & (df['mileage'] == 0))]
-        df = df[df['energy_change'] <= MAX_BATTERY_KWH]
+        df['energy_change'] = df['energy_change'].abs()   # fix negative
+        df = df[df['energy_change'] > 0.05]               # remove noise / fake sessions
+        df = df[df['energy_change'] <= MAX_BATTERY_KWH]   # battery cap filter
 
         # ---------------- SYSTEM ---------------- #
         sys_map = systems[systems['user_id'] == uid]
         system_id = sys_map['system_serial'].iloc[0] if not sys_map.empty else "NA"
         df['system_serial'] = system_id
 
-        # ---------------- REMOVE DUPLICATES ---------------- #
-        df = df.sort_values('timestamp')
-        df = df.drop_duplicates(subset=['serial_number'], keep='last')
+        # ---------------- REMOVE TRUE DUPLICATES ONLY ---------------- #
+        df = df.drop_duplicates(
+            subset=['serial_number', 'timestamp', 'energy_change'],
+            keep='last'
+        )
 
         # ================= 🔥 IMPACT METRICS ================= #
 
