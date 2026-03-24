@@ -7,131 +7,157 @@ energy = pd.read_csv("greenkwh.energy_sessions.csv")
 systems = pd.read_csv("greenkwh.systems.csv")
 
 MAX_BATTERY_KWH = 2.3
-CO2_PER_KWH = 0.26  # ✅ correct for EV vs petrol
+CO2_PER_KWH = 0.26
 
 # ---------------- CLEAN ---------------- #
 users['id'] = users['id'].astype(str).str.strip()
-energy['user_id'] = energy['user_id'].astype(str).str.strip()
-systems['user_id'] = systems['user_id'].astype(str).str.strip()
-
 users['name'] = users['name'].astype(str).str.strip()
 
+energy['user_id'] = energy['user_id'].astype(str).str.strip()
 energy['serial_number'] = energy['serial_number'].astype(str).str.strip().str.upper()
-systems['system_serial'] = systems['system_serial'].astype(str).str.strip()
-
-# ✅ TIMESTAMP
 energy['timestamp'] = pd.to_datetime(energy['timestamp'], errors='coerce', utc=True)
 energy['timestamp'] = energy['timestamp'].dt.tz_convert('Asia/Kolkata')
-
-# numeric safety
 energy['energy_change'] = pd.to_numeric(energy['energy_change'], errors='coerce')
 energy['mileage'] = pd.to_numeric(energy['mileage'], errors='coerce')
+energy['system_type'] = energy['system_type'].str.lower().str.strip()
+
+systems['user_id'] = systems['user_id'].astype(str).str.strip()
+systems['system_serial'] = systems['system_serial'].astype(str).str.strip()
 
 # ---------------- MAP ---------------- #
-user_map = dict(zip(users['name'], users['id']))
+id_to_name = dict(zip(users['id'], users['name']))
+name_to_id = dict(zip(users['name'], users['id']))
+
+# ---------------- USER CATEGORY ---------------- #
+summary = energy.groupby(['user_id', 'system_type'])['energy_change'].sum().unstack(fill_value=0)
+
+summary['category'] = summary.apply(
+    lambda x: 'both' if x.get('producer',0) > 0 and x.get('consumer',0) > 0
+    else 'producer' if x.get('producer',0) > 0
+    else 'consumer',
+    axis=1
+)
 
 # ---------------- UI ---------------- #
 st.set_page_config(layout="wide")
 st.title("📊 User Dashboard")
 
-col1, col2 = st.columns([1,3])
+left, right = st.columns([1,3])
 
-with col1:
-    selected_user = st.selectbox("Select User", users['name'].dropna().unique())
+# ================= LEFT ================= #
+with left:
+    st.markdown("### 🔍 Filters")
 
-with col2:
+    category = st.selectbox(
+        "Select Type",
+        ["producer", "consumer", "both"]
+    )
 
-    if selected_user:
+    # ✅ SAFE FILTERED USERS
+    filtered_ids = summary[summary['category'] == category].index
 
-        uid = user_map[selected_user]
+    filtered_names = [
+        id_to_name[uid]
+        for uid in filtered_ids
+        if uid in id_to_name
+    ]
 
-        # ---------------- FILTER ---------------- #
-        df = energy[energy['user_id'] == uid].copy()
+    if len(filtered_names) == 0:
+        st.warning("No users available")
+        st.stop()
 
-        if df.empty:
-            st.warning("No data available")
-            st.stop()
+    selected_user = st.selectbox("Select User", filtered_names)
 
-        # ---------------- VALID TYPES ---------------- #
-        df['system_type'] = df['system_type'].str.lower().str.strip()
-        df = df[df['system_type'].isin(['producer','consumer'])]
+# ================= RIGHT ================= #
+with right:
 
-        # ---------------- CLEAN ---------------- #
-        df['energy_change'] = df['energy_change'].abs()
-        df = df[df['energy_change'] > 0.05]
-        df = df[df['energy_change'] <= MAX_BATTERY_KWH]
+    if selected_user not in name_to_id:
+        st.warning("User mapping error")
+        st.stop()
 
-        # ---------------- SYSTEM ---------------- #
-        sys_map = systems[systems['user_id'] == uid]
-        system_id = sys_map['system_serial'].iloc[0] if not sys_map.empty else "NA"
-        df['system_serial'] = system_id
+    uid = name_to_id[selected_user]
 
-        # ---------------- REMOVE DUPLICATES ---------------- #
-        df = df.drop_duplicates(
-            subset=['serial_number', 'timestamp', 'energy_change'],
-            keep='last'
-        )
+    df = energy[energy['user_id'] == uid].copy()
 
-        # ================= 🔥 IMPACT ================= #
-        total_produced = df[df['system_type'] == 'producer']['energy_change'].sum()
-        total_consumed = df[df['system_type'] == 'consumer']['energy_change'].sum()
-        total_mileage = df[df['system_type'] == 'consumer']['mileage'].sum()
+    if df.empty:
+        st.warning("No data available")
+        st.stop()
 
-        total_co2 = total_consumed * CO2_PER_KWH  # ✅ NEW
+    # ---------------- FILTER ---------------- #
+    df = df[df['system_type'].isin(['producer','consumer'])]
 
-        st.markdown("### 🚀 Energy Impact Summary")
+    # ---------------- CLEAN ---------------- #
+    df['energy_change'] = df['energy_change'].abs()
+    df = df[df['energy_change'] > 0.05]
+    df = df[df['energy_change'] <= MAX_BATTERY_KWH]
+
+    # ---------------- SYSTEM ---------------- #
+    sys_map = systems[systems['user_id'] == uid]
+    system_id = sys_map['system_serial'].iloc[0] if not sys_map.empty else "NA"
+    df['system_serial'] = system_id
+
+    # ---------------- REMOVE DUPLICATES ---------------- #
+    df = df.drop_duplicates(
+        subset=['serial_number', 'timestamp', 'energy_change'],
+        keep='last'
+    )
+
+    # ================= METRICS ================= #
+    total_produced = df[df['system_type'] == 'producer']['energy_change'].sum()
+    total_consumed = df[df['system_type'] == 'consumer']['energy_change'].sum()
+    total_mileage = df[df['system_type'] == 'consumer']['mileage'].sum()
+    total_co2 = total_consumed * CO2_PER_KWH
+
+    st.markdown("### 🚀 Energy Impact Summary")
+
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("🔋 Energy Produced", f"{round(total_produced,2)} GreenkWh")
+    c2.metric("⚡ Energy Consumed", f"{round(total_consumed,2)} GreenkWh")
+    c3.metric("🚗 Mileage", f"{int(total_mileage)} km")
+    c4.metric("🌱 CO₂ Offset", f"{round(total_co2,2)} kg")
+
+    # ---------------- SORT ---------------- #
+    df = df.sort_values('timestamp', ascending=False)
+
+    # ================= DISPLAY ================= #
+    for _, row in df.iterrows():
+
+        energy_val = round(row['energy_change'], 2)
+        time_text = row['timestamp'].strftime("%d %b %Y, %I:%M %p IST")
+
+        if row['system_type'] == 'producer':
+            title = f"🔋 Produced {energy_val} GreenkWh"
+        else:
+            title = f"⚡ Consumed {energy_val} GreenkWh"
+
+        mileage_text = ""
+        co2_text = ""
+
+        if row['system_type'] == 'consumer':
+            mileage_text = (
+                "🚗 Mileage: NA"
+                if pd.isna(row['mileage']) or row['mileage'] == 0
+                else f"🚗 Mileage: {int(row['mileage'])} km"
+            )
+
+            co2_val = row['energy_change'] * CO2_PER_KWH
+            co2_text = f"🌱 CO₂ Offset: {round(co2_val,2)} kg"
+
         st.markdown("---")
 
-        c1, c2, c3, c4 = st.columns(4)
-
-        c1.metric("🔋 Energy Produced", f"{round(total_produced,2)} GreenkWh")
-        c2.metric("⚡ Energy Consumed", f"{round(total_consumed,2)} GreenkWh")
-        c3.metric("🚗 Mileage", f"{int(total_mileage)} km")
-        c4.metric("🌱 CO₂ Offset", f"{round(total_co2,2)} kg")  # ✅ UPDATED
-
-        # ---------------- SORT ---------------- #
-        df = df.sort_values('timestamp', ascending=False)
-
-        # ---------------- DISPLAY ---------------- #
-        for _, row in df.iterrows():
-
-            energy_val = round(row['energy_change'], 2)
-            time_text = row['timestamp'].strftime("%d %b %Y, %I:%M %p IST")
-
-            if row['system_type'] == 'producer':
-                title = f"🔋 Produced {energy_val} GreenkWh"
-            else:
-                title = f"⚡ Consumed {energy_val} GreenkWh"
-
-            # -------- MILEAGE -------- #
-            mileage_text = ""
-            if row['system_type'] == 'consumer':
-                if pd.isna(row['mileage']) or row['mileage'] == 0:
-                    mileage_text = "🚗 Mileage: NA"
-                else:
-                    mileage_text = f"🚗 Mileage: {int(row['mileage'])} km"
-
-            # -------- CO2 PER ENTRY -------- #
-            co2_text = ""
-            if row['system_type'] == 'consumer':
-                co2_val = row['energy_change'] * CO2_PER_KWH
-                co2_text = f"🌱 CO₂ Offset: {round(co2_val,2)} kg"
-
-            st.markdown("---")
-
-            if row['system_type'] == 'consumer':
-                st.markdown(f"""
-                **{title}**  
-                🆔 System: {row['system_serial']}  
-                🔋 Battery: {row['serial_number']}  
-                📅 {time_text}  
-                {mileage_text}  
-                {co2_text}
-                """)
-            else:
-                st.markdown(f"""
-                **{title}**  
-                🆔 System: {row['system_serial']}  
-                🔋 Battery: {row['serial_number']}  
-                📅 {time_text}
-                """)
+        if row['system_type'] == 'consumer':
+            st.markdown(f"""
+            **{title}**  
+            🆔 System: {row['system_serial']}  
+            🔋 Battery: {row['serial_number']}  
+            📅 {time_text}  
+            {mileage_text}  
+            {co2_text}
+            """)
+        else:
+            st.markdown(f"""
+            **{title}**  
+            🆔 System: {row['system_serial']}  
+            🔋 Battery: {row['serial_number']}  
+            📅 {time_text}
+            """)
