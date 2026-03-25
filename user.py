@@ -24,6 +24,10 @@ energy['system_type'] = energy['system_type'].str.lower().str.strip()
 systems['user_id'] = systems['user_id'].astype(str).str.strip()
 systems['system_serial'] = systems['system_serial'].astype(str).str.strip()
 
+# normalize system_type if exists
+if 'system_type' in systems.columns:
+    systems['system_type'] = systems['system_type'].astype(str).str.lower().str.strip()
+
 # ---------------- MAP ---------------- #
 id_to_name = dict(zip(users['id'], users['name']))
 name_to_id = dict(zip(users['name'], users['id']))
@@ -53,7 +57,6 @@ with left:
         ["producer", "consumer", "both"]
     )
 
-    # ✅ SAFE FILTERED USERS
     filtered_ids = summary[summary['category'] == category].index
 
     filtered_names = [
@@ -91,10 +94,22 @@ with right:
     df = df[df['energy_change'] > 0.05]
     df = df[df['energy_change'] <= MAX_BATTERY_KWH]
 
-    # ---------------- SYSTEM ---------------- #
-    sys_map = systems[systems['user_id'] == uid]
-    system_id = sys_map['system_serial'].iloc[0] if not sys_map.empty else "NA"
-    df['system_serial'] = system_id
+    # ---------------- SYSTEM MAPPING FIX ---------------- #
+    sys_map = systems[systems['user_id'] == uid].copy()
+
+    system_dict = {}
+
+    if not sys_map.empty and 'system_type' in sys_map.columns:
+        for _, row in sys_map.iterrows():
+            stype = row.get('system_type')
+            serial = row.get('system_serial')
+
+            if stype in ['producer', 'consumer']:
+                system_dict[stype] = serial
+
+    # map correct system per row
+    df['system_serial'] = df['system_type'].map(system_dict)
+    df['system_serial'] = df['system_serial'].fillna("NA")
 
     # ---------------- REMOVE DUPLICATES ---------------- #
     df = df.drop_duplicates(
