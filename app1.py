@@ -25,24 +25,16 @@ st.markdown("""
     position: relative;
     width: 50%;
 }
-.left {
-    left: 0;
-}
-.right {
-    left: 50%;
-}
+.left { left: 0; }
+.right { left: 50%; }
 .content {
     padding: 15px;
     border-radius: 12px;
     color: white;
     margin-bottom: 10px;
 }
-.charge {
-    background-color: #065f46;
-}
-.discharge {
-    background-color: #9a3412;
-}
+.charge { background-color: #065f46; }
+.discharge { background-color: #9a3412; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -86,6 +78,10 @@ if selected_battery:
     df = df[df['energy_change'].notna()]
     df = df.dropna(subset=['created_at'])
 
+    # 🔥 FIX: ONLY REMOVE NEGATIVE SIGN (KEEP RECORDS)
+    df['energy_change'] = pd.to_numeric(df['energy_change'], errors='coerce')
+    df['energy_change'] = df['energy_change'].abs()
+
     df = df.sort_values('created_at', ascending=False).reset_index(drop=True)
 
     df['user_id'] = df['user_id'].astype(str).str.strip()
@@ -95,15 +91,12 @@ if selected_battery:
     total_charged = round(df[df['system_type'] == 'producer']['energy_change'].sum(), 2)
     total_discharged = round(df[df['system_type'] == 'consumer']['energy_change'].sum(), 2)
 
-    # 🚗 Mileage
     total_mileage = df['milage'].sum() if 'milage' in df.columns else 0
     total_mileage_text = "NA" if pd.isna(total_mileage) or total_mileage == 0 else f"{round(total_mileage,2)} km"
 
-    # 🌱 CO2 OFFSET (ONLY CONSUMER)
     total_co2_offset = round(total_discharged * 0.6, 2)
 
     c1, c2, c3, c4 = st.columns(4)
-
     c1.metric("🔌 Total Charged", f"{total_charged} GreenkWh")
     c2.metric("⚡ Total Discharged", f"{total_discharged} GreenkWh")
     c3.metric("🚗 Total Mileage", total_mileage_text)
@@ -153,7 +146,6 @@ if selected_battery:
         total_mileage = g['milage'].sum() if 'milage' in g.columns else 0
         mileage_text = "NA" if pd.isna(total_mileage) or total_mileage == 0 else f"{round(total_mileage,2)} km"
 
-        # 🌱 CO2 per group (ONLY CONSUMER)
         co2_offset = round(total_energy * 0.6, 2)
 
         if system_type == 'producer':

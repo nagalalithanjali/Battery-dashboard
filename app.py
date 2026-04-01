@@ -31,8 +31,18 @@ energy['created_at'] = pd.to_datetime(energy[date_col], errors='coerce')
 # ---------------- NORMALIZE ---------------- #
 energy['system_type'] = energy['system_type'].astype(str).str.lower().str.strip()
 
+# mileage fix
 if 'mileage' in energy.columns:
-    energy['milage'] = energy['mileage']
+    energy['milage'] = pd.to_numeric(energy['mileage'], errors='coerce')
+else:
+    energy['milage'] = None
+
+# 🔥 IMPORTANT FIX → REMOVE NEGATIVE SIGN
+energy['energy_change'] = pd.to_numeric(energy['energy_change'], errors='coerce')
+energy['energy_change'] = energy['energy_change'].abs()
+
+# remove noise (optional but recommended)
+energy = energy[energy['energy_change'] > 0.05]
 
 # ---------------- UI ---------------- #
 st.set_page_config(layout="wide")
@@ -49,25 +59,32 @@ with col2:
 
     if selected_battery:
 
-        df = energy[energy['serial_number'] == selected_battery].copy()
+        # 🔥 robust filter (fix mismatch issues)
+        df = energy[
+            energy['serial_number'].str.strip().str.upper() ==
+            str(selected_battery).strip().upper()
+        ].copy()
+
         df = df[df['system_type'].isin(['producer', 'consumer'])]
         df = df[df['energy_change'].notna()]
-        df = df[df['energy_change'] > 0]
         df = df.dropna(subset=['created_at'])
+
+        if df.empty:
+            st.warning("No data for this battery")
+            st.stop()
 
         df = df.sort_values('created_at').reset_index(drop=True)
 
         df['user_id'] = df['user_id'].astype(str).str.strip()
-        df['user_name'] = df['user_id'].map(user_map)
+        df['user_name'] = df['user_id'].map(user_map).fillna("Unknown")
 
         # ================= SUMMARY ================= #
         total_charged = df[df['system_type'] == 'producer']['energy_change'].sum()
         total_discharged = df[df['system_type'] == 'consumer']['energy_change'].sum()
 
-        total_mileage = df['milage'].sum() if 'milage' in df.columns else 0
+        total_mileage = df['milage'].sum()
         total_mileage_text = "NA" if pd.isna(total_mileage) or total_mileage == 0 else f"{round(total_mileage,2)} km"
 
-        # 🌱 CO2 OFFSET (ONLY CONSUMER)
         total_co2_offset = round(total_discharged * 0.6, 2)
 
         c1, c2, c3, c4 = st.columns(4)
@@ -109,6 +126,7 @@ with col2:
             user_name = g['user_name'].iloc[0]
             system_type = g['system_type'].iloc[0]
 
+            # 🔥 SAFE SUM (always positive now)
             total_energy = round(g['energy_change'].sum(), 3)
 
             start_dt = g['created_at'].min()
@@ -122,10 +140,9 @@ with col2:
             else:
                 date_text = f"📅 {start_date} to {end_date}"
 
-            total_mileage = g['milage'].sum() if 'milage' in g.columns else 0
+            total_mileage = g['milage'].sum()
             mileage_text = "NA" if pd.isna(total_mileage) or total_mileage == 0 else f"{round(total_mileage,2)} km"
 
-            # 🌱 CO2 per group (ONLY CONSUMER)
             co2_offset = round(total_energy * 0.6, 2)
 
             if system_type == 'producer':
