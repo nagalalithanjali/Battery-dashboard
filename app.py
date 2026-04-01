@@ -65,16 +65,17 @@ with col2:
         total_discharged = df[df['system_type'] == 'consumer']['energy_change'].sum()
 
         total_mileage = df['milage'].sum() if 'milage' in df.columns else 0
-
         total_mileage_text = "NA" if pd.isna(total_mileage) or total_mileage == 0 else f"{round(total_mileage,2)} km"
 
-        c1, c2, c3 = st.columns(3)
+        # 🌱 CO2 OFFSET (ONLY CONSUMER)
+        total_co2_offset = round(total_discharged * 0.6, 2)
+
+        c1, c2, c3, c4 = st.columns(4)
 
         c1.metric("🔌 Total Charged", f"{round(total_charged,2)} GreenkWh")
         c2.metric("⚡ Total Discharged", f"{round(total_discharged,2)} GreenkWh")
         c3.metric("🚗 Total Mileage", total_mileage_text)
-
-    
+        c4.metric("🌱 CO2 Offset", f"{total_co2_offset} kg offset")
 
         # ---------------- GROUPING ---------------- #
         groups = []
@@ -124,6 +125,9 @@ with col2:
             total_mileage = g['milage'].sum() if 'milage' in g.columns else 0
             mileage_text = "NA" if pd.isna(total_mileage) or total_mileage == 0 else f"{round(total_mileage,2)} km"
 
+            # 🌱 CO2 per group (ONLY CONSUMER)
+            co2_offset = round(total_energy * 0.6, 2)
+
             if system_type == 'producer':
                 status = "🔌 Charged"
                 location = f"Producer : {user_name}"
@@ -140,5 +144,6 @@ with col2:
 
             if system_type == 'consumer':
                 text += f"\n🚗 Mileage: {mileage_text}"
+                text += f"\n🌱 CO2 Offset: {co2_offset} kg"
 
             st.markdown(text)
