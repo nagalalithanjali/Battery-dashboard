@@ -5,8 +5,80 @@ import pandas as pd
 MAX_BATTERY_KWH = 2.3
 CO2_PER_KWH = 0.6
 PRICE_PER_KWH = 16
-PETROL_PER_LITRE = 107.50
+PETROL_PER_LITRE = 107.5
 SWAP_COST = 80
+
+# ---------------- PAGE ---------------- #
+st.set_page_config(layout="wide")
+
+# ---------------- UI STYLE ---------------- #
+st.markdown("""
+<style>
+
+body {
+    background-color: #0e1117;
+}
+
+.block-container {
+    padding-top: 2rem;
+}
+
+/* CENTER */
+.center-area {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* CARDS */
+.card {
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    background: #1c1f26;
+    color: #e5e7eb;
+    border: 1px solid #2a2f3a;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* TYPE COLORS */
+.producer {
+    border-left: 5px solid #22c55e;
+}
+
+.consumer {
+    border-left: 5px solid #f97316;
+}
+
+/* TEXT */
+.title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.sub {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+/* METRICS */
+[data-testid="stMetric"] {
+    text-align: center;
+    background: #1c1f26;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #2a2f3a;
+}
+
+/* SIDEBAR */
+section[data-testid="stSidebar"] {
+    background-color: #111827;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+st.title("📊 User Energy Dashboard")
 
 # ---------------- LOAD ---------------- #
 users = pd.read_json("greenkwh.users.json")
@@ -26,162 +98,154 @@ energy['timestamp'] = pd.to_datetime(
 
 energy['energy_change'] = pd.to_numeric(
     energy['energy_change'], errors='coerce'
-).abs()   # ✅ remove negative sign only
+).abs()
 
 energy['mileage'] = pd.to_numeric(energy['mileage'], errors='coerce')
 energy['system_type'] = energy['system_type'].str.lower().str.strip()
 
 systems['user_id'] = systems['user_id'].astype(str).str.strip()
 systems['system_serial'] = systems['system_serial'].astype(str).str.strip()
+systems['system_type'] = systems['system_type'].str.lower().str.strip()
 
 # ---------------- MAP ---------------- #
 id_to_name = dict(zip(users['id'], users['name']))
 name_to_id = dict(zip(users['name'], users['id']))
 
-# ---------------- UI ---------------- #
-st.set_page_config(layout="wide")
-st.title("📊 User Dashboard")
+# ---------------- SIDEBAR ---------------- #
+summary = energy.groupby(['user_id', 'system_type'])['energy_change'].sum().unstack(fill_value=0)
 
-left, right = st.columns([1, 3])
+summary['category'] = summary.apply(
+    lambda x: 'both' if x.get('producer', 0) > 0 and x.get('consumer', 0) > 0
+    else 'producer' if x.get('producer', 0) > 0
+    else 'consumer',
+    axis=1
+)
 
-# ================= LEFT ================= #
-with left:
+category = st.sidebar.selectbox("Select Type", ["producer", "consumer", "both"])
 
-    summary = energy.groupby(['user_id', 'system_type'])['energy_change'].sum().unstack(fill_value=0)
+filtered_ids = summary[summary['category'] == category].index
+filtered_names = [id_to_name[i] for i in filtered_ids if i in id_to_name]
 
-    summary['category'] = summary.apply(
-        lambda x: 'both' if x.get('producer', 0) > 0 and x.get('consumer', 0) > 0
-        else 'producer' if x.get('producer', 0) > 0
-        else 'consumer',
-        axis=1
-    )
+selected_user = st.sidebar.selectbox("Select User", filtered_names)
 
-    category = st.selectbox("Select Type", ["producer", "consumer", "both"])
+# ---------------- DATA ---------------- #
+uid = name_to_id[selected_user]
+df = energy[energy['user_id'] == uid].copy()
 
-    filtered_ids = summary[summary['category'] == category].index
-    filtered_names = [id_to_name[i] for i in filtered_ids if i in id_to_name]
+df = df[df['system_type'].isin(['producer', 'consumer'])]
+df = df.dropna(subset=['timestamp'])
 
-    selected_user = st.selectbox("Select User", filtered_names)
+# ---------------- SYSTEM MAP ---------------- #
+sys_map = systems[systems['user_id'] == uid]
+system_dict = dict(zip(sys_map['system_type'], sys_map['system_serial']))
+df['system_serial'] = df['system_type'].map(system_dict).fillna("NA")
 
-# ================= RIGHT ================= #
-with right:
+# ---------------- MONEY ---------------- #
+def calc_money_saved(mileage):
+    if pd.isna(mileage) or mileage == 0:
+        return None
+    petrol_cost = (mileage / 40) * PETROL_PER_LITRE
+    return max(petrol_cost - SWAP_COST, 0)
 
-    uid = name_to_id[selected_user]
-    df = energy[energy['user_id'] == uid].copy()
+df['money_saved'] = df['mileage'].apply(calc_money_saved)
 
-    df = df[df['system_type'].isin(['producer', 'consumer'])]
-    df = df.dropna(subset=['timestamp'])
+# ---------------- GROUP ---------------- #
+grouped = df.groupby(
+    ['system_type', 'system_serial', 'serial_number']
+).agg({
+    'energy_change': 'sum',
+    'mileage': 'sum',
+    'money_saved': 'sum',
+    'timestamp': ['min', 'max', 'count']
+}).reset_index()
 
-    # ---------------- SYSTEM MAP ---------------- #
-    sys_map = systems[systems['user_id'] == uid]
-    system_dict = dict(zip(sys_map['system_type'], sys_map['system_serial']))
-    df['system_serial'] = df['system_type'].map(system_dict).fillna("NA")
+grouped.columns = [
+    'system_type', 'system', 'battery',
+    'energy', 'mileage', 'money',
+    'start', 'end', 'sessions'
+]
 
-    # ---------------- MONEY SAVED ---------------- #
-    def calc_money_saved(mileage):
-        if pd.isna(mileage) or mileage == 0:
-            return None
-        petrol = (mileage / 40) * PETROL_PER_LITRE
-        return max(petrol - SWAP_COST, 0)
+producer_data = grouped[grouped['system_type'] == 'producer']
+consumer_data = grouped[grouped['system_type'] == 'consumer']
 
-    df['money_saved'] = df['mileage'].apply(calc_money_saved)
+total_produced = producer_data['energy'].sum()
+total_consumed = consumer_data['energy'].sum()
 
-    # ---------------- GROUP ---------------- #
-    grouped = df.groupby(
-        ['system_type', 'system_serial', 'serial_number']
-    ).agg({
-        'energy_change': 'sum',
-        'mileage': 'sum',
-        'money_saved': 'sum',
-        'timestamp': ['min', 'max', 'count']
-    }).reset_index()
+total_earned = total_produced * PRICE_PER_KWH
+total_saved = consumer_data['money'].sum()
 
-    grouped.columns = [
-        'system_type', 'system', 'battery',
-        'energy', 'mileage', 'money',
-        'start', 'end', 'sessions'
-    ]
+total_sessions = grouped['sessions'].sum()
+producer_sessions = producer_data['sessions'].sum()
+consumer_sessions = consumer_data['sessions'].sum()
 
-    # ---------------- SPLIT ---------------- #
-    producer_data = grouped[grouped['system_type'] == 'producer']
-    consumer_data = grouped[grouped['system_type'] == 'consumer']
+total_mileage = consumer_data['mileage'].sum()
+total_co2 = total_consumed * CO2_PER_KWH
 
-    total_produced = producer_data['energy'].sum()
-    total_consumed = consumer_data['energy'].sum()
+# ---------------- CENTER ---------------- #
+st.markdown('<div class="center-area">', unsafe_allow_html=True)
 
-    total_earned = total_produced * PRICE_PER_KWH
-    total_saved = consumer_data['money'].sum()
+st.markdown("### 🚀 Energy Impact Summary")
 
-    producer_sessions = producer_data['sessions'].sum()
-    consumer_sessions = consumer_data['sessions'].sum()
+# ---------------- METRICS ---------------- #
+if category == "producer":
+    c1, c2, c3 = st.columns(3)
+    c1.metric("🔋 Energy Produced", f"{round(total_produced, 2)} GreenkWh")
+    c2.metric("🔢 Total Sessions", int(producer_sessions))
+    c3.metric("💰 Money Earned", f"₹{round(total_earned, 2)}")
 
-    total_sessions = grouped['sessions'].sum()
+elif category == "consumer":
+    c1, c2, c3, c4, c5 = st.columns(5)
+    c1.metric("⚡ Energy Consumed", f"{round(total_consumed, 2)}")
+    c2.metric("🔢 Total Sessions", int(consumer_sessions))
+    c3.metric("🚗 Mileage", f"{int(total_mileage)} km")
+    c4.metric("🌱 CO₂ Offset", f"{round(total_co2, 2)} kg")
+    c5.metric("💰 Money Saved", f"₹{round(total_saved, 2)}")
 
-    total_mileage = consumer_data['mileage'].sum()
-    total_co2 = total_consumed * CO2_PER_KWH
+else:
+    c1, c2, c3, c4, c5, c6 = st.columns(6)
+    c1.metric("🔋 Produced", f"{round(total_produced, 2)}")
+    c2.metric("⚡ Consumed", f"{round(total_consumed, 2)}")
+    c3.metric("🔢 Total Sessions", int(total_sessions))
+    c4.metric("🚗 Mileage", f"{int(total_mileage)} km")
+    c5.metric("🌱 CO₂ Offset", f"{round(total_co2, 2)} kg")
+    c6.metric("💰 Savings", f"₹{round(total_saved + total_earned, 2)}")
 
-    # ---------------- TOP CARDS ---------------- #
-    st.markdown("### 🚀 Summary")
+# ---------------- CARDS ---------------- #
+grouped = grouped.sort_values('start', ascending=False)
 
-    if category == "producer":
-        c1, c2, c3 = st.columns(3)
-        c1.metric("🔋 Energy Produced", f"{round(total_produced, 2)} GreenkWh")
-        c2.metric("🔢 Total Sessions", int(producer_sessions))
-        c3.metric("💰 Money Earned", f"₹{round(total_earned, 2)}")
+for _, row in grouped.iterrows():
 
-    elif category == "consumer":
-        c1, c2, c3, c4, c5 = st.columns(5)
-        c1.metric("⚡ Energy Consumed", f"{round(total_consumed, 2)} GreenkWh")
-        c2.metric("🔢 Total Sessions", int(consumer_sessions))
-        c3.metric("🚗 Total Mileage", f"{int(total_mileage)} km")
-        c4.metric("🌱 CO₂ Offset", f"{round(total_co2, 2)} kg")
-        c5.metric("💰 Money Saved", f"₹{round(total_saved, 2)}")
+    start = row['start'].strftime("%d %b %Y, %I:%M %p")
+    end = row['end'].strftime("%d %b %Y, %I:%M %p")
+
+    if row['system_type'] == 'producer':
+
+        st.markdown(f"""
+        <div class="card producer">
+            <div class="title">🔋 Produced: {round(row['energy'], 2)} GreenkWh</div>
+            <div class="sub">🆔 System: {row['system']}</div>
+            <div class="sub">🔋 Battery: {row['battery']}</div>
+            <div class="sub">📅 {start} → {end}</div>
+            <div class="title">💰 Money Earned: ₹{round(row['energy'] * PRICE_PER_KWH, 2)}</div>
+        </div>
+        """, unsafe_allow_html=True)
 
     else:
-        c1, c2, c3, c4, c5, c6 = st.columns(6)
-        c1.metric("🔋 Energy Produced", f"{round(total_produced, 2)}")
-        c2.metric("⚡ Energy Consumed", f"{round(total_consumed, 2)}")
-        c3.metric("🔢 Total Sessions", int(total_sessions))
-        c4.metric("🚗 Total Mileage", f"{int(total_mileage)} km")
-        c5.metric("🌱 CO₂ Offset", f"{round(total_co2, 2)} kg")
-        c6.metric("💰 Net Savings", f"₹{round(total_saved - total_earned, 2)}")
 
-    st.markdown("---")
+        mileage_text = "NA" if row['mileage'] == 0 else f"{int(row['mileage'])} km"
+        saved_text = "NA" if pd.isna(row['money']) else f"₹{round(row['money'], 2)}"
+        co2 = row['energy'] * CO2_PER_KWH
 
-    # ---------------- DISPLAY ---------------- #
-    grouped = grouped.sort_values('start', ascending=False)
+        st.markdown(f"""
+        <div class="card consumer">
+            <div class="title">⚡ Consumed: {round(row['energy'], 2)} GreenkWh</div>
+            <div class="sub">🆔 System: {row['system']}</div>
+            <div class="sub">🔋 Battery: {row['battery']}</div>
+            <div class="sub">📅 {start} → {end}</div>
+            <div class="sub">🚗 Mileage: {mileage_text}</div>
+            <div class="sub">🌱 CO₂ Offset: {round(co2, 2)} kg</div>
+            <div class="title">💰 Money Saved: {saved_text}</div>
+        </div>
+        """, unsafe_allow_html=True)
 
-    for _, row in grouped.iterrows():
-
-        start = row['start'].strftime("%d %b %Y, %I:%M %p")
-        end = row['end'].strftime("%d %b %Y, %I:%M %p")
-
-        st.markdown("---")
-
-        if row['system_type'] == 'producer':
-
-            st.markdown(f"""
-            **🔋 Produced {round(row['energy'], 2)} GreenkWh**  
-            🆔 System: {row['system']}  
-            🔋 Battery: {row['battery']}  
-            📅 {start} → {end}  
-            🔢 Sessions: {int(row['sessions'])}  
-            💰 Money Earned: ₹{round(row['energy'] * PRICE_PER_KWH, 2)}
-            """)
-
-        else:
-
-            mileage_text = "NA" if row['mileage'] == 0 else f"{int(row['mileage'])} km"
-            saved_text = "NA" if pd.isna(row['money']) else f"₹{round(row['money'], 2)}"
-            co2 = row['energy'] * CO2_PER_KWH
-
-            st.markdown(f"""
-            **⚡ Consumed {round(row['energy'], 2)} GreenkWh**  
-            🆔 System: {row['system']}  
-            🔋 Battery: {row['battery']}  
-            📅 {start} → {end}  
-            🔢 Sessions: {int(row['sessions'])}  
-            🚗 Mileage: {mileage_text}  
-            🌱 CO₂ Offset: {round(co2, 2)} kg  
-            💰 Money Saved: {saved_text}
-            """)
+st.markdown('</div>', unsafe_allow_html=True)
