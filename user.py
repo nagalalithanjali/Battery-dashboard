@@ -17,6 +17,7 @@ st.markdown("""
 
 body {
     background-color: #0e1117;
+    color: #ffffff;
 }
 
 .block-container {
@@ -35,7 +36,7 @@ body {
     border-radius: 12px;
     margin-bottom: 14px;
     background: #1c1f26;
-    color: #e5e7eb;
+    color: #ffffff;
     border: 1px solid #2a2f3a;
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
@@ -54,11 +55,12 @@ body {
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 6px;
+    color: #ffffff;
 }
 
 .sub {
     font-size: 13px;
-    color: #9ca3af;
+    color: #d1d5db;
 }
 
 /* METRICS */
@@ -70,9 +72,28 @@ body {
     border: 1px solid #2a2f3a;
 }
 
+[data-testid="stMetricLabel"] {
+    color: #9ca3af !important;
+}
+
+[data-testid="stMetricValue"] {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
 /* SIDEBAR */
 section[data-testid="stSidebar"] {
     background-color: #111827;
+    color: white;
+}
+
+/* DROPDOWN TEXT */
+div[data-baseweb="select"] * {
+    color: white !important;
+}
+
+input, select {
+    color: white !important;
 }
 
 </style>
@@ -195,7 +216,7 @@ if category == "producer":
 
 elif category == "consumer":
     c1, c2, c3, c4, c5 = st.columns(5)
-    c1.metric("⚡ Energy Consumed", f"{round(total_consumed, 2)}")
+    c1.metric("⚡ Energy Consumed", f"{round(total_consumed, 2)} GreenkWh")
     c2.metric("🔢 Total Sessions", int(consumer_sessions))
     c3.metric("🚗 Mileage", f"{int(total_mileage)} km")
     c4.metric("🌱 CO₂ Offset", f"{round(total_co2, 2)} kg")
