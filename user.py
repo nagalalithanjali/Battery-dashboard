@@ -39,23 +39,28 @@ section[data-testid="stSidebar"] div[role="button"] {
     border: 1px solid #d1d5db !important;
 }
 
-/* METRICS */
+/* METRICS - SMALLER FONT SIZE FOR SUMMARY ONLY */
 [data-testid="stMetric"] {
     background: #f8fafc;
-    padding: 16px;
-    border-radius: 14px;
+    padding: 12px 10px;
+    border-radius: 12px;
     border: 1px solid #e2e8f0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
+
+/* Especially smaller for Summary Metrics */
 [data-testid="stMetricLabel"] {
     color: #64748b !important;
+    font-size: 12px !important;     /* Decreased */
+    font-weight: 500;
 }
 [data-testid="stMetricValue"] {
     color: #0f172a !important;
     font-weight: 700;
+    font-size: 16px !important;     /* Decreased */
 }
 
-/* CARDS */
+/* CARDS - Normal size (unchanged) */
 .card {
     padding: 20px;
     border-radius: 14px;
@@ -76,12 +81,16 @@ section[data-testid="stSidebar"] div[role="button"] {
     font-size: 13px;
     color: #64748b;
 }
+
+/* CENTER CONTENT */
 .center-area {
     max-width: 1100px;
     margin: auto;
 }
+
+/* HEADER - Kept original size */
 h1 {
-    font-size: 40px !important;
+    font-size: 38px !important;
     color: #0f172a !important;
 }
 </style>
