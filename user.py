@@ -163,13 +163,13 @@ st.markdown("### 🚀 Energy Impact Summary")
 
 if category == "producer":
     c1, c2, c3 = st.columns(3)
-    c1.metric("🔋 Energy Produced", round(total_produced, 2),"GreenkwH")
+    c1.metric("🔋 Energy Produced", round(total_produced, 2),"GreenKWh")
     c2.metric("🔢 Total Sessions", int(total_sessions))
     c3.metric("💰 Money Earned", f"₹{round(total_earned, 2)}")
 
 elif category == "consumer":
     c1, c2, c3, c4, c5 = st.columns(5)
-    c1.metric("⚡ Energy Consumed", round(total_consumed, 2),"GreenkwH")
+    c1.metric("⚡ Energy Consumed", round(total_consumed, 2),"GreenKWh")
     c2.metric("🔢 Total Sessions", int(total_sessions))
     c3.metric("🚗 Total Mileage", f"{int(total_mileage)} km")
     c4.metric("🌱 CO₂ Offset", f"{round(total_co2, 2)} kg")
@@ -177,8 +177,8 @@ elif category == "consumer":
 
 else:
     c1, c2, c3, c4, c5, c6 = st.columns(6)
-    c1.metric("🔋 Energy Produced", round(total_produced, 2),"GreenkwH")
-    c2.metric("⚡ Energy Consumed", round(total_consumed, 2),"GreenkwH")
+    c1.metric("🔋 Energy Produced", round(total_produced, 2),"GreenKWh")
+    c2.metric("⚡ Energy Consumed", round(total_consumed, 2),"GreenKWh")
     c3.metric("🔢 Total Sessions", int(total_sessions))
     c4.metric("🚗 Total Mileage", f"{int(total_mileage)} km")
     c5.metric("🌱 CO₂ Offset", f"{round(total_co2, 2)} kg")
@@ -194,7 +194,7 @@ for _, row in grouped.iterrows():
     if row['system_type'] == 'producer':
         st.markdown(f"""
         <div class="card producer">
-            <div class="title">🔋 Produced: {round(row['energy'], 2)} GreenkWh</div>
+            <div class="title">🔋 Produced: {round(row['energy'], 2)} GreenKWh</div>
             <div class="sub">🆔 System: {row['system']}</div>
             <div class="sub">🔋 Battery: {row['battery']}</div>
             <div class="sub">📅 {start} → {end}</div>
@@ -204,7 +204,7 @@ for _, row in grouped.iterrows():
     else:
         st.markdown(f"""
         <div class="card consumer">
-            <div class="title">⚡ Consumed: {round(row['energy'], 2)} GreenkWh</div>
+            <div class="title">⚡ Consumed: {round(row['energy'], 2)} GreenKWh</div>
             <div class="sub">🆔 System: {row['system']}</div>
             <div class="sub">🔋 Battery: {row['battery']}</div>
             <div class="sub">📅 {start} → {end}</div>

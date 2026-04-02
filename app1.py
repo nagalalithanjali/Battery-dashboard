@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 
 st.set_page_config(layout="wide")
 
@@ -65,7 +66,7 @@ energy['created_at'] = pd.to_datetime(energy[date_col], errors='coerce')
 energy['system_type'] = energy['system_type'].astype(str).str.lower().str.strip()
 
 if 'mileage' in energy.columns:
-    energy['milage'] = energy['mileage']
+    energy['milage'] = energy['mileage']   # keeping your existing column name
 
 # ---------------- SELECT ---------------- #
 battery_list = batteries['serialnumber'].dropna().unique()
@@ -78,7 +79,7 @@ if selected_battery:
     df = df[df['energy_change'].notna()]
     df = df.dropna(subset=['created_at'])
 
-    # 🔥 FIX: ONLY REMOVE NEGATIVE SIGN (KEEP RECORDS)
+    # Keep only positive energy values
     df['energy_change'] = pd.to_numeric(df['energy_change'], errors='coerce')
     df['energy_change'] = df['energy_change'].abs()
 
@@ -92,9 +93,10 @@ if selected_battery:
     total_discharged = round(df[df['system_type'] == 'consumer']['energy_change'].sum(), 2)
 
     total_mileage = df['milage'].sum() if 'milage' in df.columns else 0
-    total_mileage_text = "NA" if pd.isna(total_mileage) or total_mileage == 0 else f"{round(total_mileage,2)} km"
+    total_mileage_text = "NA" if pd.isna(total_mileage) or total_mileage == 0 else f"{round(total_mileage, 2)} km"
 
-    total_co2_offset = round(total_discharged * 0.6, 2)
+    # NEW: CO2 based on total mileage * 0.06
+    total_co2_offset = round(total_mileage * 0.06, 2) if total_mileage > 0 else 0.0
 
     c1, c2, c3, c4 = st.columns(4)
     c1.metric("🔌 Total Charged", f"{total_charged} GreenkWh")
@@ -109,7 +111,6 @@ if selected_battery:
     current_group = []
 
     for _, row in df.iterrows():
-
         if not current_group:
             current_group.append(row)
             continue
@@ -129,7 +130,6 @@ if selected_battery:
     timeline_html = '<div class="timeline">'
 
     for g in groups:
-
         user_name = g['user_name'].iloc[0]
         system_type = g['system_type'].iloc[0]
 
@@ -144,9 +144,10 @@ if selected_battery:
         date_text = start_date if start_dt == end_dt else f"{start_date} → {end_date}"
 
         total_mileage = g['milage'].sum() if 'milage' in g.columns else 0
-        mileage_text = "NA" if pd.isna(total_mileage) or total_mileage == 0 else f"{round(total_mileage,2)} km"
+        mileage_text = "NA" if pd.isna(total_mileage) or total_mileage == 0 else f"{round(total_mileage, 2)} km"
 
-        co2_offset = round(total_energy * 0.6, 2)
+        # NEW: CO2 calculation based on mileage * 0.06
+        co2_offset = round(total_mileage * 0.06, 2) if total_mileage > 0 else 0.0
 
         if system_type == 'producer':
             side = "left"
