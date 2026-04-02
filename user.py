@@ -3,9 +3,9 @@ import pandas as pd
 
 # ---------------- CONSTANTS ---------------- #
 MAX_BATTERY_KWH = 2.3
-CO2_PER_KWH = 0.6
+CO2_PER_KWH = 0.06   
 PRICE_PER_KWH = 16
-PETROL_PER_LITRE = 107.5
+PETROL_PER_LITRE = 107.5  
 SWAP_COST = 80
 
 # ---------------- PAGE ---------------- #
