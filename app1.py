@@ -36,8 +36,8 @@ st.markdown("""
 }
 .charge { background-color: #065f46; }
 .discharge { background-color: #9a3412; }
-.placeholder-charge { background-color: #064e3b; opacity: 0.5; border: 2px dashed #6ee7b7; }
-.placeholder-discharge { background-color: #7c2d12; opacity: 0.5; border: 2px dashed #fdba74; }
+.placeholder-charge { background-color: #064e3b; opacity: 0.5; border: 2px solid #6ee7b7; }
+.placeholder-discharge { background-color: #7c2d12; opacity: 0.5; border: 2px solid #fdba74; }
 </style>
 """, unsafe_allow_html=True)
  
