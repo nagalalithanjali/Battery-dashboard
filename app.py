@@ -89,8 +89,8 @@ with col2:
 
         c1, c2, c3, c4 = st.columns(4)
 
-        c1.metric("🔌 Total Charged", f"{round(total_charged,2)} GreenkWh")
-        c2.metric("⚡ Total Discharged", f"{round(total_discharged,2)} GreenkWh")
+        c1.metric("🔌 Total Charged", f"{round(total_charged,2)} GreenKWh")
+        c2.metric("⚡ Total Discharged", f"{round(total_discharged,2)} GreenKWh")
         c3.metric("🚗 Total Mileage", total_mileage_text)
         c4.metric("🌱 CO2 Offset", f"{total_co2_offset} kg offset")
 
@@ -155,7 +155,7 @@ with col2:
             st.markdown("---")
 
             text = f"""
-            **{status} {total_energy} GreenkWh at {location}**  
+            **{status} {total_energy} GreenKWh at {location}**  
             {date_text}
             """
 
