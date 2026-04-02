@@ -163,13 +163,13 @@ st.markdown("### 🚀 Energy Impact Summary")
 
 if category == "producer":
     c1, c2, c3 = st.columns(3)
-    c1.metric("🔋 Energy Produced", round(total_produced, 2),"GreenKWh")
+    c1.metric("🔋 Energy Produced", f"{round(total_produced, 2)} GreenKWh")
     c2.metric("🔢 Total Sessions", int(total_sessions))
     c3.metric("💰 Money Earned", f"₹{round(total_earned, 2)}")
 
 elif category == "consumer":
     c1, c2, c3, c4, c5 = st.columns(5)
-    c1.metric("⚡ Energy Consumed", round(total_consumed, 2),"GreenKWh")
+    c1.metric("⚡ Energy Consumed", f"{round(total_consumed, 2)} GreenKWh")
     c2.metric("🔢 Total Sessions", int(total_sessions))
     c3.metric("🚗 Total Mileage", f"{int(total_mileage)} km")
     c4.metric("🌱 CO₂ Offset", f"{round(total_co2, 2)} kg")
@@ -177,8 +177,8 @@ elif category == "consumer":
 
 else:
     c1, c2, c3, c4, c5, c6 = st.columns(6)
-    c1.metric("🔋 Energy Produced", round(total_produced, 2),"GreenKWh")
-    c2.metric("⚡ Energy Consumed", round(total_consumed, 2),"GreenKWh")
+    c1.metric("🔋 Energy Produced", f"{round(total_produced, 2)} GreenKWh")
+    c2.metric("⚡ Energy Consumed", f"{round(total_consumed, 2)} GreenKWh")
     c3.metric("🔢 Total Sessions", int(total_sessions))
     c4.metric("🚗 Total Mileage", f"{int(total_mileage)} km")
     c5.metric("🌱 CO₂ Offset", f"{round(total_co2, 2)} kg")
