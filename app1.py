@@ -347,6 +347,11 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     color: var(--muted);
     letter-spacing: 0.08em;
 }
+/* Container padding for legend columns */
+div[data-testid="stHorizontalBlock"] {
+    padding: 14px 40px !important;
+}
+
 /* Custom Legend Buttons && Chart Wrapper */
 [data-testid="stButton"] button {
     background: transparent !important;
@@ -359,14 +364,51 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     padding: 0 !important;
     height: auto !important;
     display: inline-flex;
-    justify-content: flex-start;
+    align-items: center;
 }
 [data-testid="stButton"] button:hover {
     color: #fff !important;
 }
 [data-testid="stButton"] p {
     font-size: 11px !important;
+    display: flex;
+    align-items: center;
+    margin: 0;
 }
+
+/* Inject colored dots into Legend */
+div[data-testid="column"]:nth-child(1) button[kind="secondary"] p::before {
+    content: '';
+    display: inline-block;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background-color: var(--teal) !important;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+div[data-testid="column"]:nth-child(2) button[kind="secondary"] p::before {
+    content: '';
+    display: inline-block;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background-color: var(--amber) !important;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+div[data-testid="column"]:nth-child(3) button[kind="secondary"] p::before {
+    content: '⬡';
+    display: inline-block;
+    font-size: 14px;
+    color: var(--muted) !important;
+    font-style: italic;
+    margin-right: 6px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+div[data-testid="column"] button[kind="secondary"] p {
+    font-weight: bold !important;
+}
+
 .stPlotlyChart {
     padding: 0 40px !important; 
     margin-bottom: 24px;
@@ -555,7 +597,6 @@ g_lbl_t = "⬡ unrecorded session" if st.session_state.show_ghost else "⬡ sess
 if cols[0].button(c_lbl_t, key="btn_c"): st.session_state.show_charge = not st.session_state.show_charge; st.rerun()
 if cols[1].button(d_lbl_t, key="btn_d"): st.session_state.show_discharge = not st.session_state.show_discharge; st.rerun()
 if cols[2].button(g_lbl_t, key="btn_g"): st.session_state.show_ghost = not st.session_state.show_ghost; st.rerun()
-st.markdown('</div>', unsafe_allow_html=True)
 
 # ── PLOTLY CHART ────────────────────────────────────────────────────────────── #
 chart_df = df.sort_values('created_at').copy()
