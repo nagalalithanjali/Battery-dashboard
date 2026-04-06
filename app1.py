@@ -422,8 +422,6 @@ div[data-testid="column"] button[kind="secondary"] p {
 }
 
 /* Plotly Theme Overrides */
-
-
 .modebar-btn { padding: 4px; }
 .modebar-btn:hover svg { fill: #111827 !important; }
 </style>
@@ -466,17 +464,15 @@ def _fmt_date(dt):
     return dt.strftime("%d %b %Y, %I:%M %p")
 
 
-# def _fmt_date(dt): ... 
-# ... we just replace the charge_card line breaks to be safe
 def charge_card(total_kwh: float, user_name: str, date_text: str) -> str:
     """Render a real charge card (left column)."""
-    return f"""<div class="event-card ec-charge"><div class="ec-connector teal-rev"></div><div class="ec-body charge"><div class="ec-badge badge-charge">↑ CHARGED</div><div class="ec-kwh charge">{total_kwh:.1f}<span class="ec-kwh-unit">kWh</span></div><div class="ec-meta-row"><span class="meta-label">Producer</span><span class="meta-val">{user_name}</span></div><div class="ec-meta-row"><span class="meta-label">Date</span><span class="meta-val">{date_text}</span></div></div></div>"""
+    return f"""<div class="event-card ec-charge"><div class="ec-connector teal-rev"></div><div class="ec-body charge"><div class="ec-badge badge-charge">↑ CHARGED</div><div class="ec-kwh charge">{total_kwh:.2f}<span class="ec-kwh-unit">kWh</span></div><div class="ec-meta-row"><span class="meta-label">Producer</span><span class="meta-val">{user_name}</span></div><div class="ec-meta-row"><span class="meta-label">Date</span><span class="meta-val">{date_text}</span></div></div></div>"""
 
 
 def discharge_card(total_kwh: float, user_name: str, date_text: str,
                    mileage: float | None, co2: float | None) -> str:
     """Render a real discharge card (right column)."""
-    mileage_str = f"{mileage:.1f} km"  if mileage and mileage > 0 else "N/A"
+    mileage_str = f"{mileage:.2f} km"  if mileage and mileage > 0 else "N/A"
     co2_str     = f"{co2:.2f} kg"      if co2    and co2    > 0 else "N/A"
     co2_class   = "green" if co2 and co2 > 0 else ""
 
@@ -485,7 +481,7 @@ def discharge_card(total_kwh: float, user_name: str, date_text: str,
 
     extras = f"""<div class="ec-extras" style="gap: 12px; margin-top: 14px; border-top: none;"><div style="background: rgba(0,0,0,0.03); padding: 8px 12px; border-radius: 6px; border: 1px solid rgba(0,0,0,0.05); display: flex; align-items: center; gap: 8px;">{svg_mileage}<div><div class="extra-label">Mileage</div><div class="extra-val" style="color:#141716;">{mileage_str}</div></div></div><div style="background: rgba(56,142,60,0.05); padding: 8px 12px; border-radius: 6px; border: 1px solid rgba(56,142,60,0.2); display: flex; align-items: center; gap: 8px;">{svg_co2}<div><div class="extra-label" style="color: rgba(56,142,60,0.8);">CO₂ Offset</div><div class="extra-val" style="color: var(--green); font-weight: 500;">{co2_str}</div></div></div></div>"""
 
-    return f"""<div class="event-card ec-discharge"><div class="ec-connector amber-fwd"></div><div class="ec-body discharge"><div class="ec-badge badge-discharge">↓ DISCHARGED</div><div class="ec-kwh discharge">{total_kwh:.1f}<span class="ec-kwh-unit">kWh</span></div><div class="ec-meta-row"><span class="meta-label">Consumer</span><span class="meta-val">{user_name}</span></div><div class="ec-meta-row"><span class="meta-label">Date</span><span class="meta-val">{date_text}</span></div>{extras}</div></div>"""
+    return f"""<div class="event-card ec-discharge"><div class="ec-connector amber-fwd"></div><div class="ec-body discharge"><div class="ec-badge badge-discharge">↓ DISCHARGED</div><div class="ec-kwh discharge">{total_kwh:.2f}<span class="ec-kwh-unit">kWh</span></div><div class="ec-meta-row"><span class="meta-label">Consumer</span><span class="meta-val">{user_name}</span></div><div class="ec-meta-row"><span class="meta-label">Date</span><span class="meta-val">{date_text}</span></div>{extras}</div></div>"""
 
 
 def ghost_card(event_type: str) -> str:
@@ -500,7 +496,7 @@ def ghost_card(event_type: str) -> str:
     return f"""<div class="event-card {col}"><div class="ec-connector {conn}"></div><div class="ec-body {kwh_c} ghost"><div class="ec-badge badge-ghost">⬡ {label}</div><div class="ec-kwh ghost">—<span class="ec-kwh-unit">kWh</span></div><div class="ec-meta-row"><span class="meta-label">{label_prefix}</span><span class="meta-val">{not_rec}</span></div></div></div>"""
 
 
-# ── GROUPING (same logic as original) ───────────────────────────────────────── #
+# ── GROUPING ────────────────────────────────────────────────────────────────── #
 def build_groups(df: pd.DataFrame) -> list:
     groups = []
     current = []
@@ -536,7 +532,7 @@ def interleave_placeholders(groups: list) -> list:
 # ── MAIN RENDER ─────────────────────────────────────────────────────────────── #
 energy, batteries, user_map = load_data()
 
-battery_list     = batteries['serialnumber'].dropna().unique().tolist()
+battery_list       = batteries['serialnumber'].dropna().unique().tolist()
 header_placeholder = st.empty()
 
 selected_battery = st.selectbox("Battery Serial Filter", battery_list)
@@ -560,7 +556,7 @@ total_discharged = round(df[df['system_type'] == 'consumer']['energy_change'].su
 total_mileage    = df['milage'].sum() if 'milage' in df.columns else 0
 total_mileage    = 0 if pd.isna(total_mileage) else total_mileage
 total_co2        = round(total_mileage * 0.06, 2)
-mileage_display  = f"{total_mileage:,.1f}" if total_mileage > 0 else "—"
+mileage_display  = f"{total_mileage:,.2f}" if total_mileage > 0 else "—"
 
 # ---- header ----
 header_placeholder.markdown(f"""
@@ -576,11 +572,11 @@ st.markdown(f"""
 <div class="rm-stats">
   <div class="stat-cell">
     <div class="stat-label">Total Charged</div>
-    <div class="stat-value teal">{total_charged}<div class="stat-unit">kWh</div></div>
+    <div class="stat-value teal">{total_charged:.2f}<div class="stat-unit">kWh</div></div>
   </div>
   <div class="stat-cell">
     <div class="stat-label">Total Discharged</div>
-    <div class="stat-value amber">{total_discharged}<div class="stat-unit">kWh</div></div>
+    <div class="stat-value amber">{total_discharged:.2f}<div class="stat-unit">kWh</div></div>
   </div>
   <div class="stat-cell">
     <div class="stat-label">Total Mileage</div>
@@ -588,7 +584,7 @@ st.markdown(f"""
   </div>
   <div class="stat-cell">
     <div class="stat-label">CO₂ Offset</div>
-    <div class="stat-value green">{total_co2}<div class="stat-unit">kilograms</div></div>
+    <div class="stat-value green">{total_co2:.2f}<div class="stat-unit">kilograms</div></div>
   </div>
 </div>
 """, unsafe_allow_html=True)
@@ -621,7 +617,7 @@ if st.session_state.show_charge:
         name='Cumulative Charged',
         line=dict(color='#2E9D58', width=2),
         marker=dict(color='#2E9D58', size=6, line=dict(color='#ffffff', width=1)),
-        hovertemplate='Date: %{x}<br>Total Charged: %{y:.1f} kWh<extra></extra>'
+        hovertemplate='Date: %{x}<br>Total Charged: %{y:.2f} kWh<extra></extra>'
     ))
 
 if st.session_state.show_discharge:
@@ -633,7 +629,7 @@ if st.session_state.show_discharge:
         name='Cumulative Discharged',
         line=dict(color='#E27A33', width=2),
         marker=dict(color='#E27A33', size=6, line=dict(color='#ffffff', width=1)),
-        hovertemplate='Date: %{x}<br>Total Discharged: %{y:.1f} kWh<extra></extra>'
+        hovertemplate='Date: %{x}<br>Total Discharged: %{y:.2f} kWh<extra></extra>'
     ))
 
 fig.update_layout(
@@ -648,7 +644,16 @@ fig.update_layout(
     showlegend=False
 )
 
-st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': True, 'displaylogo': False})
+st.plotly_chart(
+    fig,
+    use_container_width=True,
+    config={
+        'displayModeBar': True,
+        'displaylogo': False,
+        'modeBarButtonsToAdd': ['resetScale2d'],
+        'modeBarButtonsToRemove': [],
+    }
+)
 
 # ── BUILD TIMELINE ──────────────────────────────────────────────────────────── #
 groups        = build_groups(df)
@@ -665,15 +670,15 @@ for item in final_groups:
         if sys_t == "consumer" and not st.session_state.show_discharge: continue
     filtered_groups.append(item)
 
-pulse_teal = True
+pulse_teal  = True
 pulse_amber = True
 
 for item in filtered_groups:
     kind = item[0]
 
-    left_content = ""
+    left_content   = ""
     center_content = ""
-    right_content = ""
+    right_content  = ""
 
     if kind == "ghost":
         ghost_type = item[1]
@@ -688,14 +693,13 @@ for item in filtered_groups:
         user_name   = g['user_name'].iloc[0]
         total_kwh   = round(g['energy_change'].sum(), 2)
 
-        start_dt = g['created_at'].min()
-        end_dt   = g['created_at'].max()
+        start_dt  = g['created_at'].min()
+        end_dt    = g['created_at'].max()
         date_text = (_fmt_date(start_dt) if start_dt == end_dt
                      else f"{_fmt_date(start_dt)} → {_fmt_date(end_dt)}")
 
         if system_type == "producer":
             left_content = charge_card(total_kwh, user_name, date_text)
-            
             cls = "spine-dot teal"
             if pulse_teal:
                 cls += " pulse"
@@ -706,7 +710,6 @@ for item in filtered_groups:
             mileage_g = 0 if pd.isna(mileage_g) else mileage_g
             co2_g     = round(mileage_g * 0.06, 2) if mileage_g > 0 else None
             right_content = discharge_card(total_kwh, user_name, date_text, mileage_g or None, co2_g)
-            
             cls = "spine-dot amber"
             if pulse_amber:
                 cls += " pulse"
