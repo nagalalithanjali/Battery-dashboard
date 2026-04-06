@@ -7,30 +7,30 @@ st.set_page_config(layout="wide", page_title="Battery Journey Roadmap", page_ico
 # ── GLOBAL CSS ─────────────────────────────────────────────────────────────── #
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap');
 
 /* hide default streamlit chrome */
 #MainMenu, footer, header { visibility: hidden; }
 .block-container { padding: 0 !important; max-width: 100% !important; }
-.stSelectbox > div > div { background: #1c1f1e !important; border: 1px solid rgba(255,255,255,0.07) !important; color: #e8ece9 !important; font-family: 'DM Mono', monospace !important; font-size: 13px !important; }
+.stSelectbox > div > div { background: #ffffff !important; border: 1px solid #E5E7EB !important; color: #111827 !important; font-family: 'Inter', sans-serif !important; font-size: 14px !important; border-radius: 6px !important; }
 .stSelectbox { padding: 16px 40px 10px !important; }
-.stSelectbox label { color: var(--muted) !important; font-family: 'DM Mono', monospace !important; font-size: 11px !important; letter-spacing: 0.12em !important; text-transform: uppercase !important; }
+.stSelectbox label { color: var(--muted) !important; font-family: 'Inter', sans-serif !important; font-size: 13px !important; font-weight: 500 !important; text-transform: none !important; letter-spacing: 0 !important; }
 
 :root {
-    --bg: #0d0f0e;
-    --surface: #141716;
-    --surface2: #1c1f1e;
-    --border: rgba(255,255,255,0.07);
-    --teal: #2dd4a0;
-    --teal-dim: rgba(45,212,160,0.12);
-    --teal-mid: rgba(45,212,160,0.3);
-    --amber: #f5a623;
-    --amber-dim: rgba(245,166,35,0.12);
-    --amber-mid: rgba(245,166,35,0.3);
-    --muted: #5a6460;
-    --text: #e8ece9;
-    --text2: #8a9690;
-    --green: #7dce82;
+    --bg: #fffafa;
+    --surface: #FFFFFF;
+    --surface2: #F3F4F6;
+    --border: #E5E7EB;
+    --teal: #2E9D58;
+    --teal-dim: rgba(46,157,88,0.12);
+    --teal-mid: rgba(46,157,88,0.3);
+    --amber: #E27A33;
+    --amber-dim: rgba(226,122,51,0.12);
+    --amber-mid: rgba(226,122,51,0.3);
+    --muted: #6B7280;
+    --text: #111827;
+    --text2: #4B5563;
+    --green: #2E9D58;
 }
 
 body, .stApp { background: var(--bg) !important; color: var(--text) !important; }
@@ -41,55 +41,56 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     border-bottom: 1px solid var(--border);
 }
 .rm-eyebrow {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.18em;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
     color: var(--muted);
-    text-transform: uppercase;
     margin-bottom: 6px;
 }
 .rm-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 46px;
-    letter-spacing: 0.04em;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
     color: var(--text);
-    line-height: 1;
-    margin-bottom: 4px;
+    line-height: 1.1;
+    margin-bottom: 8px;
 }
 .rm-serial {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
     font-size: 14px;
     color: var(--teal);
-    letter-spacing: 0.06em;
 }
 
 /* ── stats bar ── */
 .rm-stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 8px;
+    gap: 16px;
+    background: transparent;
+    border: none;
     margin: 16px 40px 24px;
-    overflow: hidden;
 }
 .stat-cell {
-    background: var(--surface);
     padding: 22px 28px;
+    border-radius: 12px;
 }
+.stat-cell:nth-child(1) { background: #E4F1F9; }
+.stat-cell:nth-child(2) { background: #EAEFF6; }
+.stat-cell:nth-child(3) { background: #E4F6EF; }
+.stat-cell:nth-child(4) { background: #F0E6F4; }
+
 .stat-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text2);
     margin-bottom: 8px;
 }
 .stat-value {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 30px;
-    letter-spacing: 0.04em;
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #111827 !important;
     line-height: 1;
 }
 .stat-value.teal  { color: var(--teal); }
@@ -97,10 +98,12 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
 .stat-value.white { color: var(--text); }
 .stat-value.green { color: var(--green); }
 .stat-unit {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
     color: var(--text2);
-    margin-top: 4px;
+    display: inline-block;
+    margin-left: 6px;
 }
 
 /* ── legend ── */
@@ -115,9 +118,10 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     display: flex;
     align-items: center;
     gap: 8px;
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--text2);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
     letter-spacing: 0.06em;
 }
 .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
@@ -140,9 +144,9 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     padding: 28px 0 16px;
 }
 .col-head-label {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 15px;
-    letter-spacing: 0.12em;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
     white-space: nowrap;
 }
 .col-head-label.teal  { color: var(--teal); }
@@ -180,8 +184,8 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
 .spine-dot.amber { border-color: var(--amber); background: var(--amber-dim); }
 .spine-dot.ghost { border-color: var(--muted); background: transparent; opacity: 0.4; }
 
-@keyframes pulse-teal  { 0%,100%{box-shadow:0 0 0 0 rgba(45,212,160,.4)} 50%{box-shadow:0 0 0 6px rgba(45,212,160,0)} }
-@keyframes pulse-amber { 0%,100%{box-shadow:0 0 0 0 rgba(245,166,35,.4)} 50%{box-shadow:0 0 0 6px rgba(245,166,35,0)} }
+@keyframes pulse-teal  { 0%,100%{box-shadow:0 0 0 0 rgba(46,157,88,.4)} 50%{box-shadow:0 0 0 6px rgba(46,157,88,0)} }
+@keyframes pulse-amber { 0%,100%{box-shadow:0 0 0 0 rgba(226,122,51,.4)} 50%{box-shadow:0 0 0 6px rgba(226,122,51,0)} }
 .spine-dot.teal.pulse  { animation: pulse-teal  2s infinite; }
 .spine-dot.amber.pulse { animation: pulse-amber 2s infinite; }
 
@@ -206,15 +210,18 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
 
 .ec-body {
     flex: 1;
-    background: var(--surface);
+    background: #ffffff;
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 16px 18px;
     position: relative;
     overflow: hidden;
-    transition: border-color .2s;
+    transition: all .2s;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
 }
-.ec-body:hover { border-color: rgba(255,255,255,0.15); }
+.ec-body.charge { background: rgba(46,157,88,0.06); border: 1px solid rgba(46,157,88,0.25) !important; }
+.ec-body.discharge { background: rgba(226,122,51,0.06); border: 1px solid rgba(226,122,51,0.25) !important; }
+.ec-body:hover { border-color: rgba(0,0,0,0.18); box-shadow: 0 6px 20px rgba(0,0,0,0.05); }
 .ec-body::before {
     content: '';
     position: absolute;
@@ -233,22 +240,22 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.12em;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
     text-transform: uppercase;
     padding: 3px 8px;
     border-radius: 3px;
     margin-bottom: 10px;
 }
-.badge-charge    { color: var(--teal);  background: var(--teal-dim);  border: 1px solid rgba(45,212,160,.22); }
-.badge-discharge { color: var(--amber); background: var(--amber-dim); border: 1px solid rgba(245,166,35,.22); }
+.badge-charge    { color: var(--teal);  background: var(--teal-dim);  border: 1px solid rgba(46,157,88,.22); }
+.badge-discharge { color: var(--amber); background: var(--amber-dim); border: 1px solid rgba(226,122,51,.22); }
 .badge-ghost     { color: var(--muted); background: rgba(90,100,96,.1); border: 1px dashed rgba(90,100,96,.3); }
 
 .ec-kwh {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 27px;
-    letter-spacing: 0.04em;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
     line-height: 1;
     margin-bottom: 8px;
 }
@@ -256,12 +263,11 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
 .ec-kwh.discharge { color: var(--amber); }
 .ec-kwh.ghost     { color: var(--muted); }
 .ec-kwh-unit {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
     color: var(--text2);
     margin-left: 4px;
-    letter-spacing: 0.06em;
 }
 
 .ec-meta-row {
@@ -271,17 +277,17 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     margin-bottom: 4px;
 }
 .meta-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
     color: var(--muted);
-    min-width: 44px;
+    min-width: 70px;
 }
 .meta-val {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--text2);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
 }
 
 .ec-extras {
@@ -292,17 +298,17 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     gap: 20px;
 }
 .extra-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
     color: var(--muted);
     margin-bottom: 2px;
 }
 .extra-val {
-    font-family: 'DM Mono', monospace;
-    font-size: 12px;
-    color: var(--text2);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
 }
 .extra-val.green { color: var(--green); }
 
@@ -315,13 +321,13 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     padding: 2px 7px;
     border-radius: 2px;
     margin-top: 8px;
-    background: rgba(45,212,160,.1);
+    background: rgba(46,157,88,.1);
     color: var(--teal);
-    border: 1px solid rgba(45,212,160,.2);
+    border: 1px solid rgba(46,157,88,.2);
 }
 .progress-wrap {
     height: 3px;
-    background: rgba(255,255,255,0.06);
+    background: rgba(0,0,0,0.06);
     border-radius: 2px;
     margin-top: 5px;
     overflow: hidden;
@@ -342,10 +348,9 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     align-items: center;
 }
 .footer-note {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
     color: var(--muted);
-    letter-spacing: 0.08em;
 }
 /* Container padding for legend columns */
 div[data-testid="stHorizontalBlock"] {
@@ -358,16 +363,16 @@ div[data-testid="stHorizontalBlock"] {
     border: none !important;
     box-shadow: none !important;
     color: var(--text2) !important;
-    font-family: 'DM Mono', monospace !important;
-    font-size: 11px !important;
-    letter-spacing: 0.05em !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
     padding: 0 !important;
     height: auto !important;
     display: inline-flex;
     align-items: center;
 }
 [data-testid="stButton"] button:hover {
-    color: #fff !important;
+    color: #000 !important;
 }
 [data-testid="stButton"] p {
     font-size: 11px !important;
@@ -383,6 +388,7 @@ div[data-testid="column"]:nth-child(1) button[kind="secondary"] p::before {
     width: 10px; height: 10px;
     border-radius: 50%;
     background-color: var(--teal) !important;
+    border-radius: 4px !important;
     margin-right: 8px;
     flex-shrink: 0;
 }
@@ -392,6 +398,7 @@ div[data-testid="column"]:nth-child(2) button[kind="secondary"] p::before {
     width: 10px; height: 10px;
     border-radius: 50%;
     background-color: var(--amber) !important;
+    border-radius: 4px !important;
     margin-right: 8px;
     flex-shrink: 0;
 }
@@ -413,7 +420,14 @@ div[data-testid="column"] button[kind="secondary"] p {
     padding: 0 40px !important; 
     margin-bottom: 24px;
 }
+
+/* Plotly Theme Overrides */
+
+
+.modebar-btn { padding: 4px; }
+.modebar-btn:hover svg { fill: #111827 !important; }
 </style>
+
 """, unsafe_allow_html=True)
 
 
@@ -466,10 +480,10 @@ def discharge_card(total_kwh: float, user_name: str, date_text: str,
     co2_str     = f"{co2:.2f} kg"      if co2    and co2    > 0 else "N/A"
     co2_class   = "green" if co2 and co2 > 0 else ""
 
-    svg_mileage = """<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>"""
-    svg_co2 = """<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:rgba(125,206,130,1);"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>"""
+    svg_mileage = """<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#141716" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>"""
+    svg_co2 = """<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green);"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>"""
 
-    extras = f"""<div class="ec-extras" style="gap: 12px; margin-top: 14px; border-top: none;"><div style="background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 8px;">{svg_mileage}<div><div class="extra-label">Mileage</div><div class="extra-val" style="color:#fff;">{mileage_str}</div></div></div><div style="background: rgba(125,206,130,0.05); padding: 8px 12px; border-radius: 6px; border: 1px solid rgba(125,206,130,0.2); display: flex; align-items: center; gap: 8px;">{svg_co2}<div><div class="extra-label" style="color: rgba(125,206,130,0.7);">CO₂ Offset</div><div class="extra-val" style="color: var(--green); font-weight: 500;">{co2_str}</div></div></div></div>"""
+    extras = f"""<div class="ec-extras" style="gap: 12px; margin-top: 14px; border-top: none;"><div style="background: rgba(0,0,0,0.03); padding: 8px 12px; border-radius: 6px; border: 1px solid rgba(0,0,0,0.05); display: flex; align-items: center; gap: 8px;">{svg_mileage}<div><div class="extra-label">Mileage</div><div class="extra-val" style="color:#141716;">{mileage_str}</div></div></div><div style="background: rgba(56,142,60,0.05); padding: 8px 12px; border-radius: 6px; border: 1px solid rgba(56,142,60,0.2); display: flex; align-items: center; gap: 8px;">{svg_co2}<div><div class="extra-label" style="color: rgba(56,142,60,0.8);">CO₂ Offset</div><div class="extra-val" style="color: var(--green); font-weight: 500;">{co2_str}</div></div></div></div>"""
 
     return f"""<div class="event-card ec-discharge"><div class="ec-connector amber-fwd"></div><div class="ec-body discharge"><div class="ec-badge badge-discharge">↓ DISCHARGED</div><div class="ec-kwh discharge">{total_kwh:.1f}<span class="ec-kwh-unit">kWh</span></div><div class="ec-meta-row"><span class="meta-label">Consumer</span><span class="meta-val">{user_name}</span></div><div class="ec-meta-row"><span class="meta-label">Date</span><span class="meta-val">{date_text}</span></div>{extras}</div></div>"""
 
@@ -562,23 +576,19 @@ st.markdown(f"""
 <div class="rm-stats">
   <div class="stat-cell">
     <div class="stat-label">Total Charged</div>
-    <div class="stat-value teal">{total_charged}</div>
-    <div class="stat-unit">kWh</div>
+    <div class="stat-value teal">{total_charged}<div class="stat-unit">kWh</div></div>
   </div>
   <div class="stat-cell">
     <div class="stat-label">Total Discharged</div>
-    <div class="stat-value amber">{total_discharged}</div>
-    <div class="stat-unit">kWh</div>
+    <div class="stat-value amber">{total_discharged}<div class="stat-unit">kWh</div></div>
   </div>
   <div class="stat-cell">
     <div class="stat-label">Total Mileage</div>
-    <div class="stat-value white">{mileage_display}</div>
-    <div class="stat-unit">kilometers</div>
+    <div class="stat-value white">{mileage_display}<div class="stat-unit">kilometers</div></div>
   </div>
   <div class="stat-cell">
     <div class="stat-label">CO₂ Offset</div>
-    <div class="stat-value green">{total_co2}</div>
-    <div class="stat-unit">kilograms</div>
+    <div class="stat-value green">{total_co2}<div class="stat-unit">kilograms</div></div>
   </div>
 </div>
 """, unsafe_allow_html=True)
@@ -609,8 +619,8 @@ if st.session_state.show_charge:
         y=chart_df['c_charge'],
         mode='lines+markers',
         name='Cumulative Charged',
-        line=dict(color='#2dd4a0', width=2),
-        marker=dict(color='#2dd4a0', size=6, line=dict(color='#0d0f0e', width=1)),
+        line=dict(color='#2E9D58', width=2),
+        marker=dict(color='#2E9D58', size=6, line=dict(color='#ffffff', width=1)),
         hovertemplate='Date: %{x}<br>Total Charged: %{y:.1f} kWh<extra></extra>'
     ))
 
@@ -621,24 +631,24 @@ if st.session_state.show_discharge:
         y=chart_df['c_discharge'],
         mode='lines+markers',
         name='Cumulative Discharged',
-        line=dict(color='#f5a623', width=2),
-        marker=dict(color='#f5a623', size=6, line=dict(color='#0d0f0e', width=1)),
+        line=dict(color='#E27A33', width=2),
+        marker=dict(color='#E27A33', size=6, line=dict(color='#ffffff', width=1)),
         hovertemplate='Date: %{x}<br>Total Discharged: %{y:.1f} kWh<extra></extra>'
     ))
 
 fig.update_layout(
     height=250,
     margin=dict(l=0, r=0, t=30, b=0),
-    title=dict(text="CUMULATIVE ENERGY YIELD (KWH)", font=dict(family='DM Mono', size=11, color='#8a9690')),
+    title=dict(text="CUMULATIVE ENERGY YIELD (KWH)", font=dict(family='Inter', size=13, color='#6B7280', weight='bold')),
     paper_bgcolor='rgba(0,0,0,0)',
     plot_bgcolor='rgba(0,0,0,0)',
-    xaxis=dict(showgrid=True, gridcolor='rgba(255,255,255,0.03)', color='#8a9690', tickfont=dict(family='DM Mono', size=10)),
-    yaxis=dict(showgrid=True, gridcolor='rgba(255,255,255,0.03)', color='#8a9690', tickfont=dict(family='DM Mono', size=10)),
-    hoverlabel=dict(bgcolor="#1c1f1e", font_size=12, font_family="DM Mono"),
+    xaxis=dict(showgrid=True, gridcolor='rgba(0,0,0,0.1)', color='#4B5563', tickfont=dict(family='Inter', size=12)),
+    yaxis=dict(showgrid=True, gridcolor='rgba(0,0,0,0.1)', color='#4B5563', tickfont=dict(family='Inter', size=12)),
+    hoverlabel=dict(bgcolor="#ffffff", font_size=13, font_family="Inter", font=dict(color="#111827")),
     showlegend=False
 )
 
-st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': True})
+st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': True, 'displaylogo': False})
 
 # ── BUILD TIMELINE ──────────────────────────────────────────────────────────── #
 groups        = build_groups(df)
@@ -714,13 +724,13 @@ timeline_html = f"""
 
   <!-- Row 0: Headers -->
   <div class="col-head" style="justify-content:flex-end;">
-    <div class="col-head-line" style="background:linear-gradient(to left,transparent,rgba(45,212,160,.3))"></div>
+    <div class="col-head-line" style="background:linear-gradient(to left,transparent,rgba(46,157,88,.3))"></div>
     <div class="col-head-label teal">CHARGE</div>
   </div>
   <div class="t-center"></div>
   <div class="col-head" style="justify-content:flex-start;">
     <div class="col-head-label amber">DISCHARGE</div>
-    <div class="col-head-line" style="background:linear-gradient(to right,transparent,rgba(245,166,35,.3))"></div>
+    <div class="col-head-line" style="background:linear-gradient(to right,transparent,rgba(226,122,51,.3))"></div>
   </div>
 
 {rows_combined}
