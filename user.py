@@ -20,8 +20,13 @@ st.markdown("""
 
 /* selectbox styles matched from app1.py */
 .stSelectbox > div > div { background: #ffffff !important; border: 1px solid #E5E7EB !important; color: #111827 !important; font-family: 'Inter', sans-serif !important; font-size: 14px !important; border-radius: 6px !important; }
-.stSelectbox { padding: 16px 40px 10px !important; }
-.stSelectbox label { color: var(--muted) !important; font-family: 'Inter', sans-serif !important; font-size: 13px !important; font-weight: 500 !important; text-transform: none !important; letter-spacing: 0 !important; }
+.stSelectbox { padding: 16px 0px 10px !important; }
+.stSelectbox label { color: var(--muted) !important; font-family: 'Inter', sans-serif !important; font-size: 13px !important; font-weight: 500 !important; text-transform: none !important; letter-spacing: 0 !important; margin-bottom: 4px !important; display: block !important; }
+
+/* column alignment */
+div[data-testid="stHorizontalBlock"] {
+    padding: 0 40px !important;
+}
 
 :root {
     --bg: #fffafa;
@@ -45,7 +50,7 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
 
 /* ── header ── */
 .ud-header {
-    padding: 32px 40px 24px;
+    padding: 24px 40px 8px;
     border-bottom: 1px solid var(--border);
 }
 .ud-eyebrow {
@@ -95,7 +100,7 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     gap: 16px;
     background: transparent;
     border: none;
-    margin: 16px 40px 24px;
+    margin: 8px 40px 24px;
 }
 .ud-stats.cols-3 { grid-template-columns: repeat(3, 1fr); }
 .ud-stats.cols-5 { grid-template-columns: repeat(5, 1fr); }
@@ -156,16 +161,19 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
 /* ── session cards ── */
 .session-list {
     padding: 0 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 24px;
     margin-bottom: 40px;
 }
 
 .sc {
     background: #ffffff;
     border-radius: 8px;
-    padding: 16px 18px;
+    padding: 20px 22px 24px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
     border: 1px solid var(--border);
     position: relative;
     overflow: hidden;
@@ -235,8 +243,8 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     display: flex;
     flex-wrap: wrap;
     gap: 8px 20px;
-    margin-top: 10px;
-    padding-top: 10px;
+    margin-top: auto;
+    padding-top: 14px;
     border-top: 1px solid var(--border);
 }
 .sc-meta-item {
@@ -244,6 +252,9 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     font-size: 13px;
     font-weight: 500;
     color: var(--muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
 }
 .sc-meta-item b {
     color: var(--text);
@@ -299,7 +310,9 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     .ud-header { padding: 20px 16px 16px; }
     .ud-title  { font-size: 22px; }
 
-    .stSelectbox { padding: 12px 16px 8px !important; }
+    .stSelectbox { padding: 12px 0px 8px !important; }
+    div[data-testid="stHorizontalBlock"] { padding: 0 16px !important; flex-wrap: wrap !important; gap: 8px !important; }
+    div[data-testid="column"] { min-width: 0 !important; flex: 0 0 auto !important; width: 100% !important; }
 
     .ud-stats { grid-template-columns: 1fr 1fr !important; gap: 10px; margin: 12px 16px 16px; }
     .stat-cell { padding: 14px 16px; }
@@ -309,8 +322,8 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     .ud-divider { margin: 0 16px 16px; }
     .ud-section-label { padding: 0 16px 12px; }
 
-    .session-list { padding: 0 16px; gap: 12px; margin-bottom: 24px; }
-    .sc { padding: 12px 14px; }
+    .session-list { padding: 0 16px; gap: 12px; margin-bottom: 24px; grid-template-columns: 1fr; }
+    .sc { padding: 16px; min-height: auto; }
     .sc-kwh { font-size: 20px; }
 
     .sc-extras { flex-direction: column; gap: 8px; }
@@ -420,7 +433,6 @@ summary['category'] = summary.apply(
 
 header_placeholder = st.empty()
 
-st.markdown('<div style="padding: 0 40px;">', unsafe_allow_html=True)
 filter_cols = st.columns([1, 1, 2])
 with filter_cols[0]:
     category = st.selectbox("User Type Filter", ["producer", "consumer", "both"], key="cat")
@@ -428,7 +440,6 @@ filtered_ids   = summary[summary['category'] == category].index
 filtered_names = [id_to_name[i] for i in filtered_ids if i in id_to_name]
 with filter_cols[1]:
     selected_user  = st.selectbox("Select User", sorted(filtered_names), key="usr")
-st.markdown('</div>', unsafe_allow_html=True)
 
 if not selected_user:
     st.stop()
@@ -457,15 +468,15 @@ total_mileage  = int(consumer_data['mileage'].sum()) if not consumer_data.empty 
 total_co2      = round(total_mileage * CO2_PER_KWH, 2)
 
 cat_label = {
-    "producer": '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px; margin-bottom:-2px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> Producer',
-    "consumer": '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px; margin-bottom:-2px;"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg> Consumer',
-    "both": '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px; margin-bottom:-2px;"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg> Both'
+    "producer": '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:2px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> Producer',
+    "consumer": '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:2px;"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg> Consumer',
+    "both": '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:2px;"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg> Both'
 }[category]
 cat_css   = {"producer": "cat-producer", "consumer": "cat-consumer", "both": "cat-both"}[category]
 
 # ── header ── #
 header_placeholder.markdown(f"""
-<div class="ud-header" style="border-bottom: none; padding-bottom: 8px;">
+<div class="ud-header" style="border-bottom: none; padding-bottom: 4px; padding-top: 16px;">
   <div class="ud-eyebrow">GreenKWh · User Energy</div>
   <div class="ud-title">Energy Dashboard</div>
   <div class="ud-name">{selected_user}</div>
@@ -515,9 +526,9 @@ else:
     session_count  = len(sorted_grouped)
     st.markdown(f'<div class="ud-section-label">{session_count} Session{"s" if session_count != 1 else ""}</div>', unsafe_allow_html=True)
 
-    svg_batt = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:-2px; margin-right:4px; opacity:0.8;"><rect x="2" y="7" width="16" height="10" rx="2" ry="2"></rect><line x1="22" y1="11" x2="22" y2="13"></line></svg>'
-    svg_sys  = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:-2px; margin-right:4px; opacity:0.8;"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>'
-    svg_cal  = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:-2px; margin-right:4px; opacity:0.8;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>'
+    svg_batt = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8;"><rect x="7" y="5" width="10" height="17" rx="2" ry="2"></rect><line x1="10" y1="3" x2="14" y2="3"></line></svg>'
+    svg_sys  = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8;"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>'
+    svg_cal  = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>'
     svg_map  = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8;"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>'
     svg_leaf = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 12 12"/></svg>'
 
