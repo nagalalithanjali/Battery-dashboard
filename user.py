@@ -456,7 +456,11 @@ total_sessions = int(grouped['sessions'].sum()) if not grouped.empty else 0
 total_mileage  = int(consumer_data['mileage'].sum()) if not consumer_data.empty else 0
 total_co2      = round(total_mileage * CO2_PER_KWH, 2)
 
-cat_label = {"producer": "⚡ Producer", "consumer": "🛵 Consumer", "both": "🔄 Both"}[category]
+cat_label = {
+    "producer": '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px; margin-bottom:-2px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> Producer',
+    "consumer": '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px; margin-bottom:-2px;"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg> Consumer',
+    "both": '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px; margin-bottom:-2px;"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg> Both'
+}[category]
 cat_css   = {"producer": "cat-producer", "consumer": "cat-consumer", "both": "cat-both"}[category]
 
 # ── header ── #
@@ -511,6 +515,12 @@ else:
     session_count  = len(sorted_grouped)
     st.markdown(f'<div class="ud-section-label">{session_count} Session{"s" if session_count != 1 else ""}</div>', unsafe_allow_html=True)
 
+    svg_batt = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:-2px; margin-right:4px; opacity:0.8;"><rect x="2" y="7" width="16" height="10" rx="2" ry="2"></rect><line x1="22" y1="11" x2="22" y2="13"></line></svg>'
+    svg_sys  = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:-2px; margin-right:4px; opacity:0.8;"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>'
+    svg_cal  = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:-2px; margin-right:4px; opacity:0.8;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>'
+    svg_map  = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8;"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>'
+    svg_leaf = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 12 12"/></svg>'
+
     cards_html = '<div class="session-list">'
     for _, row in sorted_grouped.iterrows():
         stype    = row['system_type']
@@ -536,9 +546,9 @@ else:
     <div class="sc-money">₹{earned}</div>
   </div>
   <div class="sc-meta">
-    <div class="sc-meta-item">🔋 Battery <b>{battery}</b></div>
-    <div class="sc-meta-item">🆔 System <b>{system}</b></div>
-    <div class="sc-meta-item">📅 {start} → {end}</div>
+    <div class="sc-meta-item">{svg_batt} Battery <b>{battery}</b></div>
+    <div class="sc-meta-item">{svg_sys} System <b>{system}</b></div>
+    <div class="sc-meta-item">{svg_cal} {start} → {end}</div>
   </div>
 </div>"""
         else:
@@ -556,13 +566,13 @@ else:
     <div class="sc-money">₹{money} saved</div>
   </div>
   <div class="sc-meta">
-    <div class="sc-meta-item">🔋 Battery <b>{battery}</b></div>
-    <div class="sc-meta-item">🆔 System <b>{system}</b></div>
-    <div class="sc-meta-item">📅 {start} → {end}</div>
+    <div class="sc-meta-item">{svg_batt} Battery <b>{battery}</b></div>
+    <div class="sc-meta-item">{svg_sys} System <b>{system}</b></div>
+    <div class="sc-meta-item">{svg_cal} {start} → {end}</div>
   </div>
   <div class="sc-extras">
-    <div class="sc-extra-chip">🗺 {mileage} km</div>
-    <div class="sc-extra-chip green">🌱 {co2_val} kg CO₂</div>
+    <div class="sc-extra-chip">{svg_map} {mileage} km</div>
+    <div class="sc-extra-chip green">{svg_leaf} {co2_val} kg CO₂</div>
   </div>
 </div>"""
 
