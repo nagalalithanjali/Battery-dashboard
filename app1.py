@@ -555,7 +555,7 @@ total_charged    = round(df[df['system_type'] == 'producer']['energy_change'].su
 total_discharged = round(df[df['system_type'] == 'consumer']['energy_change'].sum(), 2)
 total_mileage    = df['milage'].sum() if 'milage' in df.columns else 0
 total_mileage    = 0 if pd.isna(total_mileage) else total_mileage
-total_co2        = round(total_mileage * 0.06, 2)
+total_co2        = round(total_mileage * 0.06, 2) if total_mileage > 0 else round(total_discharged * 0.85, 2)
 mileage_display  = f"{total_mileage:,.2f}" if total_mileage > 0 else "—"
 
 # ---- header ----
@@ -708,7 +708,7 @@ for item in filtered_groups:
         else:
             mileage_g = g['milage'].sum() if 'milage' in g.columns else 0
             mileage_g = 0 if pd.isna(mileage_g) else mileage_g
-            co2_g     = round(mileage_g * 0.06, 2) if mileage_g > 0 else None
+            co2_g     = round(mileage_g * 0.06, 2) if mileage_g > 0 else round(total_kwh * 0.85, 2)
             right_content = discharge_card(total_kwh, user_name, date_text, mileage_g or None, co2_g)
             cls = "spine-dot amber"
             if pulse_amber:
