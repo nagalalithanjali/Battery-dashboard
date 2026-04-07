@@ -700,11 +700,9 @@ st.markdown('<div style="padding: 14px 40px;">', unsafe_allow_html=True)
 cols = st.columns([1, 1, 1, 2])
 c_lbl_t = "🟢 Charge event (producer)" if st.session_state.show_charge else "⚪ Charge event (hidden)"
 d_lbl_t = "🟠 Discharge event (consumer)" if st.session_state.show_discharge else "⚪ Discharge event (hidden)"
-g_lbl_t = "⬡ unrecorded session" if st.session_state.show_ghost else "⬡ session (hidden)"
 
 if cols[0].button(c_lbl_t, key="btn_c"): st.session_state.show_charge = not st.session_state.show_charge; st.rerun()
 if cols[1].button(d_lbl_t, key="btn_d"): st.session_state.show_discharge = not st.session_state.show_discharge; st.rerun()
-if cols[2].button(g_lbl_t, key="btn_g"): st.session_state.show_ghost = not st.session_state.show_ghost; st.rerun()
 
 # ── PLOTLY CHART ────────────────────────────────────────────────────────────── #
 chart_df = df.sort_values('created_at').copy()
