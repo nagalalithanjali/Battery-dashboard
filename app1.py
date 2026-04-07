@@ -860,7 +860,7 @@ timeline_html = f"""
 </div>
 
 <div class="rm-footer">
-  <div class="footer-note">GreenKWh Energy Platform · Battery Lifecycle Audit</div>
+  <div class="footer-note">GreenKWh Energy Platform · Battery Lifecycle </div>
   <div class="footer-note">Battery: {selected_battery}</div>
 </div>
 """
