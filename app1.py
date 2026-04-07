@@ -424,6 +424,90 @@ div[data-testid="column"] button[kind="secondary"] p {
 /* Plotly Theme Overrides */
 .modebar-btn { padding: 4px; }
 .modebar-btn:hover svg { fill: #111827 !important; }
+
+/* ── MOBILE RESPONSIVE ─────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+    /* header */
+    .rm-header { padding: 20px 16px 16px; }
+    .rm-title { font-size: 22px; }
+
+    /* selectbox */
+    .stSelectbox { padding: 12px 16px 8px !important; }
+
+    /* stats: 2x2 grid on mobile */
+    .rm-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin: 12px 16px 16px;
+    }
+    .stat-cell { padding: 14px 16px; }
+    .stat-value { font-size: 20px; }
+    .stat-unit { font-size: 12px; }
+
+    /* legend buttons row */
+    div[data-testid="stHorizontalBlock"] {
+        padding: 10px 16px !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+    }
+    div[data-testid="column"] {
+        min-width: 0 !important;
+        flex: 0 0 auto !important;
+        width: auto !important;
+    }
+
+    /* plotly chart */
+    .stPlotlyChart { padding: 0 16px !important; }
+
+    /* timeline: collapse to single column, spine on left */
+    .rm-body {
+        grid-template-columns: 20px 1fr;
+        padding: 0 16px;
+    }
+
+    /* hide right/left column headers and empty center cells */
+    .rm-body > .col-head:first-child,
+    .rm-body > .t-center,
+    .rm-body > .col-head:nth-child(3) { display: none; }
+
+    /* spine line: pin to left edge of center col */
+    .spine-line { left: 0; transform: none; }
+
+    /* all cards go full width in col 2 */
+    .t-left, .t-right {
+        grid-column: 2;
+        justify-content: flex-start;
+    }
+    .t-center {
+        grid-column: 1;
+        justify-content: center;
+    }
+
+    /* remove row-reverse on charge cards so they align left like discharge */
+    .ec-charge { flex-direction: row; }
+    .ec-connector.teal-rev {
+        background: linear-gradient(to right, transparent, var(--teal-mid));
+    }
+
+    /* connector shorter on mobile */
+    .ec-connector { width: 16px; }
+
+    /* card body full width */
+    .ec-body { padding: 12px 14px; }
+    .ec-kwh { font-size: 20px; }
+
+    /* extras: stack vertically on very small screens */
+    .ec-extras { flex-direction: column; gap: 8px; }
+
+    /* footer: stack vertically */
+    .rm-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 16px;
+    }
+}
 </style>
 
 """, unsafe_allow_html=True)
