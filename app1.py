@@ -460,31 +460,67 @@ div[data-testid="column"] button[kind="secondary"] p {
     /* plotly chart */
     .stPlotlyChart { padding: 0 16px !important; }
 
-    /* timeline: collapse to single column, spine on left */
+    /* timeline: 2-col grid, spine left, cards right */
     .rm-body {
-        grid-template-columns: 20px 1fr;
-        padding: 0 16px;
+        display: flex;
+        flex-direction: column;
+        padding: 0 12px 0 0;
+        position: relative;
     }
 
-    /* hide right/left column headers and empty center cells */
-    .rm-body > .col-head:first-child,
-    .rm-body > .t-center,
-    .rm-body > .col-head:nth-child(3) { display: none; }
+    /* hide CHARGE / DISCHARGE column header labels only */
+    .col-head { display: none; }
 
-    /* spine line: pin to left edge of center col */
-    .spine-line { left: 0; transform: none; }
+    /* spine line: fixed left position */
+    .spine-line {
+        left: 14px;
+        transform: none;
+    }
 
-    /* all cards go full width in col 2 */
+    /* each row becomes a flex row: dot on left, card on right */
+    .t-left, .t-right, .t-center {
+        display: contents;
+    }
+
+    /* wrap each row's dot + card together */
     .t-left, .t-right {
-        grid-column: 2;
-        justify-content: flex-start;
-    }
-    .t-center {
-        grid-column: 1;
-        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: 0;
     }
 
-    /* remove row-reverse on charge cards so they align left like discharge */
+    /* hide the now-redundant separate t-center divs */
+    .t-center { display: none; }
+
+    /* inject dot positioning via the event-card itself */
+    .event-card {
+        width: 100%;
+        padding-left: 28px;
+        position: relative;
+    }
+
+    /* dot: absolute positioned on the left spine */
+    .event-card::before {
+        content: '';
+        position: absolute;
+        left: 9px;
+        top: 18px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 2px solid;
+        z-index: 2;
+        background-color: var(--bg);
+    }
+    .ec-charge::before  { border-color: var(--teal);  background: var(--teal-dim); }
+    .ec-discharge::before { border-color: var(--amber); background: var(--amber-dim); }
+
+    /* hide the original spine dots (they're in t-center which is now hidden) */
+    .spine-dot { display: none; }
+
+    /* remove row-reverse on charge cards */
     .ec-charge { flex-direction: row; }
     .ec-connector.teal-rev {
         background: linear-gradient(to right, transparent, var(--teal-mid));
