@@ -381,40 +381,22 @@ div[data-testid="stHorizontalBlock"] {
     margin: 0;
 }
 
-/* Inject colored dots into Legend */
-div[data-testid="column"]:nth-child(1) button[kind="secondary"] p::before {
-    content: '';
-    display: inline-block;
-    width: 10px; height: 10px;
-    border-radius: 50%;
-    background-color: var(--teal) !important;
-    border-radius: 4px !important;
-    margin-right: 8px;
-    flex-shrink: 0;
-}
-div[data-testid="column"]:nth-child(2) button[kind="secondary"] p::before {
-    content: '';
-    display: inline-block;
-    width: 10px; height: 10px;
-    border-radius: 50%;
-    background-color: var(--amber) !important;
-    border-radius: 4px !important;
-    margin-right: 8px;
-    flex-shrink: 0;
-}
-div[data-testid="column"]:nth-child(3) button[kind="secondary"] p::before {
-    content: '⬡';
-    display: inline-block;
-    font-size: 14px;
-    color: var(--muted) !important;
-    font-style: italic;
-    margin-right: 6px;
-    line-height: 1;
-    flex-shrink: 0;
-}
-div[data-testid="column"] button[kind="secondary"] p {
-    font-weight: bold !important;
-}
+/* Inject colored dots into Legend - target by button key */
+[data-testid="stButton"]:has(button[data-testid="btn_c"]) p,
+button[data-testid="btn_c"] ~ * p,
+[key="btn_c"] p { color: var(--teal) !important; }
+
+[data-testid="stButton"]:has(button[data-testid="btn_d"]) p,
+button[data-testid="btn_d"] ~ * p,
+[key="btn_d"] p { color: var(--amber) !important; }
+
+[data-testid="stButton"]:has(button[data-testid="btn_g"]) p,
+[key="btn_g"] p { color: var(--muted) !important; }
+
+/* fallback: color by column position */
+div[data-testid="column"]:nth-child(1) [data-testid="stButton"] p { color: var(--teal) !important; font-weight: bold !important; }
+div[data-testid="column"]:nth-child(2) [data-testid="stButton"] p { color: var(--amber) !important; font-weight: bold !important; }
+div[data-testid="column"]:nth-child(3) [data-testid="stButton"] p { color: var(--muted) !important; font-weight: bold !important; }
 
 .stPlotlyChart {
     padding: 0 40px !important; 
@@ -716,8 +698,8 @@ if 'show_ghost' not in st.session_state: st.session_state.show_ghost = True
 
 st.markdown('<div style="padding: 14px 40px;">', unsafe_allow_html=True)
 cols = st.columns([1, 1, 1, 2])
-c_lbl_t = "● Charge event (producer)" if st.session_state.show_charge else "○ Charge event (hidden)"
-d_lbl_t = "● Discharge event (consumer)" if st.session_state.show_discharge else "○ Discharge event (hidden)"
+c_lbl_t = "🟢 Charge event (producer)" if st.session_state.show_charge else "⚪ Charge event (hidden)"
+d_lbl_t = "🟠 Discharge event (consumer)" if st.session_state.show_discharge else "⚪ Discharge event (hidden)"
 g_lbl_t = "⬡ unrecorded session" if st.session_state.show_ghost else "⬡ session (hidden)"
 
 if cols[0].button(c_lbl_t, key="btn_c"): st.session_state.show_charge = not st.session_state.show_charge; st.rerun()
@@ -860,7 +842,7 @@ timeline_html = f"""
 </div>
 
 <div class="rm-footer">
-  <div class="footer-note">GreenKWh Energy Platform · Battery Lifecycle </div>
+  <div class="footer-note">GreenKWh Energy Platform · Battery Lifecycle Audit</div>
   <div class="footer-note">Battery: {selected_battery}</div>
 </div>
 """
