@@ -14,18 +14,25 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap');
 
+/* hide default streamlit chrome */
 #MainMenu, footer, header { visibility: hidden; }
 .block-container { padding: 0 !important; max-width: 100% !important; }
+
+/* selectbox styles matched from app1.py */
+.stSelectbox > div > div { background: #ffffff !important; border: 1px solid #E5E7EB !important; color: #111827 !important; font-family: 'Inter', sans-serif !important; font-size: 14px !important; border-radius: 6px !important; }
+.stSelectbox { padding: 16px 40px 10px !important; }
+.stSelectbox label { color: var(--muted) !important; font-family: 'Inter', sans-serif !important; font-size: 13px !important; font-weight: 500 !important; text-transform: none !important; letter-spacing: 0 !important; }
 
 :root {
     --bg: #fffafa;
     --surface: #FFFFFF;
+    --surface2: #F3F4F6;
     --border: #E5E7EB;
     --teal: #2E9D58;
-    --teal-dim: rgba(46,157,88,0.10);
+    --teal-dim: rgba(46,157,88,0.12);
     --teal-mid: rgba(46,157,88,0.3);
     --amber: #E27A33;
-    --amber-dim: rgba(226,122,51,0.10);
+    --amber-dim: rgba(226,122,51,0.12);
     --amber-mid: rgba(226,122,51,0.3);
     --muted: #6B7280;
     --text: #111827;
@@ -36,36 +43,32 @@ st.markdown("""
 
 body, .stApp { background: var(--bg) !important; color: var(--text) !important; }
 
-/* ── sidebar ── */
-.stSidebar { background: #ffffff !important; border-right: 1px solid var(--border) !important; }
-.stSidebar .stSelectbox > div > div { background: #f9fafb !important; border: 1px solid var(--border) !important; color: var(--text) !important; font-family: 'Inter', sans-serif !important; font-size: 13px !important; border-radius: 6px !important; }
-.stSidebar label { color: var(--muted) !important; font-family: 'Inter', sans-serif !important; font-size: 12px !important; font-weight: 500 !important; }
-
 /* ── header ── */
 .ud-header {
-    padding: 32px 40px 20px;
+    padding: 32px 40px 24px;
+    border-bottom: 1px solid var(--border);
 }
 .ud-eyebrow {
     font-family: 'Inter', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--muted);
     margin-bottom: 6px;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
 }
 .ud-title {
     font-family: 'Inter', sans-serif;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 600;
     color: var(--text);
     line-height: 1.1;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 .ud-name {
     font-family: 'Roboto Mono', monospace;
     font-size: 14px;
     color: var(--teal);
+    display: inline-block;
+    margin-right: 12px;
 }
 
 /* ── category pill ── */
@@ -89,15 +92,17 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
 /* ── stats grid ── */
 .ud-stats {
     display: grid;
-    gap: 14px;
-    margin: 0 40px 28px;
+    gap: 16px;
+    background: transparent;
+    border: none;
+    margin: 16px 40px 24px;
 }
 .ud-stats.cols-3 { grid-template-columns: repeat(3, 1fr); }
 .ud-stats.cols-5 { grid-template-columns: repeat(5, 1fr); }
 .ud-stats.cols-6 { grid-template-columns: repeat(6, 1fr); }
 
 .stat-cell {
-    padding: 20px 22px;
+    padding: 22px 28px;
     border-radius: 12px;
 }
 .stat-cell:nth-child(1) { background: #E4F1F9; }
@@ -109,24 +114,25 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
 
 .stat-label {
     font-family: 'Inter', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 500;
     color: var(--text2);
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 .stat-value {
     font-family: 'Inter', sans-serif;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 600;
-    color: var(--text);
+    color: #111827 !important;
     line-height: 1;
 }
 .stat-unit {
     font-family: 'Inter', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--text2);
-    margin-left: 4px;
+    display: inline-block;
+    margin-left: 6px;
 }
 
 /* ── divider ── */
@@ -152,30 +158,34 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     padding: 0 40px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
     margin-bottom: 40px;
 }
 
 .sc {
-    background: var(--surface);
-    border-radius: 10px;
+    background: #ffffff;
+    border-radius: 8px;
     padding: 16px 18px;
     border: 1px solid var(--border);
     position: relative;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-    transition: box-shadow .2s;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+    transition: all .2s;
+}
+.sc:hover {
+    border-color: rgba(0,0,0,0.18);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
 }
 .sc::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0;
-    height: 3px;
-    border-radius: 10px 10px 0 0;
+    height: 2px;
+    border-radius: 8px 8px 0 0;
 }
-.sc-producer { background: rgba(46,157,88,0.05); border-color: rgba(46,157,88,0.22); }
+.sc-producer { background: rgba(46,157,88,0.06); border-color: rgba(46,157,88,0.25) !important; }
 .sc-producer::before { background: var(--teal); }
-.sc-consumer { background: rgba(226,122,51,0.05); border-color: rgba(226,122,51,0.22); }
+.sc-consumer { background: rgba(226,122,51,0.06); border-color: rgba(226,122,51,0.25) !important; }
 .sc-consumer::before { background: var(--amber); }
 
 .sc-top {
@@ -189,10 +199,9 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     align-items: center;
     gap: 5px;
     font-family: 'Inter', sans-serif;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
     padding: 3px 8px;
     border-radius: 3px;
 }
@@ -201,17 +210,18 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
 
 .sc-kwh {
     font-family: 'Inter', sans-serif;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
     line-height: 1;
 }
 .sc-kwh.producer { color: var(--teal); }
 .sc-kwh.consumer { color: var(--amber); }
 .sc-kwh-unit {
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
     font-weight: 500;
     color: var(--text2);
-    margin-left: 3px;
+    margin-left: 4px;
 }
 
 .sc-money {
@@ -224,39 +234,42 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
 .sc-meta {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px 20px;
+    gap: 8px 20px;
     margin-top: 10px;
     padding-top: 10px;
     border-top: 1px solid var(--border);
 }
 .sc-meta-item {
     font-family: 'Inter', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: 500;
     color: var(--muted);
 }
 .sc-meta-item b {
     color: var(--text);
-    font-weight: 500;
 }
 
 .sc-extras {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     margin-top: 10px;
     flex-wrap: wrap;
 }
 .sc-extra-chip {
     background: rgba(0,0,0,0.03);
-    border: 1px solid rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.05);
     border-radius: 6px;
-    padding: 6px 12px;
+    padding: 8px 12px;
     font-family: 'Inter', sans-serif;
     font-size: 12px;
-    color: var(--text2);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 .sc-extra-chip.green {
-    background: rgba(46,157,88,0.05);
-    border-color: rgba(46,157,88,0.2);
+    background: rgba(56,142,60,0.05);
+    border-color: rgba(56,142,60,0.2);
     color: var(--green);
     font-weight: 500;
 }
@@ -275,7 +288,7 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     padding: 20px 40px;
     border-top: 1px solid var(--border);
     font-family: 'Inter', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     color: var(--muted);
     display: flex;
     justify-content: space-between;
@@ -283,23 +296,26 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
 
 /* ── MOBILE ─────────────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
-    .ud-header { padding: 20px 16px 14px; }
+    .ud-header { padding: 20px 16px 16px; }
     .ud-title  { font-size: 22px; }
 
-    .ud-stats { margin: 0 16px 20px; grid-template-columns: 1fr 1fr !important; gap: 10px; }
-    .stat-cell { padding: 14px 14px; }
-    .stat-value { font-size: 18px; }
+    .stSelectbox { padding: 12px 16px 8px !important; }
+
+    .ud-stats { grid-template-columns: 1fr 1fr !important; gap: 10px; margin: 12px 16px 16px; }
+    .stat-cell { padding: 14px 16px; }
+    .stat-value { font-size: 20px; }
+    .stat-unit { font-size: 12px; }
 
     .ud-divider { margin: 0 16px 16px; }
     .ud-section-label { padding: 0 16px 12px; }
 
-    .session-list { padding: 0 16px; gap: 10px; margin-bottom: 24px; }
-    .sc { padding: 14px 14px; }
-    .sc-kwh { font-size: 18px; }
+    .session-list { padding: 0 16px; gap: 12px; margin-bottom: 24px; }
+    .sc { padding: 12px 14px; }
+    .sc-kwh { font-size: 20px; }
 
-    .sc-extras { flex-direction: column; gap: 6px; }
+    .sc-extras { flex-direction: column; gap: 8px; }
 
-    .ud-footer { flex-direction: column; gap: 4px; padding: 16px; }
+    .ud-footer { flex-direction: column; gap: 4px; padding: 16px; align-items: flex-start; }
 }
 </style>
 """, unsafe_allow_html=True)
@@ -394,7 +410,7 @@ def fmt_dt(dt):
 # ── MAIN ──────────────────────────────────────────────────────────────────────── #
 energy, id_to_name, name_to_id = load_data()
 
-# ── sidebar ── #
+# ── sidebar removal & filters ── #
 summary = energy.groupby(['user_id', 'system_type'])['energy_change'].sum().unstack(fill_value=0)
 summary['category'] = summary.apply(
     lambda x: 'both'     if x.get('producer', 0) > 0 and x.get('consumer', 0) > 0
@@ -402,12 +418,17 @@ summary['category'] = summary.apply(
     else      'consumer', axis=1
 )
 
-with st.sidebar:
-    st.markdown('<div style="padding: 20px 0 8px; font-family: Inter, sans-serif; font-size: 13px; font-weight: 600; color: #111827;">GreenKWh · User Dashboard</div>', unsafe_allow_html=True)
-    category = st.selectbox("User Type", ["producer", "consumer", "both"])
-    filtered_ids   = summary[summary['category'] == category].index
-    filtered_names = [id_to_name[i] for i in filtered_ids if i in id_to_name]
-    selected_user  = st.selectbox("Select User", sorted(filtered_names))
+header_placeholder = st.empty()
+
+st.markdown('<div style="padding: 0 40px;">', unsafe_allow_html=True)
+filter_cols = st.columns([1, 1, 2])
+with filter_cols[0]:
+    category = st.selectbox("User Type Filter", ["producer", "consumer", "both"], key="cat")
+filtered_ids   = summary[summary['category'] == category].index
+filtered_names = [id_to_name[i] for i in filtered_ids if i in id_to_name]
+with filter_cols[1]:
+    selected_user  = st.selectbox("Select User", sorted(filtered_names), key="usr")
+st.markdown('</div>', unsafe_allow_html=True)
 
 if not selected_user:
     st.stop()
@@ -439,8 +460,8 @@ cat_label = {"producer": "⚡ Producer", "consumer": "🛵 Consumer", "both": "�
 cat_css   = {"producer": "cat-producer", "consumer": "cat-consumer", "both": "cat-both"}[category]
 
 # ── header ── #
-st.markdown(f"""
-<div class="ud-header">
+header_placeholder.markdown(f"""
+<div class="ud-header" style="border-bottom: none; padding-bottom: 8px;">
   <div class="ud-eyebrow">GreenKWh · User Energy</div>
   <div class="ud-title">Energy Dashboard</div>
   <div class="ud-name">{selected_user}</div>
