@@ -638,8 +638,8 @@ fig.update_layout(
     title=dict(text="CUMULATIVE ENERGY YIELD (KWH)", font=dict(family='Inter', size=13, color='#6B7280', weight='bold')),
     paper_bgcolor='rgba(0,0,0,0)',
     plot_bgcolor='rgba(0,0,0,0)',
-    xaxis=dict(showgrid=True, gridcolor='rgba(0,0,0,0.1)', color='#4B5563', tickfont=dict(family='Inter', size=12)),
-    yaxis=dict(showgrid=True, gridcolor='rgba(0,0,0,0.1)', color='#4B5563', tickfont=dict(family='Inter', size=12)),
+    xaxis=dict(showgrid=True, gridcolor='rgba(0,0,0,0.1)', color='#111827', tickfont=dict(family='Inter', size=12, color='#111827')),
+    yaxis=dict(showgrid=True, gridcolor='rgba(0,0,0,0.1)', color='#111827', tickfont=dict(family='Inter', size=12, color='#111827')),
     hoverlabel=dict(bgcolor="#ffffff", font_size=13, font_family="Inter", font=dict(color="#111827")),
     showlegend=False
 )
@@ -651,7 +651,7 @@ st.plotly_chart(
         'displayModeBar': True,
         'displaylogo': False,
         'modeBarButtonsToAdd': ['resetScale2d'],
-        'modeBarButtonsToRemove': [],
+        'modeBarButtonsToRemove': ['select2d', 'lasso2d'],
     }
 )
 
