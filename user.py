@@ -105,9 +105,13 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
 }
 
 .stat-cell {
-    flex: 1 1 160px;
+    flex: 1 1 140px;
     padding: 22px 28px;
     border-radius: 12px;
+}
+
+@media (max-width: 1300px) {
+    .stat-cell { flex-basis: 30%; }
 }
 .stat-cell:nth-child(1) { background: #E4F1F9; }
 .stat-cell:nth-child(2) { background: #EAEFF6; }
