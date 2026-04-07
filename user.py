@@ -557,7 +557,7 @@ else:
         <span class="sc-kwh producer">{energy_v}<span class="sc-kwh-unit">kWh</span></span>
       </div>
     </div>
-    <div class="sc-money">₹{earned}</div>
+    <div class="sc-money">₹{earned} earned</div>
   </div>
   <div class="sc-meta">
     <div class="sc-meta-item">{svg_batt} Battery <b>{battery}</b></div>
