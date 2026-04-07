@@ -96,17 +96,16 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
 
 /* ── stats grid ── */
 .ud-stats {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     background: transparent;
     border: none;
     margin: 8px 40px 24px;
 }
-.ud-stats.cols-3 { grid-template-columns: repeat(3, 1fr); }
-.ud-stats.cols-5 { grid-template-columns: repeat(5, 1fr); }
-.ud-stats.cols-6 { grid-template-columns: repeat(6, 1fr); }
 
 .stat-cell {
+    flex: 1 1 160px;
     padding: 22px 28px;
     border-radius: 12px;
 }
@@ -314,8 +313,8 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     div[data-testid="stHorizontalBlock"] { padding: 0 16px !important; flex-wrap: wrap !important; gap: 8px !important; }
     div[data-testid="column"] { min-width: 0 !important; flex: 0 0 auto !important; width: 100% !important; }
 
-    .ud-stats { grid-template-columns: 1fr 1fr !important; gap: 10px; margin: 12px 16px 16px; }
-    .stat-cell { padding: 14px 16px; }
+    .ud-stats { gap: 10px; margin: 12px 16px 16px; }
+    .stat-cell { padding: 14px 16px; flex-basis: 120px; }
     .stat-value { font-size: 20px; }
     .stat-unit { font-size: 12px; }
 
