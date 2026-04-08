@@ -1,11 +1,12 @@
+import math
 import streamlit as st
 import pandas as pd
 
 st.set_page_config(layout="wide", page_title="User Energy Dashboard", page_icon="⚡")
 
 # ── CONSTANTS ───────────────────────────────────────────────────────────────── #
-PRICE_PER_KWH  = 16
-PETROL_PER_LITRE = 107.5
+PRICE_PER_KWH  = 16.5
+PETROL_PER_LITRE = 107
 SWAP_COST      = 80
 CO2_PER_KWH    = 0.06
 
@@ -416,7 +417,15 @@ def _agg(rows):
 def calc_money_saved(mileage):
     if pd.isna(mileage) or mileage == 0:
         return 0
-    return max((mileage / 40) * PETROL_PER_LITRE - SWAP_COST, 0)
+    petrol_cost = (mileage / 45) * PETROL_PER_LITRE
+    ev_cost     = (mileage / 80) * SWAP_COST
+    return max(math.floor(petrol_cost - ev_cost), 0)
+
+
+def calc_co2(mileage):
+    if pd.isna(mileage) or mileage == 0:
+        return 0
+    return math.floor(mileage * CO2_PER_KWH)
 
 
 def fmt_dt(dt):
@@ -464,11 +473,11 @@ consumer_data  = grouped[grouped['system_type'] == 'consumer']
 
 total_produced = round(producer_data['energy'].sum(), 2)
 total_consumed = round(consumer_data['energy'].sum(), 2)
-total_saved    = round(consumer_data['money'].sum(), 2)
+total_saved    = int(consumer_data['money'].sum()) if not consumer_data.empty else 0
 total_earned   = round(total_produced * PRICE_PER_KWH, 2)
 total_sessions = int(grouped['sessions'].sum()) if not grouped.empty else 0
 total_mileage  = int(consumer_data['mileage'].sum()) if not consumer_data.empty else 0
-total_co2      = round(total_mileage * CO2_PER_KWH, 2)
+total_co2      = calc_co2(total_mileage)
 
 cat_label = {
     "producer": '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:2px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> Producer',
@@ -514,7 +523,7 @@ else:
         stat("Total Sessions",  f"{total_sessions}") +
         stat("Total Mileage",   f"{total_mileage}", "km") +
         stat("CO₂ Offset",      f"{total_co2}", "kg") +
-        stat("Total Savings",   f"₹{round(total_saved + total_earned, 2)}")
+        stat("Total Savings",   f"₹{int(total_saved + total_earned)}")
     )
     cols_cls = "cols-6"
 
@@ -544,7 +553,7 @@ else:
         battery  = row['battery']
         system   = row['system']
         mileage  = int(row['mileage'])
-        co2      = round(row['mileage'] * CO2_PER_KWH, 2)
+        co2_val  = calc_co2(row['mileage'])
 
         if stype == 'producer':
             earned = round(energy_v * PRICE_PER_KWH, 2)
@@ -566,8 +575,7 @@ else:
   </div>
 </div>"""
         else:
-            money = round(row['money'], 2)
-            co2_val = round(row['mileage'] * CO2_PER_KWH, 2) if row['mileage'] > 0 else round(energy_v * 0.85, 2)
+            money = int(row['money'])
             cards_html += f"""
 <div class="sc sc-consumer">
   <div class="sc-top">
