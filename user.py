@@ -8,7 +8,7 @@ st.set_page_config(layout="wide", page_title="User Energy Dashboard", page_icon=
 PRICE_PER_KWH  = 16.5
 PETROL_PER_LITRE = 107
 SWAP_COST      = 80
-CO2_PER_KWH    = 0.06
+CO2_PER_KWH    = 2.4
 
 # ── GLOBAL CSS ─────────────────────────────────────────────────────────────── #
 st.markdown("""
@@ -169,6 +169,7 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 24px;
     margin-bottom: 40px;
+    grid-auto-flow: dense;
 }
 
 .sc {
@@ -245,9 +246,8 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
 
 .sc-meta {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px 20px;
-    margin-top: auto;
+    flex-direction: column;
+    gap: 6px;
     padding-top: 14px;
     border-top: 1px solid var(--border);
 }
@@ -422,10 +422,11 @@ def calc_money_saved(mileage):
     return max(math.floor(petrol_cost - ev_cost), 0)
 
 
-def calc_co2(mileage):
-    if pd.isna(mileage) or mileage == 0:
+def calc_co2(energy):
+    if pd.isna(energy) or energy <= 0:
         return 0
-    return math.floor(mileage * CO2_PER_KWH)
+    co2_value = energy * CO2_PER_KWH
+    return co2_value
 
 
 def fmt_dt(dt):
@@ -477,7 +478,7 @@ total_saved    = int(consumer_data['money'].sum()) if not consumer_data.empty el
 total_earned   = round(total_produced * PRICE_PER_KWH, 2)
 total_sessions = int(grouped['sessions'].sum()) if not grouped.empty else 0
 total_mileage  = int(consumer_data['mileage'].sum()) if not consumer_data.empty else 0
-total_co2      = calc_co2(total_mileage)
+total_co2      = calc_co2(total_consumed)
 
 cat_label = {
     "producer": '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:2px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> Producer',
@@ -510,21 +511,25 @@ if category == "producer":
 elif category == "consumer":
     cells = (
         stat("Energy Consumed", f"{total_consumed}", "kWh") +
-        stat("Total Sessions",  f"{total_sessions}") +
-        stat("Total Mileage",   f"{total_mileage}", "km") +
-        stat("CO₂ Offset",      f"{total_co2}", "kg") +
-        stat("Money Saved",     f"₹{total_saved}")
+        stat("Total Sessions",  f"{total_sessions}")
     )
+    if total_mileage > 0:
+        cells += stat("Total Mileage", f"{total_mileage}", "km")
+    if total_co2 > 0:
+        cells += stat("CO₂ Offset", f"{round(total_co2, 1)}", "kg")
+    cells += stat("Money Saved", f"₹{total_saved}")
     cols_cls = "cols-5"
 else:
     cells = (
         stat("Energy Produced", f"{total_produced}", "kWh") +
         stat("Energy Consumed", f"{total_consumed}", "kWh") +
-        stat("Total Sessions",  f"{total_sessions}") +
-        stat("Total Mileage",   f"{total_mileage}", "km") +
-        stat("CO₂ Offset",      f"{total_co2}", "kg") +
-        stat("Total Savings",   f"₹{int(total_saved + total_earned)}")
+        stat("Total Sessions",  f"{total_sessions}")
     )
+    if total_mileage > 0:
+        cells += stat("Total Mileage", f"{total_mileage}", "km")
+    if total_co2 > 0:
+        cells += stat("CO₂ Offset", f"{round(total_co2, 1)}", "kg")
+    cells += stat("Total Savings", f"₹{int(total_saved + total_earned)}")
     cols_cls = "cols-6"
 
 st.markdown(f'<div class="ud-stats {cols_cls}">{cells}</div>', unsafe_allow_html=True)
@@ -543,7 +548,6 @@ else:
     svg_cal  = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>'
     svg_map  = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8;"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>'
     svg_leaf = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 12 12"/></svg>'
-
     cards_html = '<div class="session-list">'
     for _, row in sorted_grouped.iterrows():
         stype    = row['system_type']
@@ -553,7 +557,7 @@ else:
         battery  = row['battery']
         system   = row['system']
         mileage  = int(row['mileage'])
-        co2_val  = calc_co2(row['mileage'])
+        co2_val  = calc_co2(row['energy'])
 
         if stype == 'producer':
             earned = round(energy_v * PRICE_PER_KWH, 2)
@@ -576,6 +580,11 @@ else:
 </div>"""
         else:
             money = int(row['money'])
+            extras_html = ""
+            if mileage > 0:
+                extras_html += f'<div class="sc-extra-chip">{svg_map} {mileage} km</div>'
+            if co2_val > 0:
+                extras_html += f'<div class="sc-extra-chip green">{svg_leaf} {round(co2_val, 1)} kg CO₂</div>'
             cards_html += f"""
 <div class="sc sc-consumer">
   <div class="sc-top">
@@ -592,11 +601,10 @@ else:
     <div class="sc-meta-item">{svg_sys} System <b>{system}</b></div>
     <div class="sc-meta-item">{svg_cal} {start} → {end}</div>
   </div>
-  <div class="sc-extras">
-    <div class="sc-extra-chip">{svg_map} {mileage} km</div>
-    <div class="sc-extra-chip green">{svg_leaf} {co2_val} kg CO₂</div>
-  </div>
-</div>"""
+"""
+            if extras_html:
+                cards_html += f'<div class="sc-extras">{extras_html}</div>'
+            cards_html += '</div>'
 
     cards_html += '</div>'
     st.markdown(cards_html, unsafe_allow_html=True)
