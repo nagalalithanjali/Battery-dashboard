@@ -555,7 +555,8 @@ if grouped.empty:
     st.markdown('<div class="ud-empty">No sessions found for this user.</div>', unsafe_allow_html=True)
 else:
     sorted_grouped = grouped.sort_values('start', ascending=False)
-    session_count  = len(sorted_grouped)
+    # Count valid sessions (energy > 0)
+    session_count = sum(1 for _, row in sorted_grouped.iterrows() if round(row['energy'], 2) > 0)
     st.markdown(f'<div class="ud-section-label">{session_count} Session{"s" if session_count != 1 else ""}</div>', unsafe_allow_html=True)
 
     svg_batt = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8;"><rect x="7" y="5" width="10" height="17" rx="2" ry="2"></rect><line x1="10" y1="3" x2="14" y2="3"></line></svg>'
@@ -571,6 +572,10 @@ else:
         end_dt    = row['end']
         start    = fmt_dt(start_dt)
         end      = fmt_dt(end_dt)
+        if energy_v <= 0:
+            continue
+        start    = fmt_dt(row['start'])
+        end      = fmt_dt(row['end'])
         battery  = row['battery']
         system   = row['system']
         mileage  = int(row['mileage'])
