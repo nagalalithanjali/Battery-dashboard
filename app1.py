@@ -574,16 +574,22 @@ def charge_card(total_kwh: float, user_name: str, date_text: str) -> str:
 def discharge_card(total_kwh: float, user_name: str, date_text: str,
                    mileage: float | None, co2: float | None) -> str:
     """Render a real discharge card (right column)."""
-    mileage_str = f"{mileage:.2f} km"  if mileage and mileage > 0 else "N/A"
-    co2_str     = f"{co2:.2f} kg"      if co2    and co2    > 0 else "N/A"
-    co2_class   = "green" if co2 and co2 > 0 else ""
+    mileage_str = f"{mileage:.1f} km"  if mileage and mileage > 0 else None
+    co2_str     = f"{co2:.1f} kg"      if co2    and co2    > 0 else None
 
     svg_mileage = """<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#141716" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.8"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>"""
     svg_co2 = """<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--green);"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>"""
 
-    extras = f"""<div class="ec-extras" style="gap: 12px; margin-top: 14px; border-top: none;"><div style="background: rgba(0,0,0,0.03); padding: 8px 12px; border-radius: 6px; border: 1px solid rgba(0,0,0,0.05); display: flex; align-items: center; gap: 8px;">{svg_mileage}<div><div class="extra-label">Mileage</div><div class="extra-val" style="color:#141716;">{mileage_str}</div></div></div><div style="background: rgba(56,142,60,0.05); padding: 8px 12px; border-radius: 6px; border: 1px solid rgba(56,142,60,0.2); display: flex; align-items: center; gap: 8px;">{svg_co2}<div><div class="extra-label" style="color: rgba(56,142,60,0.8);">CO₂ Offset</div><div class="extra-val" style="color: var(--green); font-weight: 500;">{co2_str}</div></div></div></div>"""
+    extras = ""
+    if mileage_str or co2_str:
+        extras_items = ""
+        if mileage_str:
+            extras_items += f"""<div style="background: rgba(0,0,0,0.03); padding: 8px 12px; border-radius: 6px; border: 1px solid rgba(0,0,0,0.05); display: flex; align-items: center; gap: 8px;">{svg_mileage}<div><div class="extra-label">Mileage</div><div class="extra-val" style="color:#141716;">{mileage_str}</div></div></div>"""
+        if co2_str:
+            extras_items += f"""<div style="background: rgba(56,142,60,0.05); padding: 8px 12px; border-radius: 6px; border: 1px solid rgba(56,142,60,0.2); display: flex; align-items: center; gap: 8px;">{svg_co2}<div><div class="extra-label" style="color: rgba(56,142,60,0.8);">CO₂ Offset</div><div class="extra-val" style="color: var(--green); font-weight: 500;">{co2_str}</div></div></div>"""
+        extras = f"""<div class="ec-extras" style="gap: 12px; margin-top: 14px; border-top: none;">{extras_items}</div>"""
 
-    return f"""<div class="event-card ec-discharge"><div class="ec-connector amber-fwd"></div><div class="ec-body discharge"><div class="ec-badge badge-discharge">↓ DISCHARGED</div><div class="ec-kwh discharge">{total_kwh:.2f}<span class="ec-kwh-unit">kWh</span></div><div class="ec-meta-row"><span class="meta-label">Consumer</span><span class="meta-val">{user_name}</span></div><div class="ec-meta-row"><span class="meta-label">Date</span><span class="meta-val">{date_text}</span></div>{extras}</div></div>"""
+    return f"""<div class="event-card ec-discharge"><div class="ec-connector amber-fwd"></div><div class="ec-body discharge"><div class="ec-badge badge-discharge">↓ DISCHARGED</div><div class="ec-kwh discharge">{total_kwh:.1f}<span class="ec-kwh-unit">kWh</span></div><div class="ec-meta-row"><span class="meta-label">Consumer</span><span class="meta-val">{user_name}</span></div><div class="ec-meta-row"><span class="meta-label">Date</span><span class="meta-val">{date_text}</span></div>{extras}</div></div>"""
 
 
 def ghost_card(event_type: str) -> str:
@@ -653,12 +659,13 @@ df['user_id']   = df['user_id'].astype(str).str.strip()
 df['user_name'] = df['user_id'].map(user_map).fillna("Unknown")
 
 # ---- summary stats ----
-total_charged    = round(df[df['system_type'] == 'producer']['energy_change'].sum(), 2)
-total_discharged = round(df[df['system_type'] == 'consumer']['energy_change'].sum(), 2)
+total_charged    = df[df['system_type'] == 'producer']['energy_change'].sum()
+total_discharged = df[df['system_type'] == 'consumer']['energy_change'].sum()
 total_mileage    = df['milage'].sum() if 'milage' in df.columns else 0
 total_mileage    = 0 if pd.isna(total_mileage) else total_mileage
-total_co2        = round(total_mileage * 0.06, 2) if total_mileage > 0 else round(total_discharged * 0.85, 2)
-mileage_display  = f"{total_mileage:,.2f}" if total_mileage > 0 else "—"
+total_co2        = total_discharged * 2.4
+mileage_display  = f"{total_mileage:.1f}" if total_mileage > 0 else "—"
+co2_display      = f"{total_co2:.1f}" if total_co2 > 0 else "—"
 
 # ---- header ----
 header_placeholder.markdown(f"""
@@ -674,11 +681,11 @@ st.markdown(f"""
 <div class="rm-stats">
   <div class="stat-cell">
     <div class="stat-label">Total Charged</div>
-    <div class="stat-value teal">{total_charged:.2f}<div class="stat-unit">kWh</div></div>
+    <div class="stat-value teal">{total_charged:.1f}<div class="stat-unit">kWh</div></div>
   </div>
   <div class="stat-cell">
     <div class="stat-label">Total Discharged</div>
-    <div class="stat-value amber">{total_discharged:.2f}<div class="stat-unit">kWh</div></div>
+    <div class="stat-value amber">{total_discharged:.1f}<div class="stat-unit">kWh</div></div>
   </div>
   <div class="stat-cell">
     <div class="stat-label">Total Mileage</div>
@@ -686,7 +693,7 @@ st.markdown(f"""
   </div>
   <div class="stat-cell">
     <div class="stat-label">CO₂ Offset</div>
-    <div class="stat-value green">{total_co2:.2f}<div class="stat-unit">kilograms</div></div>
+    <div class="stat-value green">{co2_display}<div class="stat-unit">kilograms</div></div>
   </div>
 </div>
 """, unsafe_allow_html=True)
@@ -791,7 +798,7 @@ for item in filtered_groups:
         g           = item[1]
         system_type = g['system_type'].iloc[0]
         user_name   = g['user_name'].iloc[0]
-        total_kwh   = round(g['energy_change'].sum(), 2)
+        total_kwh   = g['energy_change'].sum()
 
         start_dt  = g['created_at'].min()
         end_dt    = g['created_at'].max()
@@ -808,8 +815,8 @@ for item in filtered_groups:
         else:
             mileage_g = g['milage'].sum() if 'milage' in g.columns else 0
             mileage_g = 0 if pd.isna(mileage_g) else mileage_g
-            co2_g     = round(mileage_g * 0.06, 2) if mileage_g > 0 else round(total_kwh * 0.85, 2)
-            right_content = discharge_card(total_kwh, user_name, date_text, mileage_g or None, co2_g)
+            co2_g     = total_kwh * 2.4
+            right_content = discharge_card(total_kwh, user_name, date_text, mileage_g if mileage_g > 0 else None, co2_g if co2_g > 0 else None)
             cls = "spine-dot amber"
             if pulse_amber:
                 cls += " pulse"
