@@ -402,6 +402,8 @@ def build_sessions(df):
 
 def _agg(rows):
     first = rows[0]; last = rows[-1]
+    end_dt = last['disconnected_time'] if is_valid_dt(last['disconnected_time']) else None
+    end_dt = end_dt if end_dt is not None else (last['timestamp'] if is_valid_dt(last['timestamp']) else pd.NaT)
     return {
         'system_type': first['system_type'],
         'battery':     first['serial_number'],
@@ -409,9 +411,13 @@ def _agg(rows):
         'energy':      sum(r['energy_change'] for r in rows if pd.notna(r['energy_change'])),
         'mileage':     sum(r['mileage']        for r in rows if pd.notna(r['mileage'])),
         'start':       first['timestamp'],
-        'end':         last['disconnected_time'] if pd.notna(last['disconnected_time']) else last['timestamp'],
+        'end':         end_dt,
         'sessions':    len(rows),
     }
+
+
+def is_valid_dt(dt):
+    return pd.notna(dt) and hasattr(dt, 'year') and dt.year > 1900
 
 
 def calc_money_saved(mileage):
@@ -430,7 +436,7 @@ def calc_co2(energy):
 
 
 def fmt_dt(dt):
-    return dt.strftime("%d %b %Y, %I:%M %p") if pd.notna(dt) else "—"
+    return dt.strftime("%d %b %Y, %I:%M %p") if is_valid_dt(dt) else "—"
 
 
 # ── MAIN ──────────────────────────────────────────────────────────────────────── #
@@ -561,12 +567,19 @@ else:
     for _, row in sorted_grouped.iterrows():
         stype    = row['system_type']
         energy_v = round(row['energy'], 2)
-        start    = fmt_dt(row['start'])
-        end      = fmt_dt(row['end'])
+        start_dt  = row['start']
+        end_dt    = row['end']
+        start    = fmt_dt(start_dt)
+        end      = fmt_dt(end_dt)
         battery  = row['battery']
         system   = row['system']
         mileage  = int(row['mileage'])
         co2_val  = calc_co2(row['energy'])
+
+        if is_valid_dt(end_dt) and start_dt != end_dt:
+            date_text = f"{start} → {end}"
+        else:
+            date_text = start
 
         if stype == 'producer':
             earned = round(energy_v * PRICE_PER_KWH, 2)
@@ -585,7 +598,7 @@ else:
   <div class="sc-meta">
     <div class="sc-meta-item">{svg_batt} Battery <b>{battery}</b></div>
     <div class="sc-meta-item">{svg_sys} System <b>{system}</b></div>
-    <div class="sc-meta-item">{svg_cal} {start} → {end}</div>
+    <div class="sc-meta-item">{svg_cal} {date_text}</div>
   </div>
 </div>"""
         else:
@@ -610,7 +623,7 @@ else:
   <div class="sc-meta">
     <div class="sc-meta-item">{svg_batt} Battery <b>{battery}</b></div>
     <div class="sc-meta-item">{svg_sys} System <b>{system}</b></div>
-    <div class="sc-meta-item">{svg_cal} {start} → {end}</div>
+    <div class="sc-meta-item">{svg_cal} {date_text}</div>
   </div>
 """
             if extras_html:
