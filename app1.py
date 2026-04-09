@@ -61,6 +61,69 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     color: var(--teal);
 }
 
+.page-hero {
+    padding: 28px 40px 28px;
+    max-width: 100%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(248,250,252,0.95));
+    border: 1px solid rgba(229,231,235,0.9);
+    border-radius: 26px;
+    box-shadow: 0 22px 60px rgba(15, 23, 42, 0.08);
+    margin: 16px 40px 24px;
+}
+.page-hero-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+.page-hero-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.agg-banner {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+    background: transparent;
+    border: none;
+    margin: 0;
+}
+.agg-card {
+    background: #ffffff;
+    border: 1px solid rgba(229,231,235,0.95);
+    border-radius: 18px;
+    padding: 22px 20px;
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.06);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.agg-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 22px 40px rgba(15, 23, 42, 0.12);
+}
+.agg-card .stat-label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+.agg-card .stat-value {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: #111827;
+}
+.agg-card .stat-unit {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+    margin-left: 4px;
+}
+
 /* ── stats bar ── */
 .rm-stats {
     display: grid;
@@ -71,39 +134,55 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
     margin: 16px 40px 24px;
 }
 .stat-cell {
-    padding: 22px 28px;
-    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.05);
 }
-.stat-cell:nth-child(1) { background: #E4F1F9; }
-.stat-cell:nth-child(2) { background: #EAEFF6; }
-.stat-cell:nth-child(3) { background: #E4F6EF; }
-.stat-cell:nth-child(4) { background: #F0E6F4; }
-
 .stat-label {
     font-family: 'Inter', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--text2);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
     margin-bottom: 8px;
 }
 .stat-value {
     font-family: 'Inter', sans-serif;
-    font-size: 28px;
-    font-weight: 600;
-    color: #111827 !important;
-    line-height: 1;
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.1;
 }
-.stat-value.teal  { color: var(--teal); }
+.stat-value.teal { color: var(--teal); }
 .stat-value.amber { color: var(--amber); }
 .stat-value.white { color: var(--text); }
 .stat-value.green { color: var(--green); }
 .stat-unit {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     color: var(--text2);
-    display: inline-block;
     margin-left: 6px;
+}
+
+/* ── agg section ── */
+.agg-banner {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    background: transparent;
+    border: none;
+    margin: 16px 0 24px;
+}
+.agg-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.05);
 }
 
 /* ── legend ── */
@@ -427,6 +506,17 @@ div[data-testid="column"]:nth-child(3) [data-testid="stButton"] p { color: var(-
     .stat-value { font-size: 20px; }
     .stat-unit { font-size: 12px; }
 
+    /* agg banner */
+    .agg-banner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin: 12px 16px 16px;
+    }
+    .agg-card { padding: 14px 16px; }
+    .page-hero { margin: 16px 16px 20px; }
+    .page-hero-title { font-size: 28px; }
+    .page-hero-subtitle { font-size: 13px; }
+
     /* legend buttons row */
     div[data-testid="stHorizontalBlock"] {
         padding: 10px 16px !important;
@@ -640,6 +730,46 @@ def interleave_placeholders(groups: list) -> list:
 # ── MAIN RENDER ─────────────────────────────────────────────────────────────── #
 energy, batteries, user_map = load_data()
 
+total_batteries = batteries['serialnumber'].dropna().nunique()
+agg = energy.copy()
+agg['energy_change'] = pd.to_numeric(agg['energy_change'], errors='coerce').abs()
+agg_total_charged = agg[agg['system_type'] == 'producer']['energy_change'].sum()
+agg_total_discharged = agg[agg['system_type'] == 'consumer']['energy_change'].sum()
+agg_total_mileage = agg['milage'].sum() if 'milage' in agg.columns else 0
+agg_total_mileage = 0 if pd.isna(agg_total_mileage) else agg_total_mileage
+agg_total_co2 = agg_total_discharged * 2.4
+agg_total_charged_display = agg_total_charged
+
+# overall battery summary section
+st.markdown(f"""
+<div class="page-hero">
+  <div class="page-hero-title">Overall Battery Summary</div>
+  <div class="page-hero-subtitle">High-level metrics across all batteries</div>
+  <div class="agg-banner">
+    <div class="agg-card">
+      <div class="stat-label">Total batteries</div>
+      <div class="stat-value">{total_batteries}</div>
+    </div>
+    <div class="agg-card">
+      <div class="stat-label">Total charged</div>
+      <div class="stat-value">{agg_total_charged_display:.1f}<span class="stat-unit">kWh</span></div>
+    </div>
+    <div class="agg-card">
+      <div class="stat-label">Total discharged</div>
+      <div class="stat-value">{agg_total_discharged:.1f}<span class="stat-unit">kWh</span></div>
+    </div>
+    <div class="agg-card">
+      <div class="stat-label">Total mileage</div>
+      <div class="stat-value">{agg_total_mileage:.1f}<span class="stat-unit">km</span></div>
+    </div>
+    <div class="agg-card">
+      <div class="stat-label">Total CO₂ offset achieved</div>
+      <div class="stat-value">{agg_total_co2:.1f}<span class="stat-unit">kg</span></div>
+    </div>
+  </div>
+</div>
+""", unsafe_allow_html=True)
+
 battery_list       = batteries['serialnumber'].dropna().unique().tolist()
 header_placeholder = st.empty()
 
@@ -671,7 +801,7 @@ co2_display      = f"{total_co2:.1f}" if total_co2 > 0 else "—"
 header_placeholder.markdown(f"""
 <div class="rm-header" style="border-bottom: none; padding-bottom: 8px;">
   <div class="rm-eyebrow">GreenKWh · Battery Journey</div>
-  <div class="rm-title">Energy Roadmap</div>
+  <div class="rm-title">Energy Timeline</div>
   <div class="rm-serial">{selected_battery}</div>
 </div>
 """, unsafe_allow_html=True)
@@ -680,15 +810,15 @@ header_placeholder.markdown(f"""
 st.markdown(f"""
 <div class="rm-stats">
   <div class="stat-cell">
-    <div class="stat-label">Total Charged</div>
+    <div class="stat-label">Charged</div>
     <div class="stat-value teal">{total_charged:.1f}<div class="stat-unit">kWh</div></div>
   </div>
   <div class="stat-cell">
-    <div class="stat-label">Total Discharged</div>
+    <div class="stat-label">Discharged</div>
     <div class="stat-value amber">{total_discharged:.1f}<div class="stat-unit">kWh</div></div>
   </div>
   <div class="stat-cell">
-    <div class="stat-label">Total Mileage</div>
+    <div class="stat-label">Mileage</div>
     <div class="stat-value white">{mileage_display}<div class="stat-unit">kilometers</div></div>
   </div>
   <div class="stat-cell">

@@ -504,10 +504,13 @@ def stat(label, value, unit=""):
 if category == "producer":
     cells = (
         stat("Energy Produced", f"{total_produced}", "kWh") +
-        stat("Total Sessions",  f"{total_sessions}") +
-        stat("Money Earned",    f"₹{total_earned}")
+        stat("Total Sessions",  f"{total_sessions}")
     )
-    cols_cls = "cols-3"
+    if total_earned > 0:
+        cells += stat("Money Earned", f"₹{total_earned}")
+        cols_cls = "cols-3"
+    else:
+        cols_cls = "cols-2"
 elif category == "consumer":
     cells = (
         stat("Energy Consumed", f"{total_consumed}", "kWh") +
@@ -517,8 +520,11 @@ elif category == "consumer":
         cells += stat("Total Mileage", f"{total_mileage}", "km")
     if total_co2 > 0:
         cells += stat("CO₂ Offset", f"{round(total_co2, 1)}", "kg")
-    cells += stat("Money Saved", f"₹{total_saved}")
-    cols_cls = "cols-5"
+    if total_saved > 0:
+        cells += stat("Money Saved", f"₹{total_saved}")
+        cols_cls = "cols-5"
+    else:
+        cols_cls = "cols-4"
 else:
     cells = (
         stat("Energy Produced", f"{total_produced}", "kWh") +
@@ -529,8 +535,11 @@ else:
         cells += stat("Total Mileage", f"{total_mileage}", "km")
     if total_co2 > 0:
         cells += stat("CO₂ Offset", f"{round(total_co2, 1)}", "kg")
-    cells += stat("Total Savings", f"₹{int(total_saved + total_earned)}")
-    cols_cls = "cols-6"
+    if total_saved + total_earned > 0:
+        cells += stat("Total Savings", f"₹{int(total_saved + total_earned)}")
+        cols_cls = "cols-6"
+    else:
+        cols_cls = "cols-5"
 
 st.markdown(f'<div class="ud-stats {cols_cls}">{cells}</div>', unsafe_allow_html=True)
 st.markdown('<div class="ud-divider"></div>', unsafe_allow_html=True)
@@ -561,6 +570,7 @@ else:
 
         if stype == 'producer':
             earned = round(energy_v * PRICE_PER_KWH, 2)
+            money_html = f'<div class="sc-money">₹{earned} earned</div>' if earned > 0 else ''
             cards_html += f"""
 <div class="sc sc-producer">
   <div class="sc-top">
@@ -570,7 +580,7 @@ else:
         <span class="sc-kwh producer">{energy_v}<span class="sc-kwh-unit">kWh</span></span>
       </div>
     </div>
-    <div class="sc-money">₹{earned} earned</div>
+    {money_html}
   </div>
   <div class="sc-meta">
     <div class="sc-meta-item">{svg_batt} Battery <b>{battery}</b></div>
@@ -580,6 +590,7 @@ else:
 </div>"""
         else:
             money = int(row['money'])
+            money_html = f'<div class="sc-money">₹{money} saved</div>' if money > 0 else ''
             extras_html = ""
             if mileage > 0:
                 extras_html += f'<div class="sc-extra-chip">{svg_map} {mileage} km</div>'
@@ -594,7 +605,7 @@ else:
         <span class="sc-kwh consumer">{energy_v}<span class="sc-kwh-unit">kWh</span></span>
       </div>
     </div>
-    <div class="sc-money">₹{money} saved</div>
+    {money_html}
   </div>
   <div class="sc-meta">
     <div class="sc-meta-item">{svg_batt} Battery <b>{battery}</b></div>
