@@ -341,7 +341,7 @@ body, .stApp { background: var(--bg) !important; color: var(--text) !important; 
 # ── DATA LOADING ─────────────────────────────────────────────────────────────── #
 @st.cache_data
 def load_data():
-    users   = pd.read_json("greenkwh.users.json")
+    users   = pd.read_csv("greenkwh.users.csv")
     energy  = pd.read_csv("greenkwh.energy_sessions.csv")
     systems = pd.read_csv("greenkwh.systems.csv")
 
